@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>انجمن علمی زیست‌شناسی جانوری | دانشگاه تبریز</title>
+<meta name="description" content="انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز — اخبار، کارگاه‌ها، نشریات، مسابقات و فعالیت‌های علمی">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f1c3f;
+    --muted:#5b6b87;
+    --bg:#f2f5fc;
+    --surface:#ffffff;
+    --line:#e4e9f5;
+    --blue:#2f5fea;
+    --blue-dark:#1c3fae;
+    --teal:#14b8a6;
+    --amber:#f5a524;
+    --rose:#f43f5e;
+    --indigo:#6366f1;
+    --shadow: 0 16px 38px -20px rgba(15,28,63,.28);
+    --shadow-lg: 0 26px 60px -24px rgba(15,28,63,.35);
+    --radius-lg:20px;
+    --radius-xl:28px;
+    --maxw:1180px;
+    --header-h:64px;
+  }
+  *{box-sizing:border-box;}
+  [hidden]{display:none !important;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;font-family:'Vazirmatn',sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.8;-webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;}
+  h1,h2,h3,h4,p{overflow-wrap:break-word;word-break:break-word;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,5vw,32px);}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+
+  /* ================= HEADER ================= */
+  header.app-header{
+    position:sticky;top:0;z-index:80;
+    background:rgba(255,255,255,.85);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);height:var(--header-h);
+  }
+  .header-inner{
+    max-width:var(--maxw);margin:0 auto;height:100%;padding:0 18px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .icon-btn{
+    width:42px;height:42px;border-radius:14px;border:1px solid var(--line);background:var(--surface);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;color:var(--ink);
+    box-shadow:var(--shadow);
+  }
+  .icon-btn svg{width:19px;height:19px;stroke:var(--ink);}
+  .icon-btn[hidden]{display:none;}
+  .icon-btn.ghost{background:transparent;box-shadow:none;border-color:transparent;}
+
+  .brand{display:flex;align-items:center;gap:10px;min-width:0;flex:1;justify-content:center;}
+  .brand-mark{
+    width:40px;height:40px;border-radius:11px;flex-shrink:0;overflow:hidden;
+    background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand-mark img{width:100%;height:100%;object-fit:contain;padding:3px;box-sizing:border-box;}
+  .brand-mark span{color:#fff;font-weight:800;font-size:13px;}
+  .brand-text{min-width:0;text-align:center;}
+  .brand-text b{display:block;font-size:14px;font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .brand-text small{display:block;font-size:10.5px;color:var(--muted);font-weight:500;}
+  #pageTitle{display:none;}
+  body.subpage .brand-text b{display:none;}
+  body.subpage .brand-text small{display:none;}
+  body.subpage #pageTitle{display:block;font-size:15px;font-weight:800;color:var(--ink);}
+
+  /* ================= HAMBURGER OVERLAY MENU ================= */
+  .menu-overlay{
+    position:fixed;inset:0;z-index:200;background:rgba(15,28,63,.42);
+    opacity:0;pointer-events:none;transition:opacity .25s ease;
+    display:flex;justify-content:flex-end;
+  }
+  .menu-overlay.open{opacity:1;pointer-events:auto;}
+  .menu-panel{
+    width:min(360px,86vw);height:100%;background:var(--surface);
+    padding:22px 20px 30px;overflow-y:auto;transform:translateX(100%);
+    transition:transform .32s cubic-bezier(.4,0,.2,1);
+    box-shadow:-20px 0 50px -20px rgba(15,28,63,.4);
+  }
+  .menu-overlay.open .menu-panel{transform:translateX(0);}
+  .menu-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;}
+  .menu-head b{font-size:15px;font-weight:800;}
+  .menu-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;}
+  .menu-list a{
+    display:flex;align-items:center;gap:12px;padding:12px 12px;border-radius:14px;
+    font-size:14px;font-weight:600;color:var(--ink);
+  }
+  .menu-list a.active{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;}
+  .menu-list a:not(.active):hover{background:var(--bg);}
+  .menu-list .m-ic{
+    width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .menu-list a.active .m-ic{background:rgba(255,255,255,.22);}
+  .menu-list a.active .m-ic svg{stroke:#fff;}
+  .menu-list .m-ic svg{width:16px;height:16px;}
+  .menu-sep{height:1px;background:var(--line);margin:14px 2px;}
+  .menu-label{font-size:11px;color:var(--muted);font-weight:700;padding:6px 12px 2px;}
+  .menu-social{display:flex;gap:10px;margin-top:20px;padding:0 12px;}
+  .menu-social a{
+    width:38px;height:38px;border-radius:12px;background:var(--bg);display:flex;align-items:center;justify-content:center;
+  }
+  .menu-social a svg{width:16px;height:16px;}
+
+  .chip-blue{background:linear-gradient(135deg,#2f5fea,#5a86f5);}
+  .chip-teal{background:linear-gradient(135deg,#0d9488,#14b8a6);}
+  .chip-amber{background:linear-gradient(135deg,#d97706,#f5a524);}
+  .chip-rose{background:linear-gradient(135deg,#e11d48,#f43f5e);}
+  .chip-indigo{background:linear-gradient(135deg,#4f46e5,#6366f1);}
+  .chip-light-blue{background:#e7edfd;} .chip-light-blue svg{stroke:var(--blue);}
+  .chip-light-teal{background:#e1f7f3;} .chip-light-teal svg{stroke:#0d9488;}
+  .chip-light-amber{background:#fdf0da;} .chip-light-amber svg{stroke:#d97706;}
+  .chip-light-rose{background:#fde3e8;} .chip-light-rose svg{stroke:#e11d48;}
+  .chip-light-indigo{background:#e6e5fd;} .chip-light-indigo svg{stroke:#4f46e5;}
+  .m-ic svg{stroke:#fff;fill:none;stroke-width:1.8;}
+  .menu-list a:not(.active) .m-ic svg{stroke:inherit;}
+
+  /* ================= PAGES ================= */
+  main{min-height:60vh;}
+  .page{display:none;}
+  .page.active{display:block;}
+  .page-body{padding:28px 0 56px;}
+  .page-head{margin-bottom:26px;}
+  .page-head .eyebrow{font-size:12px;font-weight:700;color:var(--blue);margin-bottom:6px;}
+  .page-head h1{font-size:clamp(21px,3vw,30px);font-weight:800;margin:0 0 8px;}
+  .page-head p{color:var(--muted);font-size:13.5px;margin:0;max-width:560px;}
+
+  /* ================= HOME : HERO SLIDER ================= */
+  .hero-wrap{padding:18px 0 0;}
+  .slider{
+    position:relative;border-radius:var(--radius-xl);overflow:hidden;
+    height:min(64vw,400px);min-height:280px;box-shadow:var(--shadow-lg);
+  }
+  .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease;display:flex;align-items:center;}
+  .slide.active{opacity:1;visibility:visible;}
+  .slide-bg{position:absolute;inset:0;z-index:0;}
+  .g-blue{background:linear-gradient(135deg,#1c3fae 0%,#2f5fea 55%,#14b8a6 100%);}
+  .g-teal{background:linear-gradient(135deg,#0d9488 0%,#14b8a6 55%,#5a86f5 100%);}
+  .g-indigo{background:linear-gradient(135deg,#3730a3 0%,#6366f1 55%,#2f5fea 100%);}
+  .g-rose{background:linear-gradient(135deg,#9f1239 0%,#e11d48 55%,#f43f5e 100%);}
+  .g-amber{background:linear-gradient(135deg,#b45309 0%,#f5a524 55%,#14b8a6 100%);}
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.35;background:rgba(255,255,255,.5);}
+  .slide-content{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 34px;width:100%;}
+  .glass-card{
+    background:rgba(255,255,255,.14);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.28);
+    border-radius:20px;padding:22px 26px;max-width:480px;
+  }
+  .slide-eyebrow{color:#eaf1ff;font-size:12px;font-weight:700;margin-bottom:8px;opacity:.9;}
+  .slide-title{font-size:clamp(19px,3vw,27px);font-weight:800;color:#fff;margin:0 0 10px;line-height:1.5;}
+  .slide-desc{color:rgba(255,255,255,.88);font-size:13px;margin:0 0 18px;}
+  .slide-btn{
+    display:inline-block;background:#fff;color:var(--blue-dark);font-weight:800;
+    padding:10px 22px;border-radius:99px;font-size:13px;border:none;cursor:pointer;
+  }
+  .slider-controls{position:absolute;bottom:16px;left:0;right:0;z-index:5;display:flex;justify-content:center;gap:7px;}
+  .slider-controls button{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.4);cursor:pointer;padding:0;}
+  .slider-controls button.active{background:#fff;width:20px;border-radius:6px;}
+  .slider-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:36px;height:36px;border-radius:50%;
+    border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.14);backdrop-filter:blur(6px);
+    color:#fff;cursor:pointer;font-size:15px;
+  }
+  .slider-arrow.prev{right:14px;} .slider-arrow.next{left:14px;}
+  @media(max-width:640px){.glass-card{padding:18px 20px;} .slide-content{padding:0 20px;}}
+
+  /* ================= QUICK GRID ================= */
+  .quick-section{padding:30px 0 6px;}
+  .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:760px){.quick-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:460px){.quick-grid{grid-template-columns:repeat(2,1fr);}}
+  .quick-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 12px;text-align:center;
+    box-shadow:var(--shadow);transition:transform .18s ease;
+  }
+  .quick-card:hover{transform:translateY(-4px);}
+  .quick-card .qc-ic{width:46px;height:46px;border-radius:14px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;}
+  .quick-card .qc-ic svg{width:21px;height:21px;stroke-width:1.8;fill:none;}
+  .quick-card span{font-size:12.5px;font-weight:700;color:var(--ink);}
+
+  /* ================= CTA BANNER ================= */
+  .cta-section{padding:34px 0 8px;}
+  .cta{
+    position:relative;overflow:hidden;border-radius:var(--radius-xl);
+    background:linear-gradient(120deg,#1c3fae,#2f5fea 45%,#14b8a6);
+    padding:34px 30px;display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;color:#fff;
+  }
+  .cta h2{font-size:20px;font-weight:800;margin:0 0 8px;}
+  .cta p{color:rgba(255,255,255,.85);font-size:13.5px;max-width:440px;margin:0;}
+  .cta .btn-light{background:#fff;color:var(--blue-dark);font-weight:800;padding:12px 26px;border-radius:99px;border:none;cursor:pointer;font-size:13.5px;white-space:nowrap;}
+
+  /* ================= GRIDS / CARDS (shared across pages) ================= */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr);}.grid-4{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.grid-3{grid-template-columns:1fr;}.grid-4{grid-template-columns:1fr;}}
+
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;
+  }
+  .card-media{height:128px;position:relative;overflow:hidden;}
+  .card-body{padding:16px 17px 18px;flex:1;display:flex;flex-direction:column;}
+  .card-tag{font-size:10.5px;font-weight:700;color:#fff;padding:4px 10px;border-radius:99px;margin-bottom:10px;width:fit-content;}
+  .card-date{font-size:11px;color:var(--muted);margin-bottom:6px;}
+  .card h3{font-size:14.5px;margin:0 0 8px;font-weight:700;line-height:1.6;}
+  .card p{font-size:12.5px;color:var(--muted);margin:0 0 12px;flex:1;}
+  .card-link{font-size:12px;font-weight:700;color:var(--blue);}
+  .card-media svg{position:absolute;inset:0;width:100%;height:100%;opacity:.5;}
+
+  .hscroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x proximity;}
+  .hscroll .card{min-width:240px;scroll-snap-align:start;}
+  .hscroll::-webkit-scrollbar{height:6px;}
+  .hscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px;}
+
+  .pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  @media(max-width:900px){.pub-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:560px){.pub-grid{grid-template-columns:repeat(2,1fr);}}
+  .pub-cover{aspect-ratio:3/4;border-radius:16px;position:relative;overflow:hidden;box-shadow:var(--shadow);display:flex;align-items:flex-end;padding:12px;background-size:cover;background-position:center;}
+  .pub-cover span{position:relative;z-index:2;color:#fff;font-size:12px;font-weight:700;line-height:1.6;}
+  .pub-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,28,63,0) 30%,rgba(15,28,63,.82));z-index:1;}
+
+  /* congresses */
+  .congress-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  .congress-card{display:flex;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;}
+  .congress-cover{flex:0 0 170px;background-size:cover;background-position:center;position:relative;min-height:100%;}
+  .congress-body{flex:1;min-width:0;padding:18px 20px;display:flex;flex-direction:column;gap:6px;}
+  .congress-body h3{margin:0;font-size:15px;font-weight:800;line-height:1.7;}
+  .congress-body .c-en{font-size:11px;color:var(--muted);margin:0 0 4px;}
+  .congress-meta-list{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:4px;}
+  .congress-meta-list li{font-size:12.5px;color:var(--ink);display:flex;gap:6px;flex-wrap:wrap;}
+  .congress-meta-list li b{color:var(--blue);font-weight:700;flex-shrink:0;}
+  .congress-actions{margin-top:12px;}
+  .congress-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(120deg,var(--blue),var(--teal));color:#fff;font-weight:800;padding:10px 20px;border-radius:99px;font-size:12.5px;}
+  @media(max-width:640px){.congress-card{flex-direction:column;}.congress-cover{flex:none;width:100%;height:180px;}}
+
+  /* image lightbox */
+  .img-lightbox{position:fixed;inset:0;z-index:300;background:rgba(15,28,63,.88);display:flex;align-items:center;justify-content:center;padding:26px;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .img-lightbox.open{opacity:1;pointer-events:auto;}
+  .img-lightbox img{max-width:100%;max-height:88vh;border-radius:14px;box-shadow:var(--shadow-lg);}
+  .img-lightbox-close{position:absolute;top:18px;left:18px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:19px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);}
+
+  .badge-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+  .badge-icon{width:52px;height:52px;border-radius:16px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;}
+  .badge-icon svg{width:23px;height:23px;stroke-width:1.7;fill:none;}
+  .badge-card h3{font-size:14px;margin:0 0 8px;}
+  .badge-card p{font-size:12.5px;color:var(--muted);margin:0;}
+
+  .section-block{margin-bottom:40px;}
+  .section-block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap;}
+  .section-block-head h2{font-size:17px;font-weight:800;margin:0;}
+  .see-all{font-size:12.5px;font-weight:700;color:var(--blue);}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:start;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-hero-img{width:100%;aspect-ratio:21/9;border-radius:var(--radius-xl);margin-bottom:24px;box-shadow:var(--shadow-lg);background:linear-gradient(135deg,#1c3fae 0%,#2f5fea 55%,#14b8a6 100%);}
+  @media(max-width:600px){.about-hero-img{aspect-ratio:16/9;}}
+  .about-text p{color:#3c4a63;font-size:14px;}
+  .activity-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px;}
+  .activity-list li{display:flex;gap:10px;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow);}
+  .activity-list li b{color:var(--blue);font-weight:800;}
+  .about-panel{background:linear-gradient(150deg,#1c3fae,#14b8a6);border-radius:var(--radius-lg);padding:24px;color:#fff;}
+  .about-panel h3{margin:0 0 14px;font-size:14px;}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .stat{background:rgba(255,255,255,.14);border-radius:12px;padding:14px;text-align:center;}
+  .stat b{display:block;font-size:20px;}
+  .stat span{font-size:11px;color:rgba(255,255,255,.85);}
+  .about-panel .link-btn{display:block;text-align:center;margin-top:16px;background:rgba(255,255,255,.18);border-radius:12px;padding:11px;font-size:12.5px;font-weight:700;}
+
+  /* council */
+  .council-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:760px){.council-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.council-grid{grid-template-columns:1fr;}}
+  .council-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center;box-shadow:var(--shadow);}
+  .council-photo{width:88px;height:88px;border-radius:50%;margin:0 auto 12px;overflow:hidden;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;}
+  .council-photo img{width:100%;height:100%;object-fit:cover;}
+  .council-photo span{font-weight:800;color:#fff;font-size:19px;}
+  .council-card b{display:block;font-size:13.5px;margin-bottom:3px;}
+  .council-card small{font-size:11.5px;color:var(--muted);}
+  .council-mini-grid{display:flex;flex-wrap:wrap;gap:12px 10px;justify-content:center;}
+  .council-mini-card{width:78px;text-align:center;}
+  .council-mini-photo{width:50px;height:50px;border-radius:50%;margin:0 auto 6px;overflow:hidden;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;}
+  .council-mini-photo span{color:#fff;font-weight:800;font-size:13px;}
+  .council-mini-card b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:10.5px;font-weight:700;line-height:1.4;}
+  .council-mini-card small{display:block;font-size:9px;color:var(--muted);margin-top:2px;}
+
+  /* membership */
+  .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;}
+  @media(max-width:760px){.benefit-grid{grid-template-columns:1fr;}}
+  .benefit-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);}
+  .benefit-card .b-ic{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .benefit-card .b-ic svg{width:17px;height:17px;stroke-width:1.8;fill:none;}
+  .benefit-card h4{margin:0 0 5px;font-size:13.5px;}
+  .benefit-card p{margin:0;font-size:12px;color:var(--muted);}
+
+  /* membership form */
+  .form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow);}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:640px){.form-grid{grid-template-columns:1fr;}}
+  .form-field{display:flex;flex-direction:column;gap:6px;}
+  .form-field label{font-size:12.5px;font-weight:700;color:var(--ink);}
+  .form-field label em{color:var(--rose);font-style:normal;margin-right:3px;}
+  .form-field input, .form-field select, .form-field textarea{
+    border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-family:inherit;font-size:13.5px;
+    background:var(--bg);color:var(--ink);width:100%;
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{outline:none;border-color:var(--blue);background:#fff;}
+  .form-field textarea{resize:vertical;min-height:70px;}
+  .checkbox-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  @media(max-width:760px){.checkbox-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.checkbox-grid{grid-template-columns:1fr;}}
+  .chk{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:12.5px;cursor:pointer;}
+  .chk input{width:16px;height:16px;accent-color:var(--blue);flex-shrink:0;}
+  .form-actions{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .form-note{font-size:11.5px;color:var(--muted);margin:0;max-width:340px;}
+  .btn-primary-form{
+    background:linear-gradient(120deg,var(--blue),var(--teal));color:#fff;font-weight:800;border:none;
+    padding:13px 30px;border-radius:99px;font-size:14px;cursor:pointer;white-space:nowrap;
+  }
+
+  /* timeline */
+  .timeline{position:relative;padding-right:24px;border-right:2px solid var(--line);display:grid;gap:24px;}
+  .timeline-item{position:relative;}
+  .timeline-item::before{content:'';position:absolute;right:-30px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--blue);border:3px solid var(--bg);}
+  .timeline-item .t-date{font-size:11.5px;color:var(--blue);font-weight:700;margin-bottom:4px;}
+  .timeline-item h3{margin:0 0 6px;font-size:14.5px;}
+  .timeline-item p{margin:0;font-size:12.5px;color:var(--muted);max-width:580px;}
+
+  /* contact page */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);}
+  .contact-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;}
+  .contact-row:last-child{margin-bottom:0;}
+  .contact-row .c-ic{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-row .c-ic svg{width:16px;height:16px;stroke-width:1.8;fill:none;}
+  .contact-row b{display:block;font-size:13px;margin-bottom:2px;}
+  .contact-row span{font-size:12.5px;color:var(--muted);}
+  .map-box{border-radius:18px;overflow:hidden;border:1px solid var(--line);height:100%;min-height:220px;}
+  .map-box iframe{width:100%;height:100%;border:0;min-height:220px;}
+
+  /* ================= FOOTER ================= */
+  footer{background:#0f1c3f;color:#eef2fb;padding:44px 0 24px;margin-top:20px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  footer h4{font-size:13.5px;color:#8fb1ff;margin:0 0 14px;}
+  footer p, footer a, footer li{font-size:12.5px;color:rgba(238,242,251,.75);}
+  .footer-links{list-style:none;padding:0;margin:0;display:grid;gap:8px;}
+  .social-row{display:flex;gap:9px;margin-top:14px;}
+  .social-row a{width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+  .social-row a svg{width:15px;height:15px;stroke:#eef2fb;fill:none;stroke-width:1.7;}
+  .footer-bottom{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:11.5px;color:rgba(238,242,251,.5);}
+
+  .to-top{
+    position:fixed;bottom:20px;left:20px;z-index:50;width:42px;height:42px;border-radius:50%;
+    background:var(--blue);border:none;color:#fff;cursor:pointer;box-shadow:var(--shadow-lg);
+    opacity:0;pointer-events:none;transition:opacity .25s ease;
+  }
+  .to-top.show{opacity:1;pointer-events:auto;}
+
+  /* ================= CLICKABLE ITEM CARDS ================= */
+  [data-item]{cursor:pointer;}
+  [data-item]:hover{filter:brightness(1.02);}
+
+  /* ================= DETAIL PAGE ================= */
+  /* default (non-workshop sections): image card and info card are fully separate, image is 3:4 */
+  .detail-hero{
+    display:flex;flex-direction:column;gap:16px;margin-bottom:24px;
+  }
+  .detail-hero-info{
+    min-width:0;padding:24px 22px;display:flex;flex-direction:column;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);
+  }
+  .detail-hero-cover{
+    position:relative;overflow:hidden;order:-1;
+    width:100%;max-width:300px;margin:0 auto;aspect-ratio:3/4;
+    border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);
+    background-size:cover;background-position:center;
+  }
+  .detail-hero-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,28,63,0) 45%,rgba(15,28,63,.78));z-index:1;}
+  .detail-hero-cover.cover-landscape{aspect-ratio:16/9;max-width:620px;}
+  .detail-cover-label{position:absolute;z-index:2;bottom:14px;right:12px;left:12px;color:#fff;font-size:11px;font-weight:700;opacity:.92;line-height:1.7;overflow-wrap:break-word;word-break:break-word;}
+
+  /* festival sections: 3-photo landscape slider instead of a single cover */
+  .detail-hero-slider{
+    position:relative;overflow:hidden;order:-1;width:100%;aspect-ratio:16/9;
+    border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);
+  }
+  .detail-hero-slider.is-portrait{aspect-ratio:3/4;max-width:320px;margin:0 auto;}
+  .detail-hero-slider .slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;}
+  .detail-hero-slider .slide.active{opacity:1;}
+  .detail-hero-slider .slide::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,28,63,0) 55%,rgba(15,28,63,.72));}
+  .slider-dots{position:absolute;z-index:2;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;}
+  .slider-dots button{width:7px;height:7px;border-radius:50%;border:none;background:rgba(255,255,255,.55);padding:0;cursor:pointer;}
+  .slider-dots button.active{background:#fff;width:18px;border-radius:4px;}
+
+  /* workshop only: image fused side-by-side with info, in one card (unchanged legacy layout) */
+  .detail-hero.is-workshop{
+    flex-direction:row;align-items:stretch;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);gap:0;
+  }
+  .detail-hero.is-workshop .detail-hero-info{
+    flex:1 1 58%;border:none;border-radius:0;box-shadow:none;
+  }
+  .detail-hero.is-workshop .detail-hero-cover{
+    order:0;flex:0 0 36%;max-width:210px;min-height:230px;width:auto;aspect-ratio:auto;
+    margin:0;border-radius:0;box-shadow:none;
+  }
+  @media(max-width:520px){.detail-hero.is-workshop .detail-hero-cover{flex-basis:32%;max-width:130px;min-height:auto;}}
+  .detail-tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;padding:5px 13px;border-radius:99px;margin-bottom:12px;width:fit-content;}
+  .detail-page-title{font-size:clamp(17px,3vw,22px);font-weight:800;margin:0 0 10px;line-height:1.7;overflow-wrap:break-word;word-break:break-word;}
+  .detail-meta{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12px;color:var(--muted);margin-bottom:10px;}
+  .detail-meta span{display:inline-flex;align-items:center;gap:5px;}
+  .detail-desc{font-size:13px;color:#3c4a63;margin:0 0 16px;line-height:1.95;overflow-wrap:break-word;word-break:break-word;white-space:pre-line;}
+
+  /* info chips (certificate / date / duration / code) */
+  .detail-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .info-chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;padding:8px 13px;border-radius:99px;white-space:nowrap;}
+  .info-chip svg{width:14px;height:14px;flex-shrink:0;}
+  .chip-pill-green{background:#dcfce7;color:#15803d;}
+  .chip-pill-blue{background:#e7edfd;color:#1c3fae;}
+  .chip-pill-amber{background:#fdf0da;color:#b45309;}
+  .chip-pill-indigo{background:#e6e5fd;color:#4338ca;}
+
+  .detail-price-row{display:flex;flex-direction:column;gap:2px;margin-bottom:16px;}
+  .price-old{font-size:12px;color:var(--muted);text-decoration:line-through;}
+  .price-new{font-size:21px;font-weight:800;color:#16a34a;}
+  .price-unit{font-size:12.5px;color:var(--muted);margin-right:6px;}
+
+  .btn-cta-green{
+    background:linear-gradient(135deg,#16a34a,#22c55e);color:#fff;font-weight:800;border:none;
+    padding:14px 22px;border-radius:14px;font-size:13.5px;cursor:pointer;width:100%;
+    box-shadow:0 16px 30px -14px rgba(22,163,74,.5);
+  }
+
+  .detail-download-wrap{margin-bottom:8px;}
+  .btn-primary-form{
+    background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;border:none;font-weight:800;
+    padding:13px 26px;border-radius:14px;font-size:13.5px;cursor:pointer;box-shadow:var(--shadow);
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .btn-outline-form{
+    background:var(--surface);color:var(--ink);border:1.5px solid var(--line);font-weight:700;
+    padding:12px 24px;border-radius:14px;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  }
+
+  /* workshop block */
+  .workshop-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow);margin-bottom:18px;}
+  .workshop-panel-grid{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;}
+  @media(max-width:640px){.workshop-panel-grid{grid-template-columns:1fr;}}
+
+  .jcal{width:230px;background:var(--bg);border-radius:16px;padding:14px;border:1px solid var(--line);}
+  .jcal-head{text-align:center;font-size:13px;font-weight:800;margin-bottom:10px;color:var(--ink);}
+  .jcal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+  .jcal-wd{font-size:9.5px;color:var(--muted);text-align:center;font-weight:700;padding-bottom:3px;}
+  .jcal-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:11px;color:var(--ink);}
+  .jcal-cell.empty{visibility:hidden;}
+  .jcal-cell.today-marker{box-shadow:inset 0 0 0 1.5px var(--muted);}
+  .jcal-cell.active-day{color:#fff;font-weight:800;box-shadow:var(--shadow);}
+
+  .workshop-info{display:flex;flex-direction:column;gap:10px;}
+  .workshop-info-row{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink);}
+  .workshop-info-row .wi-ic{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+  /* publication masthead table */
+  .masthead-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow);margin-bottom:18px;}
+  .masthead-title{margin:0 0 14px;font-size:15px;font-weight:800;color:var(--ink);}
+  .masthead-table{width:100%;border-collapse:collapse;font-size:13px;}
+  .masthead-table tr{border-top:1px solid var(--line);}
+  .masthead-table tr:first-child{border-top:none;}
+  .masthead-table th{text-align:right;color:var(--muted);font-weight:700;padding:10px 10px 10px 0;white-space:nowrap;vertical-align:top;width:1%;}
+  .masthead-table td{padding:10px 0;color:var(--ink);line-height:1.9;}
+  @media(max-width:560px){
+    .masthead-table, .masthead-table tbody, .masthead-table tr, .masthead-table th, .masthead-table td{display:block;width:auto;}
+    .masthead-table tr{padding:10px 0;}
+    .masthead-table th{padding:0 0 4px;}
+    .masthead-table td{padding:0;}
+  }
+  .workshop-info-row .wi-ic svg{width:15px;height:15px;stroke-width:1.8;fill:none;}
+  .workshop-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;}
+  .workshop-actions button.workshop-disabled{opacity:.55;filter:grayscale(.3);}
+
+  .workshop-notice{
+    display:none;margin-top:14px;background:#fff4f4;border:1px solid #fbd0d5;border-radius:14px;padding:16px 18px;
+  }
+  .workshop-notice.show{display:block;}
+  .workshop-notice p{margin:0 0 12px;font-size:13px;color:#7a2330;line-height:1.9;}
+  .workshop-notice .btn-telegram{
+    display:inline-flex;align-items:center;gap:7px;background:#229ed9;color:#fff;font-weight:700;
+    padding:10px 20px;border-radius:12px;font-size:12.5px;
+  }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <button class="icon-btn" id="backBtn" hidden aria-label="بازگشت">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <a href="#home" class="brand" data-go="home">
+      <span class="brand-mark">
+        <img src="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/logghoabc-1-06.png" alt="لوگوی انجمن" onerror="this.style.display='none';this.parentElement.querySelector('span').style.display='flex';">
+        <span style="display:none;">AB</span>
+      </span>
+      <span class="brand-text">
+        <b>انجمن زیست‌شناسی جانوری</b>
+        <small>دانشکده علوم طبیعی، دانشگاه تبریز</small>
+      </span>
+      <span id="pageTitle"></span>
+    </a>
+    <button class="icon-btn" id="menuBtn" aria-label="باز کردن منو">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HAMBURGER OVERLAY MENU ============ -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-panel">
+    <div class="menu-head">
+      <b>بخش‌های سایت</b>
+      <button class="icon-btn ghost" id="menuClose" aria-label="بستن منو">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul class="menu-list" id="menuList">
+      <li><a href="#home" data-go="home"><span class="m-ic chip-blue"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9"/></svg></span>خانه</a></li>
+
+      <div class="menu-label">محتوای علمی</div>
+      <li><a href="#news" data-go="news"><span class="m-ic chip-blue"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg></span>اخبار</a></li>
+      <li><a href="#workshops" data-go="workshops"><span class="m-ic chip-teal"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 14l9 5 9-5"/></svg></span>کارگاه‌ها و دوره‌ها</a></li>
+      <li><a href="#publications" data-go="publications"><span class="m-ic chip-indigo"><svg viewBox="0 0 24 24"><path d="M4 5h9a2 2 0 012 2v13H6a2 2 0 01-2-2V5z"/><path d="M20 5h-4v15"/></svg></span>نشریات</a></li>
+      <li><a href="#biology-news" data-go="biology-news"><span class="m-ic chip-teal"><svg viewBox="0 0 24 24"><path d="M4 4c6 0 10 4 10 10M4 10c3.5 0 6 2.5 6 6M4 16c1.5 0 2 .5 2 2"/></svg></span>تازه‌های زیست‌شناسی</a></li>
+      <li><a href="#congresses" data-go="congresses"><span class="m-ic chip-amber"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>کنگره‌های پیش رو</a></li>
+
+      <div class="menu-label">درباره انجمن</div>
+      <li><a href="#about" data-go="about"><span class="m-ic chip-blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>درباره انجمن</a></li>
+      <li><a href="#council" data-go="council"><span class="m-ic chip-indigo"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2 20c1-3.5 3.8-5 6-5s5 1.5 6 5M14 15c2.2 0 5 1.5 6 5"/></svg></span>شورای مرکزی</a></li>
+      <li><a href="#honors" data-go="honors"><span class="m-ic chip-amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8 13l-2 8 6-3 6 3-2-8"/></svg></span>افتخارات</a></li>
+      <li><a href="#festivals" data-go="festivals"><span class="m-ic chip-teal"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></span>جشنواره‌ها</a></li>
+      <li><a href="#competitions" data-go="competitions"><span class="m-ic chip-rose"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M6 4h12v4a6 6 0 01-12 0V4z"/></svg></span>مسابقات</a></li>
+
+      <div class="menu-label">همراهی با ما</div>
+      <li><a href="#membership" data-go="membership"><span class="m-ic chip-rose"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></span>عضویت</a></li>
+      <li><a href="#contact" data-go="contact"><span class="m-ic chip-blue"><svg viewBox="0 0 24 24"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></span>تماس با ما</a></li>
+    </ul>
+    <div class="menu-social">
+      <a href="https://www.instagram.com/animal_biology_association?igsh=ZGFhdTZxMTIwbGth" target="_blank" rel="noopener" style="background:#fde3e8;"><svg viewBox="0 0 24 24" stroke="#e11d48"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+      <a href="https://t.me/animalbiology_tabrizu" target="_blank" rel="noopener" style="background:#e7edfd;"><svg viewBox="0 0 24 24" stroke="#2f5fea"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg></a>
+      <a href="mailto:abans.tabrizu@gmail.com" style="background:#e1f7f3;"><svg viewBox="0 0 24 24" stroke="#0d9488"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ================= HOME ================= -->
+  <section class="page active" id="page-home" data-page="home">
+    <div class="hero-wrap wrap">
+      <div class="slider" id="slider">
+
+        <div class="slide active" data-target="news">
+          <div class="slide-bg g-rose" style="background-image:linear-gradient(120deg,rgba(159,18,57,.78),rgba(244,63,94,.55) 60%,rgba(28,63,174,.55)),url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"><span class="blob" style="width:220px;height:220px;top:-60px;left:-40px;"></span></div>
+          <div class="slide-content">
+            <div class="glass-card">
+              <div class="slide-eyebrow">افتخارآفرینی</div>
+              <h2 class="slide-title">کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h2>
+              <p class="slide-desc">دبیر سابق انجمن، در شصت‌وچهارمین دوره جایزه ملی نخبگانی البرز برگزیده شد.</p>
+              <button class="slide-btn" data-go="news">مشاهده خبر</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-target="news">
+          <div class="slide-bg g-blue"><span class="blob" style="width:220px;height:220px;top:-60px;left:-40px;"></span><span class="blob" style="width:140px;height:140px;bottom:-40px;right:10%;"></span></div>
+          <div class="slide-content">
+            <div class="glass-card">
+              <div class="slide-eyebrow">آخرین اطلاعیه</div>
+              <h2 class="slide-title">اطلاعیه دریافت گواهی اعضای هیئت تحریریه نشریات میکرون و کدون</h2>
+              <p class="slide-desc">اعضای هیئت تحریریه جهت دریافت گواهی خود پس از هماهنگی، در هفته آتی به دفتر انجمن مراجعه کنند.</p>
+              <button class="slide-btn" data-go="news">مشاهده اخبار</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-target="workshops">
+          <div class="slide-bg g-teal"><span class="blob" style="width:200px;height:200px;top:-50px;right:-30px;"></span></div>
+          <div class="slide-content">
+            <div class="glass-card">
+              <div class="slide-eyebrow">کارگاه آموزشی</div>
+              <h2 class="slide-title">کارگاه تشریح و شناسایی مهره‌داران برای دانشجویان علوم زیستی</h2>
+              <p class="slide-desc">ظرفیت محدود — ثبت‌نام از طریق لینک اختصاصی کارگاه.</p>
+              <button class="slide-btn" data-go="workshops">ثبت‌نام کارگاه</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-target="membership">
+          <div class="slide-bg g-indigo"><span class="blob" style="width:180px;height:180px;bottom:-40px;left:8%;"></span></div>
+          <div class="slide-content">
+            <div class="glass-card">
+              <div class="slide-eyebrow">عضویت</div>
+              <h2 class="slide-title">به جمع اعضای فعال انجمن زیست‌شناسی جانوری بپیوندید</h2>
+              <p class="slide-desc">عضویت برای تمامی دانشجویان علاقه‌مند از همه رشته‌ها رایگان و بلامانع است.</p>
+              <button class="slide-btn" data-go="membership">فرم عضویت</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-target="congresses">
+          <div class="slide-bg g-amber" style="background-image:linear-gradient(120deg,rgba(180,83,9,.72),rgba(245,165,36,.55) 55%,rgba(20,184,166,.6)),url('https://bioch19.tabrizu.ac.ir/files_site/pooster_file/r_6_260921134838.jpg');background-size:cover;background-position:center;"><span class="blob" style="width:200px;height:200px;top:-50px;left:-30px;"></span></div>
+          <div class="slide-content">
+            <div class="glass-card">
+              <div class="slide-eyebrow">رویداد پیش‌رو · دانشگاه تبریز</div>
+              <h2 class="slide-title">نوزدهمین همایش ملی و چهارمین همایش بین‌المللی بیوشیمی فیزیک ایران</h2>
+              <p class="slide-desc">۶ و ۷ آبان ۱۴۰۵ — مهلت ارسال مقاله تا ۱۵ مهر ۱۴۰۵.</p>
+              <button class="slide-btn" data-go="congresses">مشاهده برنامه</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow prev" id="slidePrev" aria-label="اسلاید قبلی">‹</button>
+        <button class="slider-arrow next" id="slideNext" aria-label="اسلاید بعدی">›</button>
+        <div class="slider-controls" id="slideDots"></div>
+      </div>
+    </div>
+
+    <div class="quick-section wrap">
+      <div class="section-block-head"><h2>دسترسی سریع</h2></div>
+      <div class="quick-grid">
+        <a class="quick-card" href="#news" data-go="news"><span class="qc-ic chip-light-blue"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg></span><span>اخبار</span></a>
+        <a class="quick-card" href="#workshops" data-go="workshops"><span class="qc-ic chip-light-teal"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 14l9 5 9-5"/></svg></span><span>کارگاه و دوره</span></a>
+        <a class="quick-card" href="#publications" data-go="publications"><span class="qc-ic chip-light-indigo"><svg viewBox="0 0 24 24"><path d="M4 5h9a2 2 0 012 2v13H6a2 2 0 01-2-2V5z"/><path d="M20 5h-4v15"/></svg></span><span>نشریات</span></a>
+        <a class="quick-card" href="#membership" data-go="membership"><span class="qc-ic chip-light-rose"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></span><span>عضویت</span></a>
+        <a class="quick-card" href="#about" data-go="about"><span class="qc-ic chip-light-blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span><span>درباره انجمن</span></a>
+        <a class="quick-card" href="#biology-news" data-go="biology-news"><span class="qc-ic chip-light-teal"><svg viewBox="0 0 24 24"><path d="M4 4c6 0 10 4 10 10M4 10c3.5 0 6 2.5 6 6M4 16c1.5 0 2 .5 2 2"/></svg></span><span>تازه‌های زیست‌شناسی</span></a>
+        <a class="quick-card" href="#congresses" data-go="congresses"><span class="qc-ic chip-light-amber"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span><span>کنگره‌های پیش رو</span></a>
+        <a class="quick-card" href="#contact" data-go="contact"><span class="qc-ic chip-light-blue"><svg viewBox="0 0 24 24"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></span><span>تماس با ما</span></a>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding-top:34px;">
+
+      <!-- Workshops preview -->
+      <div class="section-block">
+        <div class="section-block-head"><h2>کارگاه‌ها و دوره‌ها</h2><a class="see-all" href="#workshops" data-go="workshops">مشاهده همه ←</a></div>
+        <div class="grid-3">
+          <article class="card" data-go="workshops" style="cursor:pointer;">
+            <div class="card-media g-amber"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--amber);">حضوری</span><h3>کارگاه تشریح مهره‌داران</h3><p>آشنایی عملی با آناتومی مقایسه‌ای مهره‌داران در آزمایشگاه دانشکده.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+          <article class="card" data-go="workshops" style="cursor:pointer;">
+            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--teal);">حضوری</span><h3>کارگاه نانوپزشکی</h3><p>با تدریس خانم مهندس ساحل حکیمی، کارشناس ارشد بیوشیمی (فیلد نانو).</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+          <article class="card" data-go="workshops" style="cursor:pointer;">
+            <div class="card-media g-teal"></div>
+            <div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه شناسایی گونه‌های بومی</h3><p>برگزاری در محیط طبیعی با همکاری اداره محیط‌زیست استان.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- News preview -->
+      <div class="section-block">
+        <div class="section-block-head"><h2>اخبار انجمن</h2><a class="see-all" href="#news" data-go="news">مشاهده همه ←</a></div>
+        <div class="grid-3">
+          <article class="card" data-go="news" style="cursor:pointer;">
+            <div class="card-media" style="background-image:url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--rose);">افتخار علمی</span><h3>کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h3><p>دبیر سابق انجمن، در جمع برگزیدگان جایزه ملی نخبگانی البرز قرار گرفت.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+          <article class="card" data-go="news" style="cursor:pointer;">
+            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_140349_734.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--indigo);">انتشار کتاب</span><h3>انتشار کتاب «نقش میکروRNA ها در سرطان پستان؛ تشخیص، درمان و چشم‌اندازهای آینده»</h3><p>اثری از دکتر ابوطالبی‌وند بیلانکوهی، دکتر صفرعلیزاده و مریم زمانی‌ثانی.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+          <article class="card" data-go="news" style="cursor:pointer;">
+            <div class="card-media g-teal"></div>
+            <div class="card-body"><span class="card-tag" style="background:#0d9488;">فراخوان</span><h3>فراخوان عضویت دوره جدید انجمن برای دانشجویان ورودی جدید</h3><p>به جمع اعضای فعال انجمن بپیوندید و از مزایای عضویت بهره‌مند شوید.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Publications preview -->
+      <div class="section-block">
+        <div class="section-block-head"><h2>نشریات انجمن</h2><a class="see-all" href="#publications" data-go="publications">مشاهده همه ←</a></div>
+        <div class="pub-grid">
+          <div class="pub-cover g-rose" data-go="publications" style="cursor:pointer;background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2026/1779779973-6a15498522d09-1.png');"><span>نشریه کدون - شماره ۱</span></div>
+          <div class="pub-cover g-blue" data-go="publications" style="cursor:pointer;background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/1763356202-691aae2ad1623-5.png');"><span>نشریه میکرون - شماره ۵</span></div>
+          <div class="pub-cover g-teal" data-go="publications" style="cursor:pointer;background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/67c4346ea3390-4.jpg');"><span>نشریه میکرون - شماره ۴</span></div>
+        </div>
+      </div>
+
+      <!-- Congresses preview -->
+      <div class="section-block">
+        <div class="section-block-head"><h2>کنگره‌های پیش رو</h2><a class="see-all" href="#congresses" data-go="congresses">مشاهده همه ←</a></div>
+        <div class="timeline">
+          <div class="timeline-item" data-go="congresses" style="cursor:pointer;"><div class="t-date">۶ و ۷ آبان ۱۴۰۵</div><h3>نوزدهمین همایش ملی و چهارمین همایش بین‌المللی بیوشیمی فیزیک ایران</h3><p>مهلت ارسال مقاله تا ۱۵ مهر ۱۴۰۵ — دانشگاه تبریز.</p></div>
+          <div class="timeline-item" data-go="congresses" style="cursor:pointer;"><div class="t-date">۲۷ آذر ۱۴۰۵</div><h3>پنجمین کنفرانس بین‌المللی دانشجویان علوم پایه ایران</h3><p>مهلت ارسال اصل مقالات تا ۱۵ آذر ۱۴۰۵ — تهران.</p></div>
+        </div>
+      </div>
+
+      <!-- About preview -->
+      <div class="section-block">
+        <div class="section-block-head"><h2>درباره انجمن</h2><a class="see-all" href="#about" data-go="about">مشاهده بیشتر ←</a></div>
+        <div class="about-grid" data-go="about" style="cursor:pointer;">
+          <div class="about-text">
+            <p>انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز با هدف گسترش فعالیت‌های علمی، پژوهشی و آموزشی در حوزه جانورشناسی توسط دانشجویان این دانشکده تأسیس شده است. با برگزاری نشست‌های تخصصی، کارگاه‌ها و بازدیدهای علمی، بستری برای رشد علمی دانشجویان علاقه‌مند فراهم می‌کند.</p>
+            <span class="card-link">ادامه مطلب و فعالیت‌های انجمن ←</span>
+          </div>
+          <div class="about-panel">
+            <h3>انجمن در یک نگاه</h3>
+            <div class="stat-row">
+              <div class="stat"><b>+۱۵۰</b><span>عضو</span></div>
+              <div class="stat"><b>۱۴۰۵</b><span>سال فعالیت جاری</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Council preview -->
+      <div class="section-block">
+        <div class="section-block-head"><h2>شورای مرکزی</h2><a class="see-all" href="#council" data-go="council">مشاهده همه اعضا ←</a></div>
+        <div class="council-mini-grid">
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>س</span></div><b>سما بنا آذرپناه</b><small>دبیر انجمن</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ا</span></div><b>المیرا ابوطالبی‌وند بیلانکوهی</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ز</span></div><b>زهرا کهنموئیان</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ز</span></div><b>زینب سادات نقوی</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ع</span></div><b>عرشیا دلجوان قدرتی</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>م</span></div><b>محمد آقازاده سلطان احمدی</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>م</span></div><b>مهدی حمدالهی داشکسن</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>م</span></div><b>مریم عبدالهی فخیم</b><small>عضو شورا</small></div>
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>پ</span></div><b>پریسا اندیشه</b><small>عضو شورا</small></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-section wrap">
+      <div class="cta">
+        <div>
+          <h2>به انجمن بپیوندید</h2>
+          <p>عضویت برای تمامی دانشجویان علاقه‌مند از تمامی رشته‌ها بلامانع است. با ما بخشی از دریای علم را بپیمایید و رزومه خود را تقویت کنید.</p>
+        </div>
+        <button class="btn-light" data-go="membership">فرم عضویت</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWS ================= -->
+  <section class="page" id="page-news" data-page="news" data-title="اخبار انجمن">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>اخبار انجمن</h1><p>تازه‌ترین اطلاعیه‌ها و رویدادهای انجمن زیست‌شناسی جانوری</p></div>
+      <div class="grid-3">
+        <article class="card" data-item data-cat="news" data-color="g-teal" data-tag="انتشار کتاب" data-title="انتشار کتاب «زیست‌شناسی به زبان فارسی؛ فرهنگ لغات و اصطلاحات»" data-desc="انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز با افتخار تقدیم می‌کند:
+
+📖 کتاب
+📕 عنوان: زیست‌شناسی به زبان فارسی؛ فرهنگ لغات و اصطلاحات
+
+📝 مولفان:
+محمدرضا رحیمیان، مجید زینالی، فاطمه محسن‌نژاد، الهام محمدی، المیرا ابوطالبی‌وند بیلانکوهی، فاطمه صباحی، سارا آریش، محمد آقازاده سلطان احمدی، مهدی حمدالهی داشکسن، سارا رضاکرمی، حانیه میرزائی، نیلوفر خردی ممقانی
+
+🔶 با نظارت علمی: پروفسور نصرت‌اله ضرغامی سلطان احمدی
+
+📚 جلد ۱ و ۲
+❇️ چاپ: اسفند ۱۴۰۳
+📕 قطع: وزیری
+🟣 قیمت: ۲۰۰٬۰۰۰ تومان
+🌱 مشخصات ظاهری: ۱۰۲۰ صفحه
+
+🔶 انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز
+🔶 مدیریت امور اجتماعی و فرهنگی دانشگاه تبریز
+🔶 سازمان ترویج مطالعه و نشر جهاددانشگاهی
+🔶 معاونت فرهنگی جهاددانشگاهی آذربایجان شرقی
+🔶 انتشارات جهاددانشگاهی آذربایجان شرقی" data-meta="چاپ اسفند ۱۴۰۳ · ۲ جلد · ۱۰۲۰ صفحه" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130704_393.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130704_393.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:#0d9488;">انتشار کتاب</span><div class="card-date">اسفند ۱۴۰۳</div><h3>انتشار کتاب «زیست‌شناسی به زبان فارسی؛ فرهنگ لغات و اصطلاحات»</h3><p>اثری دو جلدی با مشارکت اعضای انجمن، با نظارت علمی پروفسور ضرغامی سلطان‌احمدی.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-rose" data-tag="افتخار علمی" data-title="کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی" data-desc="به گزارش روابط عمومی انجمن زیست‌شناسی جانوری دانشگاه تبریز، دکتر المیرا ابوطالبی‌وند بیلانکوهی؛ دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز، در شصت‌وچهارمین دوره جایزه ملّی نخبگانی البرز (نوبل ایرانی) موفق به کسب این جایزه شد.
+
+به گزارش روابط عمومی دانشگاه تبریز، آیین اعطای جوایز شصت‌وچهارمین دوره جایزه ملّی البرز، با حضور دکتر محمّدرضا عارف؛ معاون اول رئیس‌جمهوری و جمعی از مسئولان، استادان، پژوهشگران و نخبگان علمی کشور در مرکز همایش‌های بین‌المللی دانشگاه شهید بهشتی تهران برگزار شد و دکتر المیرا ابوطالبی‌وند بیلانکوهی، به پاس مجموعه‌ای از فعالیت‌ها و دستاوردهای علمی، پژوهشی، آموزشی، فرهنگی و اجتماعی، جایزه ملّی البرز را در بخش دانشجویان رشته‌های غیرپزشکی از آن خود کرد.
+
+دکتر ابوطالبی‌وند بیلانکوهی از دانشجویان برگزیده استعداد درخشان دانشگاه تبریز بوده و در دوران تحصیل در مقطع دکتری تخصصی، عنوان دانشجوی سرآمد آموزشی، پژوهشی و فرهنگی در جشنواره وزارت علوم را نیز به دست آورده است.
+
+وی همچنین موفق به کسب مقام دوم در رویداد مسئله‌محور بنیاد ملی نخبگان و عنوان برگزیده بخش طرح پژوهشی در سومین جشنواره علمی شهید چمران شده است.
+
+از دیگر سوابق علمی و حرفه‌ای این پژوهشگر می‌توان به همکاری اصلی در راه‌اندازی و اجرای هفت پروژه تحقیقاتی، نگارش ۴۲ مقاله علمی در مجلات معتبر ملی و بین‌المللی و تألیف سه جلد کتاب در انتشارات جهاد دانشگاهی اشاره کرد.
+
+وی همچنین به‌عنوان استاد مدعو مؤسسه آموزش عالی ربع رشید تبریز، دانشگاه پیام نور تبریز و مؤسسه گلستان خرد ایرانیان فعالیت داشته و سابقه دبیری تحریریه نشریه بین‌المللی Hereditas در انگلستان و داوری بیش از ۶۴ مقاله در مجلات علمی ملی و بین‌المللی را در کارنامه خود دارد.
+
+خانم دکتر ابوطالبی‌وند در حوزه‌های فرهنگی، هنری، ادبی و ورزشی نیز حضور فعالی داشته و کسب بیش از ۳۲ عنوان و رتبه در جشنواره‌ها و مسابقات مختلف از دیگر بخش‌های کارنامه وی به شمار می‌رود.
+
+ایشان همچنین سابقه فعالیت به‌عنوان استاد مشاور نشریات «میکرون» و «کدون» دانشگاه تبریز، دبیر و نایب‌دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز و مدیر کانون حامیان محیط زیست جهاد دانشگاهی استان آذربایجان شرقی را در کارنامه خود دارد.
+
+جایزه البرز که از آن به عنوان «نوبل ایرانی» یاد می‌شود، یکی از باسابقه‌ترین جوایز نخبگانی کشور است که با هدف شناسایی، معرفی و تجلیل از استعدادهای برتر و چهره‌های شاخص علمی و فرهنگی کشور برگزار می‌شود.
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز، ضمن تبریک این افتخار ارزشمند به دکتر ابوطالبی‌وند بیلانکوهی، خانواده ایشان و جامعه علمی کشور، از درگاه خداوند متعال برای این عضو افتخارآفرین خانواده بزرگ زیست‌شناسی جانوری، توفیق روزافزون در تمامی عرصه‌های علمی، پژوهشی و فرهنگی را مسئلت می‌نماید." data-meta="شصت‌وچهارمین دوره جایزه ملی البرز" data-images="https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339457-6a97e5014de52-ih5tc-20.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339365-6a97e4a513206-lskex-1.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7ba4e-o3bbf-img-20260827-103409-280.jpg">
+          <div class="card-media" style="background-image:url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--rose);">افتخار علمی</span><div class="card-date">شصت‌وچهارمین دوره جایزه ملی البرز</div><h3>کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h3><p>دبیر سابق انجمن، در جمع برگزیدگان جایزه ملی نخبگانی البرز قرار گرفت.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-indigo" data-tag="انتشار کتاب" data-title="انتشار کتاب «نقش میکروRNA ها در سرطان پستان؛ تشخیص، درمان و چشم‌اندازهای آینده»" data-desc="انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز با افتخار تقدیم می‌کند:
+
+📖 کتاب
+📕 عنوان: نقش میکروRNA ها در سرطان پستان؛ تشخیص، درمان و چشم‌اندازهای آینده
+
+📝 مولفان:
+المیرا ابوطالبی‌وند بیلانکوهی، رضا صفرعلیزاده، مریم زمانی‌ثانی
+
+🖍 طراح جلد: سما بنا آذرپناه
+
+❇️ چاپ: اردیبهشت‌ماه ۱۴۰۴
+📕 قطع: وزیری
+🟣 قیمت: ۲۰۰٬۰۰۰ تومان
+🌱 مشخصات ظاهری: ۱۳۰ صفحه
+
+🔶 انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز
+🔶 مدیریت امور اجتماعی و فرهنگی دانشگاه تبریز
+🔶 سازمان ترویج مطالعه و نشر جهاددانشگاهی
+🔶 معاونت فرهنگی جهاددانشگاهی آذربایجان شرقی
+🔶 انتشارات جهاددانشگاهی آذربایجان شرقی" data-meta="چاپ اردیبهشت ۱۴۰۴ · ۱۳۰ صفحه" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_140349_734.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_140349_734.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--indigo);">انتشار کتاب</span><div class="card-date">اردیبهشت ۱۴۰۴</div><h3>انتشار کتاب «نقش میکروRNA ها در سرطان پستان؛ تشخیص، درمان و چشم‌اندازهای آینده»</h3><p>اثری از دکتر ابوطالبی‌وند بیلانکوهی، دکتر صفرعلیزاده و مریم زمانی‌ثانی.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-teal" data-tag="اطلاعیه" data-title="فراخوان عضویت دوره جدید انجمن برای دانشجویان ورودی جدید" data-desc="عضویت از طریق فرم اختصاصی انجمن امکان‌پذیر است و برای تمامی دانشجویان علاقه‌مند از همه رشته‌ها بلامانع است." data-meta="۱۴۰۵/۰۶/۲۵">
+          <div class="card-media g-teal"><svg viewBox="0 0 100 60"><circle cx="30" cy="25" r="6" fill="#fff"/><circle cx="50" cy="15" r="6" fill="#fff"/><circle cx="70" cy="25" r="6" fill="#fff"/></svg></div>
+          <div class="card-body"><span class="card-tag" style="background:#0d9488;">اطلاعیه</span><div class="card-date">۱۴۰۵/۰۶/۲۵</div><h3>فراخوان عضویت دوره جدید انجمن برای دانشجویان ورودی جدید</h3><p>عضویت از طریق فرم اختصاصی انجمن امکان‌پذیر است.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-indigo" data-tag="انتشار کتاب" data-title="انتشار کتاب «رتینوبلاستوما و RNAهای غیرکدکننده (ncRNAs)؛ رویکردی نوین در تشخیص و درمان»" data-desc="انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز با افتخار تقدیم می‌کند:
+
+📖 کتاب
+📕 عنوان: رتینوبلاستوما و RNAهای غیرکدکننده (ncRNAs)؛ رویکردی نوین در تشخیص و درمان
+
+📝 مولفان:
+مریم زمانی‌ثانی، دکتر المیرا ابوطالبی‌وند بیلانکوهی، دکتر رضا صفرعلیزاده
+
+🖍 طراح جلد: سما بنا آذرپناه
+
+❇️ چاپ: شهریورماه ۱۴۰۴
+📕 قطع: وزیری
+🟣 قیمت: ۳۰۰٬۰۰۰ تومان
+🌱 مشخصات ظاهری: ۱۷۳ صفحه
+
+مشروح خبر در لینک زیر:
+https://ash.acecr.ac.ir/fa/news/88775/
+
+🔶 انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز
+🔶 مدیریت امور اجتماعی و فرهنگی دانشگاه تبریز
+🔶 سازمان ترویج مطالعه و نشر جهاددانشگاهی
+🔶 معاونت فرهنگی جهاددانشگاهی آذربایجان شرقی
+🔶 انتشارات جهاددانشگاهی آذربایجان شرقی
+🔶 کانون حامیان محیط‌زیست (نسل) جهاد دانشگاهی استان آذربایجان شرقی" data-meta="چاپ شهریور ۱۴۰۴ · ۱۷۳ صفحه" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130414_331.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130414_331.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--indigo);">انتشار کتاب</span><div class="card-date">شهریور ۱۴۰۴</div><h3>انتشار کتاب «رتینوبلاستوما و RNAهای غیرکدکننده (ncRNAs)؛ رویکردی نوین در تشخیص و درمان»</h3><p>اثری از مریم زمانی‌ثانی، دکتر ابوطالبی‌وند بیلانکوهی و دکتر صفرعلیزاده.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-amber" data-tag="همایش" data-title="حضور اعضای انجمن در همایش دانشجویی علوم زیستی شمال‌غرب کشور" data-desc="ارائه پوستر علمی توسط دانشجویان عضو انجمن در همایش منطقه‌ای دانشجویی علوم زیستی." data-meta="۱۴۰۵/۰۶/۱۰">
+          <div class="card-media g-amber"><svg viewBox="0 0 100 60"><circle cx="50" cy="30" r="18" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--amber);">همایش</span><div class="card-date">۱۴۰۵/۰۶/۱۰</div><h3>حضور اعضای انجمن در همایش دانشجویی علوم زیستی شمال‌غرب کشور</h3><p>ارائه پوستر علمی توسط دانشجویان عضو انجمن.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-blue" data-tag="اطلاعیه" data-title="تمدید مهلت ثبت‌نام کارگاه تشریح مهره‌داران" data-desc="مهلت ثبت‌نام تا پایان هفته جاری تمدید شد. دانشجویان علاقه‌مند می‌توانند از طریق بخش کارگاه‌ها ثبت‌نام کنند." data-meta="۱۴۰۵/۰۵/۳۰">
+          <div class="card-media g-blue"><svg viewBox="0 0 100 60"><path d="M0 30h100" stroke="#fff" stroke-width="2"/></svg></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--blue);">اطلاعیه</span><div class="card-date">۱۴۰۵/۰۵/۳۰</div><h3>تمدید مهلت ثبت‌نام کارگاه تشریح مهره‌داران</h3><p>مهلت ثبت‌نام تا پایان هفته جاری تمدید شد.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-teal" data-tag="گزارش" data-title="گزارش عملکرد فصلی انجمن منتشر شد" data-desc="مروری بر فعالیت‌های سه‌ماهه اخیر انجمن شامل کارگاه‌ها، نشست‌های علمی و بازدیدهای میدانی." data-meta="۱۴۰۵/۰۵/۲۰">
+          <div class="card-media g-teal"><svg viewBox="0 0 100 60"><path d="M10 50 L40 15 L60 35 L90 10" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
+          <div class="card-body"><span class="card-tag" style="background:#0d9488;">گزارش</span><div class="card-date">۱۴۰۵/۰۵/۲۰</div><h3>گزارش عملکرد فصلی انجمن منتشر شد</h3><p>مروری بر فعالیت‌های سه‌ماهه اخیر انجمن.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKSHOPS ================= -->
+  <section class="page" id="page-workshops" data-page="workshops" data-title="کارگاه‌ها و دوره‌ها">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>کارگاه‌ها و دوره‌ها</h1><p>کارگاه‌های تخصصی و عملی ویژه دانشجویان علوم زیستی</p></div>
+      <!--
+        ادمین: برای هر کارگاه attribute های زیر را ویرایش کنید:
+        data-datetime="YYYY-MM-DDTHH:MM:00+03:30"  (تاریخ و ساعت واقعی کلاس، به وقت تهران)
+        پیش از این تاریخ/ساعت: دکمه «ثبت‌نام» فعال و دکمه «ورود به کلاس» غیرفعال است.
+        پس از فرارسیدن این تاریخ/ساعت: دکمه «ثبت‌نام» غیرفعال و دکمه «ورود به کلاس» فعال می‌شود.
+        data-register = لینک ثبت‌نام | data-class = لینک ورود به کلاس آنلاین
+        data-cert="true" یا "false" = نمایش برچسب «دارای گواهی»
+        data-duration = مدت‌زمان کارگاه، مثلاً "۳ ساعت"
+        data-code = کد کارگاه، مثلاً "ARV-WK1405-18"
+        data-price-old = قیمت اصلی (اختیاری، با خط خورده نمایش داده می‌شود) | data-price-new = قیمت نهایی یا "رایگان"
+      -->
+      <div class="grid-3">
+        <article class="card" data-item data-cat="workshop" data-color="g-amber" data-tag="حضوری" data-title="کارگاه تشریح مهره‌داران" data-desc="آشنایی عملی با آناتومی مقایسه‌ای مهره‌داران در آزمایشگاه دانشکده علوم طبیعی، زیر نظر اساتید گروه زیست‌شناسی." data-meta="حضوری · آزمایشگاه دانشکده علوم طبیعی" data-datetime="2026-10-18T16:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۳ ساعت" data-code="ARV-WK1405-18" data-price-old="150,000" data-price-new="90,000">
+          <div class="card-media g-amber"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">حضوری</span><h3>کارگاه تشریح مهره‌داران</h3><p>آشنایی عملی با آناتومی مقایسه‌ای مهره‌داران در آزمایشگاه دانشکده.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه نانوپزشکی" data-desc="انجمن علمی-دانشجویی زیست‌شناسی جانوری دانشگاه تبریز برگزار می‌کند: کارگاه نانوپزشکی
+
+تحت نظر استادان مشاور انجمن علمی_دانشجویی زیست‌شناسی جانوری، جناب آقای دکتر رضا صفرعلیزاده و سرکار خانم دکتر المیرا ابوطالبی‌وند بیلانکوهی.
+
+مدرس این دوره: خانم مهندس ساحل حکیمی؛ کارشناس ارشد بیوشیمی (فیلد نانو)
+
+این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد." data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-11-19T17:30:00+03:30" data-cert="true" data-duration="۱ ساعت و ۳۰ دقیقه" data-code="ARV-WK1404-28" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAAnvzj4s1c6NkZnH-KK8eEs-fYkM8k1frxH8NyQ2UA&s=10">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--teal);">حضوری</span><h3>کارگاه نانوپزشکی</h3><p>با تدریس خانم مهندس ساحل حکیمی، کارشناس ارشد بیوشیمی (فیلد نانو).</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه شناسایی گونه‌های بومی" data-desc="برگزاری در محیط طبیعی با همکاری اداره محیط‌زیست استان؛ آشنایی میدانی با گونه‌های جانوری بومی منطقه." data-meta="حضوری · منطقه حفاظت‌شده اطراف تبریز" data-datetime="2026-09-20T09:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۴ ساعت" data-code="ARV-WK1405-06" data-price-old="" data-price-new="رایگان">
+          <div class="card-media g-teal"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه شناسایی گونه‌های بومی</h3><p>برگزاری در محیط طبیعی با همکاری اداره محیط‌زیست استان.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="workshop" data-color="g-indigo" data-tag="حضوری" data-title="کارگاه میکروسکوپی بافت‌شناسی جانوری" data-desc="آموزش تهیه و مطالعه مقاطع بافتی زیر نظر اساتید گروه، همراه با کار عملی با میکروسکوپ‌های آزمایشگاهی دانشکده." data-meta="حضوری · آزمایشگاه بافت‌شناسی دانشکده" data-datetime="2026-11-08T15:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۵ ساعت" data-code="ARV-WK1405-08" data-price-old="180,000" data-price-new="110,000">
+          <div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">حضوری</span><h3>کارگاه میکروسکوپی بافت‌شناسی جانوری</h3><p>آموزش تهیه و مطالعه مقاطع بافتی زیر نظر اساتید گروه.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section class="page" id="page-publications" data-page="publications" data-title="نشریات انجمن">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>نشریات انجمن</h1><p>آرشیو نشریات علمی و خبری منتشرشده توسط انجمن</p></div>
+      <!-- ادمین: برای افزودن نشریه جدید، یک div.pub-cover مشابه زیر با data-title, data-desc, data-download (لینک دانلود) اضافه کنید -->
+      <div class="pub-grid">
+        <div class="pub-cover g-rose" data-item data-cat="publication" data-color="g-rose" data-tag="نشریه صوتی" data-title="نشریه کدون - شماره ۱" data-desc="اولین اپیزود از نشریه صوتی «کدون» با عنوان «سمفونی حیات»؛ دربارهٔ نقش صدا در زیست جانداران، الهام انسان از پژواک‌یابی خفاش‌ها، تأثیرات درمانی صدا بر بدن انسان و مصاحبه‌ای دربارهٔ پژوهش دانشگاه کیوتو دربارهٔ اثر صدا بر سلول‌ها." data-meta="شماره ۱ · نشریه صوتی" data-download="https://stjournals.tabrizu.ac.ir/file/download/page/1779780049-6a1549d1dd349-codon-cast-2026-1k.mp3" data-image="https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2026/1779779973-6a15498522d09-1.png" data-masthead="صاحب امتیاز|انجمن علمی دانشجویی زیست‌شناسی جانوری دانشگاه تبریز;استاد مشاور|آقای دکتر رضا صفرعلیزاده، خانم دکتر المیرا ابوطالبی‌وند بیلانکوهی;مدیرمسئول|زهرا کهنموئیان;سردبیر|پریسا اندیشه;دبیران تحریریه|زینب سادات نقوی، عرشیا دلجوان، سما بنا آذرپناه;گویندگان|پریسا اندیشه، عرشیا دلجوان، آریانا رضاپور، زهرا کهنموئیان;تدوینگر|زهرا کهنموئیان;گرافیست|سما بنا آذرپناه" style="background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2026/1779779973-6a15498522d09-1.png');"><span>نشریه کدون - شماره ۱</span></div>
+        <div class="pub-cover g-blue" data-item data-cat="publication" data-color="g-blue" data-tag="نشریه میکرون" data-title="نشریه میکرون - شماره ۵" data-desc="پنجمین شماره نشریه میکرون با مقالاتی درباره ایمنی‌درمانی با سلول‌های CAR-T، نانوذرات هوشمند در درمان سرطان ریه و تشخیص روابط ژنتیکی پنهان در جمعیت‌های حیوانی." data-meta="شماره ۵ · گاهنامه علمی-دانشجویی" data-download="https://stjournals.tabrizu.ac.ir/file/download/page/1763356112-691aadd063dc8-.pdf" data-image="https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/1763356202-691aae2ad1623-5.png" data-masthead="صاحب امتیاز|انجمن علمی-تخصصی زیست‌شناسی جانوری دانشگاه تبریز;استادان مشاور انجمن|آقای دکتر رضا صفر علیزاده، آقای دکتر غلامرضا دهقان، خانم دکتر المیرا ابوطالبی وند بیلانکوهی;مدیرمسئول|محمد آقازاده سلطان احمدی;سردبیر|سما بنا آذر پناه;دبیران تحریریه|مریم زمانی ثانی، نیلوفر خردی، محمد رضا دشتی، سحر سعیدی، علیرضا ابوطالبی وند بیلانکوهی، محمد ولی لو;هیئت تحریریه|امیر حسین اصلان نژاد، راضیه پور فتاح، مهدی حمدالهی داشکسن;گرافیست و صفحه‌آرا|سما بنا آذر پناه" style="background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/1763356202-691aae2ad1623-5.png');"><span>نشریه میکرون - شماره ۵</span></div>
+        <div class="pub-cover g-teal" data-item data-cat="publication" data-color="g-teal" data-tag="نشریه میکرون" data-title="نشریه میکرون - شماره ۴" data-desc="چهارمین شماره نشریه میکرون با مقالاتی درباره کشف microRNA، پروتئین تاو و بیماری‌های عصبی، و مصاحبه اختصاصی با کانون حامیان محیط‌زیست (نسل)." data-meta="شماره ۴ · زمستان ۱۴۰۳" data-download="https://stjournals.tabrizu.ac.ir/file/download/page/67c434024e2d0-1403-.pdf" data-image="https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/67c4346ea3390-4.jpg" data-masthead="صاحب امتیاز|انجمن علمی دانشجویی زیست‌شناسی جانوری دانشگاه تبریز;مدیرمسئول|مارال سالک مقصودی;سردبیر|المیرا ابوطالبی وند بیلانکوهی;استاد مشاور محترم|دکتر رضا صفر علیزاده;دبیران تحریریه|مریم زمانی ثانی، سالومه روشنی، علیرضا ابوطالبی وند بیلانکوهی، سحر سعیدی، معصومه علی نژاد، محمد ولی لو، محمد رضا رحیمیان، صغری خاتم زاده;گرافیست|سما بنا آذر پناه" style="background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/67c4346ea3390-4.jpg');"><span>نشریه میکرون - شماره ۴</span></div>
+        <div class="pub-cover g-amber" data-item data-cat="publication" data-color="g-amber" data-tag="نشریه میکرون" data-title="نشریه میکرون - شماره ۳" data-desc="سومین شماره نشریه میکرون، به زبان انگلیسی، با مقالاتی درباره ویروس آبله میمون، تشخیص زودهنگام زوال عقل و واکسن‌های نوظهور علیه سرطان." data-meta="شماره ۳ · پاییز ۱۴۰۳ (انگلیسی)" data-download="https://stjournals.tabrizu.ac.ir/file/download/page/674ae4f5530c0-micron-first-year-issue3-autumn2024.pdf" data-image="https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/67c434d6942a6-3.png" data-masthead="صاحب امتیاز|انجمن علمی-تخصصی زیست‌شناسی جانوری دانشگاه تبریز;استادان مشاور انجمن|آقای دکتر رضا صفر علیزاده، آقای دکتر مهدی بانان خجسته، آقای دکتر امیر مهدی زاده حقیقی، آقای دکتر مهدی حقی;مدیرمسئول|المیرا ابوطالبی وند بیلانکوهی;سردبیر|مارال سالک مقصودی;دبیران تحریریه|مریم زمانی ثانی، نیلوفر خردی، محمد رضا رحیمیان، فاطمه روشنی، علیرضا ابوطالبی وند بیلانکوهی، محمد ولی لو، رضا زارع زاده، سهراب مینایی بیرامی، محمد آقازاده سلطان احمدی، معصومه علی نژاد، حانیه رئوفی پور;هیئت تحریریه|پویا زحمت کش، امیر رضا پرمور، مهدی حمدالهی داشکسن، پریسا اندیشه، سمیرا واحدی، راضیه پور فتاح، الهه مقصودی نیا;گرافیست و صفحه آرا|سما بنا آذر پناه" style="background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2025/67c434d6942a6-3.png');"><span>نشریه میکرون - شماره ۳</span></div>
+        <div class="pub-cover g-indigo" data-item data-cat="publication" data-color="g-indigo" data-tag="نشریه میکرون" data-title="نشریه میکرون - شماره ۲" data-desc="دومین شماره نشریه میکرون با مقالاتی درباره نوتروفیل‌ها، مقاومت ضد میکروبی (AMR) و گفتگو با دکتر علی شایانفر، جوان‌ترین استاد تمام شیمی دارویی ایران." data-meta="شماره ۲ · ۱۴۰۳" data-download="https://stjournals.tabrizu.ac.ir/file/download/page/66e7ef0a51b1e-2.pdf" data-image="https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2024/66e6847805a2d-2.png" data-masthead="صاحب امتیاز|انجمن علمی-دانشجویی زیست‌شناسی جانوری دانشگاه تبریز;استادان مشاور انجمن|آقای دکتر رضا صفر علیزاده، آقای دکتر مهدی حقی;مدیرمسئول|مارال سالک مقصودی;سردبیر|المیرا ابوطالبی وند بیلانکوهی;دبیران تحریریه|مریم زمانی ثانی، نیلوفر خردی، فاطمه روشنی، یسرا واعظ قراملکی، علیرضا ابوطالبی وند بیلانکوهی، معصومه علی نژاد، حانیه رئوفی پور، محمد ولی لو;هیئت تحریریه|پریسا اندیشه، محمد آقازاده سلطان احمدی، مهدی حمدالهی، محمدرضا رحیمیان، مینا زارع، محمدرضا دشتی، نگین سعید خسروشاهی;طراح لوگو و صفحه آرا|سما بنا آذر پناه" style="background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2024/66e6847805a2d-2.png');"><span>نشریه میکرون - شماره ۲</span></div>
+        <div class="pub-cover g-blue" data-item data-cat="publication" data-color="g-blue" data-tag="نشریه میکرون" data-title="نشریه میکرون - شماره ۱" data-desc="اولین شماره نشریه میکرون با مقالاتی درباره آلزایمر، کاربرد هوش مصنوعی در تشخیص لوسمی و گفتگو با پروفسور جلیل واعظ قراملکی." data-meta="شماره ۱ · اردیبهشت ۱۴۰۳" data-download="https://stjournals.tabrizu.ac.ir/file/download/page/6669906b52136-1403-.pdf" data-image="https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2024/66698fdc0e4b5-1.png" data-masthead="صاحب امتیاز|المیرا ابوطالبی وند بیلانکوهی دانشجوی دکتری تخصصی رشته ژنتیک مولکولی دانشگاه تبریز;مدیرمسئول|المیرا ابوطالبی وند بیلانکوهی;استاد مشاور|دکتر رضا صفرعلیزاده;سردبیر|مارال سالک مقصودی;دبیران تحریریه|مریم زمانی ثانی، رضا زارع زاده، یسرا واعظ قراملکی، محمد ولی لو;ویراستاران علمی|مریم زمانی ثانی، معصومه علی نژاد، نیلوفر خردی، رضا زارع زاده;هیئت تحریریه|معصومه علی نژاد، نیلوفر خردی، محمد رضا رحیمیان، حانیه رئوفی، پریسا اندیشه;ویراستاران ادبی|علیرضا ابوطالبی وند بیلانکوهی، نیلوفر خردی، یسرا واعظ قراملکی، محمد ولی لو;گرافیست و صفحه‌آرا|سما بنا آذرپناه" style="background-image:url('https://stjournals.tabrizu.ac.ir/images/stjournals/fa/page/editor/2024/66698fdc0e4b5-1.png');"><span>نشریه میکرون - شماره ۱</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEMBERSHIP ================= -->
+  <section class="page" id="page-membership" data-page="membership" data-title="عضویت در انجمن">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">🧬🔬 فراخوان عضویت</div><h1>به انجمن زیست‌شناسی جانوری دانشگاه تبریز خوش آمدید! ✨</h1><p>با عضویت در انجمن زیست‌شناسی جانوری دانشگاه تبریز از مزایای آن بهره‌مند شوید. فرم زیر را تکمیل کنید یا از طریق تلگرام با ما در ارتباط باشید.</p></div>
+
+      <div class="benefit-grid" style="margin-top:0;margin-bottom:22px;">
+        <div class="benefit-card"><span class="b-ic chip-light-blue"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/></svg></span><h4>✅ تقویت دانش و مهارت</h4><p>با شرکت در فعالیت‌های انجمن، دانش خود را در زمینه زیست‌شناسی افزایش داده و مهارت‌های علمی خود را تقویت کنید.</p></div>
+        <div class="benefit-card"><span class="b-ic chip-light-teal"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 21c1-3.5 3.8-6 7-6s6 2.5 7 6"/><path d="M14 15c2.6 0 5 1.9 6 6"/></svg></span><h4>✅ گسترش ارتباطات</h4><p>با اساتید و دانشجویان فعال، ارتباط مؤثر برقرار کنید و از تجربیات آن‌ها بهره ببرید.</p></div>
+        <div class="benefit-card"><span class="b-ic chip-light-indigo"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></span><h4>✅ کسب تجربه‌های جدید</h4><p>با شرکت در اردوهای علمی، بازدیدهای میدانی و سایر برنامه‌های انجمن، تجربیات جدید و هیجان‌انگیز کسب کنید.</p></div>
+        <div class="benefit-card"><span class="b-ic chip-light-rose"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></span><h4>✅ دریافت گواهی فعالیت</h4><p>برای فعالیت‌های خود در انجمن و نشریات علمی، گواهی معتبر دریافت کنید.</p></div>
+        <div class="benefit-card"><span class="b-ic chip-light-amber"><svg viewBox="0 0 24 24"><path d="M4 4h16v4a8 8 0 01-16 0V4z"/><path d="M9 21h6M12 15v6"/></svg></span><h4>✅ کد تخفیف ویژه اعضا</h4><p>جهت شرکت در کارگاه‌ها و دوره‌های تخصصی، کد تخفیف ویژه اعضای انجمن را دریافت کنید.</p></div>
+        <div class="benefit-card"><span class="b-ic chip-light-blue"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><h4>✅ دوره‌های مهارت‌افزایی رایگان</h4><p>از امکان شرکت رایگان در دوره‌های مهارت‌افزایی مختص اعضای فعال بهره‌مند شوید.</p></div>
+      </div>
+
+      <div class="congress-actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px;">
+        <a class="congress-btn" href="https://t.me/+zPHsNMbFZt4wY2Y0" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg>
+          عضویت در گروه تلگرام انجمن
+        </a>
+        <a class="congress-btn" href="https://t.me/animalbiology_tabrizu" target="_blank" rel="noopener" style="background:linear-gradient(120deg,var(--indigo),var(--blue));">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg>
+          کانال تلگرام انجمن
+        </a>
+      </div>
+
+      <form class="member-form" id="memberForm">
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="form-field"><label for="f-name">نام<em>*</em></label><input id="f-name" name="نام" type="text" required></div>
+            <div class="form-field"><label for="f-lastname">نام خانوادگی<em>*</em></label><input id="f-lastname" name="نام خانوادگی" type="text" required></div>
+            <div class="form-field"><label for="f-student-id">شماره دانشجویی</label><input id="f-student-id" name="شماره دانشجویی" type="text"></div>
+            <div class="form-field"><label for="f-phone">شماره تماس<em>*</em></label><input id="f-phone" name="شماره تماس" type="tel" required></div>
+            <div class="form-field"><label for="f-major">رشته تحصیلی</label><input id="f-major" name="رشته تحصیلی" type="text"></div>
+            <div class="form-field">
+              <label for="f-degree">مقطع</label>
+              <select id="f-degree" name="مقطع">
+                <option value="">انتخاب کنید</option>
+                <option>کارشناسی</option>
+                <option>کارشناسی ارشد</option>
+                <option>دکتری</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="f-telegram">آیدی تلگرام</label><input id="f-telegram" name="آیدی تلگرام" type="text" placeholder="@username"></div>
+            <div class="form-field"><label for="f-prev">قبلاً فعالیت داشته‌اید در انجمن‌های دیگر؟</label><input id="f-prev" name="سابقه فعالیت در انجمن‌های دیگر" type="text"></div>
+          </div>
+
+          <div class="form-field" style="margin-top:16px;">
+            <label for="f-interest">به کدام حوزه علاقه دارید؟</label>
+            <textarea id="f-interest" name="حوزه مورد علاقه" rows="3" placeholder="توضیح دهید..."></textarea>
+          </div>
+
+          <div class="form-field" style="margin-top:18px;">
+            <label>حوزه‌های فعالیت</label>
+            <div class="checkbox-grid">
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="نویسندگی"><span>نویسندگی</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="ویراستاری"><span>ویراستاری</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="تدوین"><span>تدوین</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="تولید محتوا"><span>تولید محتوا</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="گویندگی"><span>گویندگی</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="مصاحبه"><span>مصاحبه</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="ادیت عکس"><span>ادیت عکس</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="ادیت ویدیو"><span>ادیت ویدیو</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="طراحی پوستر و بروشور"><span>طراحی پوستر و بروشور</span></label>
+              <label class="chk"><input type="checkbox" name="حوزه فعالیت" value="طراحی صفحه"><span>طراحی صفحه</span></label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <p class="form-note">با ارسال فرم، پیام آماده‌شده در تلگرام باز می‌شود و می‌توانید آن را برای انجمن ارسال کنید.</p>
+            <button type="submit" class="btn-primary-form">ارسال فرم عضویت</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="page" id="page-about" data-page="about" data-title="درباره انجمن">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>درباره انجمن</h1><p>آشنایی با تاریخچه، اهداف و فعالیت‌های انجمن علمی زیست‌شناسی جانوری</p></div>
+      <div class="about-hero-img"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز با هدف گسترش فعالیت‌های علمی، پژوهشی و آموزشی در حوزه جانورشناسی توسط دانشجویان این دانشکده تأسیس شده است. این انجمن با برگزاری نشست‌های تخصصی، کارگاه‌های عملی، بازدیدهای علمی و همکاری با اساتید گروه، بستری برای رشد علمی و ارتباط دانشجویان علاقه‌مند به علوم جانوری فراهم می‌کند.</p>
+          <ul class="activity-list">
+            <li><b>◆</b> برگزاری نشست‌های علمی هفتگی و ماهانه با حضور اساتید و پژوهشگران</li>
+            <li><b>◆</b> برپایی کارگاه‌های تخصصی تشریح، بافت‌شناسی و شناسایی گونه‌ها</li>
+            <li><b>◆</b> انتشار نشریات علمی و خبری انجمن</li>
+            <li><b>◆</b> برگزاری بازدیدهای میدانی و علمی از مناطق طبیعی و موزه‌ها</li>
+            <li><b>◆</b> مشارکت در کنگره‌ها و جشنواره‌های علمی سراسری</li>
+          </ul>
+        </div>
+        <div class="about-panel">
+          <h3>انجمن در یک نگاه</h3>
+          <div class="stat-row">
+            <div class="stat"><b>+۱۵۰</b><span>عضو</span></div>
+            <div class="stat"><b>۱۴۰۵</b><span>سال فعالیت جاری</span></div>
+            <div class="stat"><b>علوم طبیعی</b><span>دانشکده میزبان</span></div>
+            <div class="stat"><b>تبریز</b><span>دانشگاه</span></div>
+          </div>
+          <a class="link-btn" href="#council" data-go="council">مشاهده اعضای شورای مرکزی ←</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COUNCIL ================= -->
+  <section class="page" id="page-council" data-page="council" data-title="شورای مرکزی">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>شورای مرکزی انجمن</h1><p>اعضای شورای مرکزی انجمن علمی زیست‌شناسی جانوری</p></div>
+      <div class="council-grid">
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>س</span></div><b>سما بنا آذرپناه</b><small>دبیر انجمن</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ا</span></div><b>المیرا ابوطالبی‌وند بیلانکوهی</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ز</span></div><b>زهرا کهنموئیان</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ز</span></div><b>زینب سادات نقوی</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ع</span></div><b>عرشیا دلجوان قدرتی</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>م</span></div><b>محمد آقازاده سلطان احمدی</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>م</span></div><b>مهدی حمدالهی داشکسن</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>م</span></div><b>مریم عبدالهی فخیم</b><small>عضو شورای مرکزی</small></div>
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>پ</span></div><b>پریسا اندیشه</b><small>عضو شورای مرکزی</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HONORS ================= -->
+  <section class="page" id="page-honors" data-page="honors" data-title="افتخارات">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>افتخارات</h1><p>دستاوردها و افتخارات کسب‌شده توسط انجمن و اعضای آن</p></div>
+      <div class="grid-3">
+        <article class="card" data-item data-cat="news" data-color="g-rose" data-tag="افتخار علمی" data-title="کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی" data-desc="به گزارش روابط عمومی انجمن زیست‌شناسی جانوری دانشگاه تبریز، دکتر المیرا ابوطالبی‌وند بیلانکوهی؛ دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز، در شصت‌وچهارمین دوره جایزه ملّی نخبگانی البرز (نوبل ایرانی) موفق به کسب این جایزه شد.
+
+به گزارش روابط عمومی دانشگاه تبریز، آیین اعطای جوایز شصت‌وچهارمین دوره جایزه ملّی البرز، با حضور دکتر محمّدرضا عارف؛ معاون اول رئیس‌جمهوری و جمعی از مسئولان، استادان، پژوهشگران و نخبگان علمی کشور در مرکز همایش‌های بین‌المللی دانشگاه شهید بهشتی تهران برگزار شد و دکتر المیرا ابوطالبی‌وند بیلانکوهی، به پاس مجموعه‌ای از فعالیت‌ها و دستاوردهای علمی، پژوهشی، آموزشی، فرهنگی و اجتماعی، جایزه ملّی البرز را در بخش دانشجویان رشته‌های غیرپزشکی از آن خود کرد.
+
+دکتر ابوطالبی‌وند بیلانکوهی از دانشجویان برگزیده استعداد درخشان دانشگاه تبریز بوده و در دوران تحصیل در مقطع دکتری تخصصی، عنوان دانشجوی سرآمد آموزشی، پژوهشی و فرهنگی در جشنواره وزارت علوم را نیز به دست آورده است.
+
+وی همچنین موفق به کسب مقام دوم در رویداد مسئله‌محور بنیاد ملی نخبگان و عنوان برگزیده بخش طرح پژوهشی در سومین جشنواره علمی شهید چمران شده است.
+
+از دیگر سوابق علمی و حرفه‌ای این پژوهشگر می‌توان به همکاری اصلی در راه‌اندازی و اجرای هفت پروژه تحقیقاتی، نگارش ۴۲ مقاله علمی در مجلات معتبر ملی و بین‌المللی و تألیف سه جلد کتاب در انتشارات جهاد دانشگاهی اشاره کرد.
+
+وی همچنین به‌عنوان استاد مدعو مؤسسه آموزش عالی ربع رشید تبریز، دانشگاه پیام نور تبریز و مؤسسه گلستان خرد ایرانیان فعالیت داشته و سابقه دبیری تحریریه نشریه بین‌المللی Hereditas در انگلستان و داوری بیش از ۶۴ مقاله در مجلات علمی ملی و بین‌المللی را در کارنامه خود دارد.
+
+خانم دکتر ابوطالبی‌وند در حوزه‌های فرهنگی، هنری، ادبی و ورزشی نیز حضور فعالی داشته و کسب بیش از ۳۲ عنوان و رتبه در جشنواره‌ها و مسابقات مختلف از دیگر بخش‌های کارنامه وی به شمار می‌رود.
+
+ایشان همچنین سابقه فعالیت به‌عنوان استاد مشاور نشریات «میکرون» و «کدون» دانشگاه تبریز، دبیر و نایب‌دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز و مدیر کانون حامیان محیط زیست جهاد دانشگاهی استان آذربایجان شرقی را در کارنامه خود دارد.
+
+جایزه البرز که از آن به عنوان «نوبل ایرانی» یاد می‌شود، یکی از باسابقه‌ترین جوایز نخبگانی کشور است که با هدف شناسایی، معرفی و تجلیل از استعدادهای برتر و چهره‌های شاخص علمی و فرهنگی کشور برگزار می‌شود.
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز، ضمن تبریک این افتخار ارزشمند به دکتر ابوطالبی‌وند بیلانکوهی، خانواده ایشان و جامعه علمی کشور، از درگاه خداوند متعال برای این عضو افتخارآفرین خانواده بزرگ زیست‌شناسی جانوری، توفیق روزافزون در تمامی عرصه‌های علمی، پژوهشی و فرهنگی را مسئلت می‌نماید." data-meta="شصت‌وچهارمین دوره جایزه ملی البرز" data-images="https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339457-6a97e5014de52-ih5tc-20.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339365-6a97e4a513206-lskex-1.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7ba4e-o3bbf-img-20260827-103409-280.jpg">
+          <div class="card-media" style="background-image:url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--rose);">افتخار علمی</span><div class="card-date">شصت‌وچهارمین دوره جایزه ملی البرز</div><h3>کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h3><p>دبیر سابق انجمن، در جمع برگزیدگان جایزه ملی نخبگانی البرز قرار گرفت.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-indigo" data-tag="جشنواره حرکت" data-title="درخشش انجمن در هجدهمین جشنواره حرکت ۱۴۰۴" data-desc="با افتخار اعلام می‌داریم که انجمن علمی دانشجویی زیست‌شناسی جانوری دانشگاه تبریز، در هجدهمین جشنواره «حرکت» بخش درون‌دانشگاهی، موفق به کسب عناوین ارزشمندی در سه بخش شد:
+
+بخش کارآفرینی: برگزیده
+بخش سکوی حرکت: شایسته تقدیر
+بخش کتاب: شایسته تقدیر" data-meta="هجدهمین جشنواره حرکت ۱۴۰۴" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130519_557.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/harakat2-3.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture4.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture3.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture2.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130519_557.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--indigo);">جشنواره حرکت</span><h3>درخشش انجمن در هجدهمین جشنواره حرکت ۱۴۰۴</h3><p>کسب عنوان برگزیده و شایسته تقدیر در سه بخش جشنواره حرکت.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-amber" data-tag="جشنواره رسانه و نشریات" data-title="کسب مقام دوم نشریه «میکرون» در دومین جشنواره رسانه و نشریات دانشگاهی یاز ۱۴۰۴" data-desc="با افتخار اعلام می‌گردد نشریه میکرون انجمن علمی‌_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز، با همدلی و پشتکار فراوان اعضای فعال انجمن، موفق به کسب مقام دوم در بخش نشریات گروه عمده علوم پایه شد." data-meta="دومین جشنواره رسانه و نشریات دانشگاهی یاز ۱۴۰۴" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture5.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture5.png');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--amber);">جشنواره رسانه و نشریات</span><h3>کسب مقام دوم نشریه «میکرون» در دومین جشنواره رسانه و نشریات دانشگاهی یاز ۱۴۰۴</h3><p>نشریه میکرون، مقام دوم بخش نشریات گروه عمده علوم پایه را کسب کرد.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-teal" data-tag="جشنواره تیتر" data-title="راه‌یابی نشریه «میکرون» به مرحله نهایی چهاردهمین جشنواره رسانه و نشریات دانشجویی «تیتر»" data-desc="نام نشریه میکرون در میان راه‌یافتگان به مرحله نهایی داوری چهاردهمین جشنواره رسانه و نشریات دانشجویی «تیتر»، در دو بخش نشریه طنز و کاریکاتور و بخش نشریات به زبان‌های خارجی قرار گرفت." data-meta="چهاردهمین جشنواره رسانه و نشریات دانشجویی تیتر" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture8.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture7.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture8.png');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:#0d9488;">جشنواره تیتر</span><h3>راه‌یابی نشریه «میکرون» به مرحله نهایی چهاردهمین جشنواره رسانه و نشریات دانشجویی «تیتر»</h3><p>راه‌یابی به مرحله نهایی جشنواره تیتر در دو بخش داوری.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-rose" data-shape="portrait" data-tag="دانشجوی سرآمد" data-title="درخشش اعضای شورای مرکزی انجمن در جشنواره دانشجوی سرآمد و نمونه دانشگاه تبریز" data-desc="در مراسم بزرگداشت روز دانشجوی دانشگاه تبریز که ۱۹ آذرماه ۱۴۰۳ در تالار وحدت دانشگاه تبریز برگزار شد، خانم دکتر المیرا ابوطالبی‌وند، دانشجوی دکتری تخصصی ژنتیک مولکولی دانشگاه تبریز، دبیر انجمن علمی‌_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز و سردبیر نشریه میکرون، و خانم سما بنا آذرپناه، دبیر تولید محتوای انجمن علمی‌_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز و دبیر تحریریه نشریه میکرون، به‌عنوان دانشجویان سرآمد و برگزیده دانشگاه تبریز در بخش‌های مختلف معرفی و تجلیل شدند." data-meta="جشنواره دانشجوی سرآمد و نمونه دانشگاه تبریز · ۱۹ آذر ۱۴۰۳" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture10.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture9.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture10.png');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--rose);">دانشجوی سرآمد</span><h3>درخشش اعضای شورای مرکزی انجمن در جشنواره دانشجوی سرآمد و نمونه دانشگاه تبریز</h3><p>دو تن از اعضای شورای مرکزی، دانشجوی سرآمد و نمونه دانشگاه تبریز شناخته شدند.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FESTIVALS ================= -->
+  <section class="page" id="page-festivals" data-page="festivals" data-title="جشنواره‌ها">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>جشنواره‌ها</h1><p>جشنواره‌ها و رویدادهای علمی‌فرهنگی مرتبط با انجمن</p></div>
+      <div class="grid-3">
+        <article class="card" data-item data-cat="festival" data-color="g-indigo" data-tag="جشنواره حرکت" data-title="درخشش انجمن در هجدهمین جشنواره حرکت ۱۴۰۴" data-desc="با افتخار اعلام می‌داریم که انجمن علمی دانشجویی زیست‌شناسی جانوری دانشگاه تبریز، در هجدهمین جشنواره «حرکت» بخش درون‌دانشگاهی، موفق به کسب عناوین ارزشمندی در سه بخش شد:
+
+بخش کارآفرینی: برگزیده
+بخش سکوی حرکت: شایسته تقدیر
+بخش کتاب: شایسته تقدیر" data-meta="هجدهمین جشنواره حرکت ۱۴۰۴" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130519_557.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/harakat2-3.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture4.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture3.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture2.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130519_557.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--indigo);">جشنواره حرکت</span><h3>درخشش انجمن در هجدهمین جشنواره حرکت ۱۴۰۴</h3><p>کسب عنوان برگزیده و شایسته تقدیر در سه بخش جشنواره حرکت.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-amber" data-tag="جشنواره رسانه و نشریات" data-title="کسب مقام دوم نشریه «میکرون» در دومین جشنواره رسانه و نشریات دانشگاهی یاز ۱۴۰۴" data-desc="با افتخار اعلام می‌گردد نشریه میکرون انجمن علمی‌_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز، با همدلی و پشتکار فراوان اعضای فعال انجمن، موفق به کسب مقام دوم در بخش نشریات گروه عمده علوم پایه شد." data-meta="دومین جشنواره رسانه و نشریات دانشگاهی یاز ۱۴۰۴" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture5.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture5.png');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--amber);">جشنواره رسانه و نشریات</span><h3>کسب مقام دوم نشریه «میکرون» در دومین جشنواره رسانه و نشریات دانشگاهی یاز ۱۴۰۴</h3><p>نشریه میکرون، مقام دوم بخش نشریات گروه عمده علوم پایه را کسب کرد.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-teal" data-tag="جشنواره تیتر" data-title="راه‌یابی نشریه «میکرون» به مرحله نهایی چهاردهمین جشنواره رسانه و نشریات دانشجویی «تیتر»" data-desc="نام نشریه میکرون در میان راه‌یافتگان به مرحله نهایی داوری چهاردهمین جشنواره رسانه و نشریات دانشجویی «تیتر»، در دو بخش نشریه طنز و کاریکاتور و بخش نشریات به زبان‌های خارجی قرار گرفت." data-meta="چهاردهمین جشنواره رسانه و نشریات دانشجویی تیتر" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture8.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture7.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture8.png');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:#0d9488;">جشنواره تیتر</span><h3>راه‌یابی نشریه «میکرون» به مرحله نهایی چهاردهمین جشنواره رسانه و نشریات دانشجویی «تیتر»</h3><p>راه‌یابی به مرحله نهایی جشنواره تیتر در دو بخش داوری.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="festival" data-color="g-rose" data-shape="portrait" data-tag="دانشجوی سرآمد" data-title="درخشش اعضای شورای مرکزی انجمن در جشنواره دانشجوی سرآمد و نمونه دانشگاه تبریز" data-desc="در مراسم بزرگداشت روز دانشجوی دانشگاه تبریز که ۱۹ آذرماه ۱۴۰۳ در تالار وحدت دانشگاه تبریز برگزار شد، خانم دکتر المیرا ابوطالبی‌وند، دانشجوی دکتری تخصصی ژنتیک مولکولی دانشگاه تبریز، دبیر انجمن علمی‌_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز و سردبیر نشریه میکرون، و خانم سما بنا آذرپناه، دبیر تولید محتوای انجمن علمی‌_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز و دبیر تحریریه نشریه میکرون، به‌عنوان دانشجویان سرآمد و برگزیده دانشگاه تبریز در بخش‌های مختلف معرفی و تجلیل شدند." data-meta="جشنواره دانشجوی سرآمد و نمونه دانشگاه تبریز · ۱۹ آذر ۱۴۰۳" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture10.png|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture9.png">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/Picture10.png');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--rose);">دانشجوی سرآمد</span><h3>درخشش اعضای شورای مرکزی انجمن در جشنواره دانشجوی سرآمد و نمونه دانشگاه تبریز</h3><p>دو تن از اعضای شورای مرکزی، دانشجوی سرآمد و نمونه دانشگاه تبریز شناخته شدند.</p><span class="card-link">جزئیات ←</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPETITIONS ================= -->
+  <section class="page" id="page-competitions" data-page="competitions" data-title="مسابقات">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>مسابقات</h1><p>مسابقات علمی و هنری فعال و برگزارشده توسط انجمن</p></div>
+      <div class="grid-3">
+        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-tag="فعال" data-title="مسابقه عکاسی حیات‌وحش «نگاه جانوری»" data-desc="مهلت ارسال آثار تا پایان ماه جاری است. دانشجویان علاقه‌مند می‌توانند آثار خود را از طریق کانال انجمن ارسال کنند."><div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">فعال</span><h3>مسابقه عکاسی حیات‌وحش «نگاه جانوری»</h3><p>مهلت ارسال آثار تا پایان ماه جاری</p><span class="card-link">شرکت در مسابقه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-teal" data-tag="فعال" data-title="مسابقه پوستر علمی دانشجویی" data-desc="ویژه دانشجویان کارشناسی و تحصیلات تکمیلی؛ طراحی پوستر علمی با موضوعات مرتبط با زیست‌شناسی جانوری."><div class="card-media g-teal"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">فعال</span><h3>مسابقه پوستر علمی دانشجویی</h3><p>ویژه دانشجویان کارشناسی و تحصیلات تکمیلی</p><span class="card-link">شرکت در مسابقه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-amber" data-tag="به‌زودی" data-title="مسابقه دانش زیست‌شناسی جانوری" data-desc="آزمون علمی گروهی با جوایز نفیس برای نفرات برتر. جزئیات بیشتر به‌زودی از طریق کانال انجمن اعلام خواهد شد."><div class="card-media g-amber"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">به‌زودی</span><h3>مسابقه دانش زیست‌شناسی جانوری</h3><p>آزمون علمی گروهی با جوایز نفیس برای نفرات برتر</p><span class="card-link">اطلاعات بیشتر ←</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BIOLOGY NEWS ================= -->
+  <section class="page" id="page-biology-news" data-page="biology-news" data-title="تازه‌های زیست‌شناسی">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>تازه‌های زیست‌شناسی</h1><p>گزیده‌ای از تازه‌ترین یافته‌های علمی دنیای زیست‌شناسی جانوری</p></div>
+      <div class="grid-4">
+        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-tag="پژوهش جهانی" data-title="کشف گونه جدیدی از دوزیستان در جنگل‌های استوایی" data-desc="پژوهشگران در جریان بررسی‌های میدانی، گونه جدیدی از دوزیستان را در جنگل‌های استوایی شناسایی کردند."><div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">پژوهش جهانی</span><h3>کشف گونه جدیدی از دوزیستان در جنگل‌های استوایی</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-blue" data-tag="پژوهش جهانی" data-title="یافته‌های تازه درباره مهاجرت پرندگان دریایی" data-desc="یافته‌های جدید نشان می‌دهد الگوهای مهاجرت پرندگان دریایی تحت تأثیر تغییرات اقلیمی در حال تغییر است."><div class="card-media g-blue"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">پژوهش جهانی</span><h3>یافته‌های تازه درباره مهاجرت پرندگان دریایی</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-teal" data-tag="پژوهش جهانی" data-title="مطالعه جدید بر رفتار اجتماعی پستانداران دریایی" data-desc="پژوهش تازه‌ای به بررسی الگوهای ارتباطی و رفتار اجتماعی پستانداران دریایی در اقیانوس‌های آزاد پرداخته است."><div class="card-media g-teal"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">پژوهش جهانی</span><h3>مطالعه جدید بر رفتار اجتماعی پستانداران دریایی</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-amber" data-tag="پژوهش جهانی" data-title="پیشرفت‌های ژنتیک حفاظتی در گونه‌های در معرض خطر" data-desc="روش‌های نوین ژنتیک حفاظتی می‌توانند به حفظ تنوع ژنتیکی گونه‌های در معرض خطر انقراض کمک کنند."><div class="card-media g-amber"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">پژوهش جهانی</span><h3>پیشرفت‌های ژنتیک حفاظتی در گونه‌های در معرض خطر</h3><span class="card-link">مطالعه ←</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONGRESSES ================= -->
+  <section class="page" id="page-congresses" data-page="congresses" data-title="کنگره‌های پیش رو">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>کنگره‌های پیش رو</h1><p>رویدادها و کنگره‌های علمی ملی و بین‌المللی مرتبط</p></div>
+      <div class="congress-grid">
+
+        <div class="congress-card" data-image="https://bioch19.tabrizu.ac.ir/files_site/pooster_file/r_6_260921134838.jpg">
+          <div class="congress-cover" style="background-image:url('https://bioch19.tabrizu.ac.ir/files_site/pooster_file/r_6_260921134838.jpg');"></div>
+          <div class="congress-body">
+            <h3>نوزدهمین همایش ملی و چهارمین همایش بین‌المللی بیوشیمی فیزیک ایران</h3>
+            <ul class="congress-meta-list">
+              <li><b>مهلت ارسال مقاله:</b> تا ۱۵ مهر ۱۴۰۵</li>
+              <li><b>زمان برگزاری:</b> ۶ و ۷ آبان ۱۴۰۵</li>
+              <li><b>مکان:</b> دانشگاه تبریز</li>
+            </ul>
+            <div class="congress-actions"><a class="congress-btn" href="https://bioch19.tabrizu.ac.ir" target="_blank" rel="noopener" onclick="event.stopPropagation();">ورود به صفحه رسمی ←</a></div>
+          </div>
+        </div>
+
+        <div class="congress-card" data-image="https://civilica.com/media/l/188931.webp">
+          <div class="congress-cover" style="background-image:url('https://civilica.com/media/l/188931.webp');"></div>
+          <div class="congress-body">
+            <h3>پنجمین کنفرانس بین‌المللی دانشجویان علوم پایه ایران</h3>
+            <p class="c-en">Fifth International Conference of Iranian Basic Science Students</p>
+            <ul class="congress-meta-list">
+              <li><b>تاریخ برگزاری:</b> ۲۷ آذر ۱۴۰۵</li>
+              <li><b>مهلت ارسال اصل مقالات:</b> ۱۵ آذر ۱۴۰۵</li>
+              <li><b>محل برگزاری:</b> تهران</li>
+              <li><b>شناسه ملی کنفرانس:</b> SCCFSTS05</li>
+            </ul>
+            <div class="congress-actions"><a class="congress-btn" href="https://civilica.com/l/188931/" target="_blank" rel="noopener" onclick="event.stopPropagation();">ورود به صفحه رسمی ←</a></div>
+          </div>
+        </div>
+
+        <div class="congress-card" data-image="https://civilica.com/media/l/188933.webp">
+          <div class="congress-cover" style="background-image:url('https://civilica.com/media/l/188933.webp');"></div>
+          <div class="congress-body">
+            <h3>پنجمین کنگره بین‌المللی توسعه علمی و فناوری دانشجویان زیست شناسی و شیمی</h3>
+            <p class="c-en">Fifth International Congress of Scientific and Technological Development of Biology and Chemistry Students</p>
+            <ul class="congress-meta-list">
+              <li><b>تاریخ برگزاری:</b> ۳۰ دی ۱۴۰۵</li>
+              <li><b>مهلت ارسال اصل مقالات:</b> ۱۵ دی ۱۴۰۵</li>
+              <li><b>محل برگزاری:</b> تهران</li>
+              <li><b>شناسه ملی کنفرانس:</b> BCSCD05</li>
+            </ul>
+            <div class="congress-actions"><a class="congress-btn" href="https://bcs.cdsts.ir/" target="_blank" rel="noopener" onclick="event.stopPropagation();">ورود به صفحه رسمی ←</a></div>
+          </div>
+        </div>
+
+        <div class="congress-card" data-image="https://civilica.com/media/l/188939.webp">
+          <div class="congress-cover" style="background-image:url('https://civilica.com/media/l/188939.webp');"></div>
+          <div class="congress-body">
+            <h3>پنجمین کنفرانس بین‌المللی دانشجویان بهداشت و علوم سلامت ایران</h3>
+            <p class="c-en">Fifth International Conference for Iranian Hygienics and Health Sciences Students</p>
+            <ul class="congress-meta-list">
+              <li><b>تاریخ برگزاری:</b> ۳۰ بهمن ۱۴۰۵</li>
+              <li><b>مهلت ارسال اصل مقالات:</b> ۱۵ بهمن ۱۴۰۵</li>
+              <li><b>محل برگزاری:</b> تهران</li>
+              <li><b>شناسه ملی کنفرانس:</b> HEALTHCD05</li>
+            </ul>
+            <div class="congress-actions"><a class="congress-btn" href="https://civilica.com/l/188939/" target="_blank" rel="noopener" onclick="event.stopPropagation();">ورود به صفحه رسمی ←</a></div>
+          </div>
+        </div>
+
+        <div class="congress-card" data-image="https://civilica.com/media/l/190981.webp">
+          <div class="congress-cover" style="background-image:url('https://civilica.com/media/l/190981.webp');"></div>
+          <div class="congress-body">
+            <h3>دهمین کنفرانس بین‌المللی مطالعات میان رشته‌ای در نانو فناوری</h3>
+            <p class="c-en">10th International Conference on Interdisciplinary Studies in Nanotechnology</p>
+            <ul class="congress-meta-list">
+              <li><b>تاریخ برگزاری:</b> ۱۹ اسفند ۱۴۰۵</li>
+              <li><b>مهلت ارسال اصل مقالات:</b> ۵ اسفند ۱۴۰۵</li>
+              <li><b>مهلت ثبت‌نام در کنفرانس:</b> ۱۵ اسفند ۱۴۰۵</li>
+              <li><b>محل برگزاری:</b> تهران</li>
+              <li><b>شناسه ملی کنفرانس:</b> NANOB10</li>
+            </ul>
+            <div class="congress-actions"><a class="congress-btn" href="https://nano.bcnf.ir/" target="_blank" rel="noopener" onclick="event.stopPropagation();">ورود به صفحه رسمی ←</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="page" id="page-contact" data-page="contact" data-title="تماس با ما">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">همراهی با ما</div><h1>تماس با ما</h1><p>راه‌های ارتباطی با انجمن علمی زیست‌شناسی جانوری</p></div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-row"><span class="c-ic chip-light-blue"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div><b>آدرس</b><span>آذربایجان شرقی، تبریز، فلکه دانشگاه، دانشگاه تبریز، دانشکده علوم طبیعی، طبقه اول، اتاق انجمن</span></div></div>
+          <div class="contact-row"><span class="c-ic chip-light-teal"><svg viewBox="0 0 24 24"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></span><div><b>ایمیل</b><span>abans.tabrizu@gmail.com</span></div></div>
+          <div class="contact-row"><span class="c-ic chip-light-rose"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span><div><b>اینستاگرام</b><span>animal_biology_association</span></div></div>
+          <div class="contact-row"><span class="c-ic chip-light-indigo"><svg viewBox="0 0 24 24"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg></span><div><b>تلگرام</b><span>animalbiology_tabrizu</span></div></div>
+        </div>
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=University%20of%20Tabriz&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="نقشه دانشگاه تبریز"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ITEM DETAIL (dynamic) ================= -->
+  <section class="page" id="page-detail" data-page="detail" data-title="جزئیات">
+    <div class="wrap page-body">
+
+      <div class="detail-hero">
+        <div class="detail-hero-info">
+          <span class="detail-tag" id="detailTag"></span>
+          <h1 class="detail-page-title" id="detailTitle"></h1>
+          <div class="detail-meta" id="detailMeta"></div>
+          <p class="detail-desc" id="detailDesc"></p>
+
+          <!-- workshop-only info chips: certificate / date / duration / code -->
+          <div class="detail-chips" id="detailChips" hidden></div>
+
+          <!-- workshop-only price -->
+          <div class="detail-price-row" id="detailPriceRow" hidden>
+            <span class="price-old" id="priceOld"></span>
+            <span><span class="price-new" id="priceNew"></span><span class="price-unit">تومان</span></span>
+          </div>
+
+          <!-- publication: download button -->
+          <div id="detailDownloadWrap" hidden>
+            <button class="btn-primary-form" id="detailDownloadBtn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+              دانلود نشریه
+            </button>
+          </div>
+
+          <!-- workshop: register CTA -->
+          <div id="detailRegisterWrap" hidden>
+            <button class="btn-cta-green" id="detailRegisterBtn">ثبت‌نام در کارگاه آموزشی</button>
+          </div>
+
+          <div class="workshop-notice" id="detailNotice">
+            <p id="detailNoticeText"></p>
+            <a class="btn-telegram" id="detailAdminBtn" href="https://t.me/Zainab_naqavi" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg>
+              ارتباط با ادمین
+            </a>
+          </div>
+        </div>
+        <div class="detail-hero-cover" id="detailCover"><span class="detail-cover-label" id="detailCoverLabel"></span></div>
+        <div class="detail-hero-slider" id="detailSlider" hidden>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slider-dots" id="sliderDots">
+            <button type="button" data-dot="0" aria-label="اسلاید ۱"></button>
+            <button type="button" data-dot="1" aria-label="اسلاید ۲"></button>
+            <button type="button" data-dot="2" aria-label="اسلاید ۳"></button>
+            <button type="button" data-dot="3" aria-label="اسلاید ۴"></button>
+            <button type="button" data-dot="4" aria-label="اسلاید ۵"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- workshop: calendar + join-class -->
+      <div id="detailWorkshopWrap" hidden>
+        <div class="workshop-panel">
+          <div class="workshop-panel-grid">
+            <div class="jcal" id="jcalBox">
+              <div class="jcal-head" id="jcalHead"></div>
+              <div class="jcal-grid" id="jcalGrid"></div>
+            </div>
+            <div class="workshop-info">
+              <div class="workshop-info-row"><span class="wi-ic chip-light-blue"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span><span id="wiDate"></span></div>
+              <div class="workshop-info-row"><span class="wi-ic chip-light-teal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span id="wiTime"></span></div>
+              <div class="workshop-actions">
+                <button class="btn-outline-form" id="detailJoinBtn">ورود به کلاس</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- publication: masthead table -->
+      <div id="detailMastheadWrap" hidden>
+        <div class="masthead-panel">
+          <h3 class="masthead-title">شناسنامه نشریه</h3>
+          <table class="masthead-table" id="detailMastheadTable"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <h4>انجمن علمی زیست‌شناسی جانوری</h4>
+      <p>🧬 Animal Biology Association of Natural Sciences 🧬</p>
+      <p style="margin-top:8px;">آذربایجان شرقی، تبریز، فلکه دانشگاه، دانشکده علوم طبیعی، طبقه اول، اتاق انجمن</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/animal_biology_association?igsh=ZGFhdTZxMTIwbGth" target="_blank" rel="noopener" aria-label="اینستاگرام"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://t.me/animalbiology_tabrizu" target="_blank" rel="noopener" aria-label="تلگرام"><svg viewBox="0 0 24 24"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg></a>
+        <a href="mailto:abans.tabrizu@gmail.com" aria-label="ایمیل"><svg viewBox="0 0 24 24"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>دسترسی سریع</h4>
+      <ul class="footer-links">
+        <li><a href="#news" data-go="news">اخبار</a></li>
+        <li><a href="#workshops" data-go="workshops">کارگاه‌ها</a></li>
+        <li><a href="#publications" data-go="publications">نشریات</a></li>
+        <li><a href="#membership" data-go="membership">عضویت</a></li>
+        <li><a href="#about" data-go="about">درباره انجمن</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ارتباط با ما</h4>
+      <ul class="footer-links">
+        <li>ایمیل: abans.tabrizu@gmail.com</li>
+        <li>اینستاگرام: animal_biology_association@</li>
+        <li>تلگرام: animalbiology_tabrizu@</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">© ۱۴۰۵ انجمن علمی زیست‌شناسی جانوری، دانشکده علوم طبیعی دانشگاه تبریز — تمامی حقوق محفوظ است.</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="بازگشت به بالا">↑</button>
+
+<div class="img-lightbox" id="imgLightbox">
+  <button class="img-lightbox-close" id="imgLightboxClose" aria-label="بستن">✕</button>
+  <img src="" alt="" id="imgLightboxImg">
+</div>
+
+<script>
+(function(){
+  var pages = {};
+  document.querySelectorAll('.page').forEach(function(p){ pages[p.dataset.page] = p; });
+  var menuList = document.getElementById('menuList');
+  var menuLinks = menuList.querySelectorAll('a[data-go]');
+  var pageTitleEl = document.getElementById('pageTitle');
+  var backBtn = document.getElementById('backBtn');
+  var menuOverlay = document.getElementById('menuOverlay');
+
+  function closeMenu(){ menuOverlay.classList.remove('open'); }
+  function openMenu(){ menuOverlay.classList.add('open'); }
+  document.getElementById('menuBtn').addEventListener('click', openMenu);
+  document.getElementById('menuClose').addEventListener('click', closeMenu);
+  menuOverlay.addEventListener('click', function(e){ if(e.target === menuOverlay) closeMenu(); });
+
+  function showPage(id, push){
+    if(!pages[id]) id = 'home';
+    Object.keys(pages).forEach(function(k){ pages[k].classList.toggle('active', k === id); });
+    menuLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('data-go') === id); });
+
+    if(id === 'home'){
+      document.body.classList.remove('subpage');
+      backBtn.hidden = true;
+    } else {
+      document.body.classList.add('subpage');
+      pageTitleEl.textContent = pages[id].dataset.title || '';
+      backBtn.hidden = false;
+    }
+    window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+    if(push !== false){
+      var hash = '#' + id;
+      if(location.hash !== hash) history.pushState({page:id}, '', hash);
+    }
+    closeMenu();
+  }
+
+  document.addEventListener('click', function(e){
+    var item = e.target.closest('[data-item]');
+    if(item){ e.preventDefault(); openDetail(item); return; }
+    var link = e.target.closest('[data-go]');
+    if(!link) return;
+    e.preventDefault();
+    showPage(link.getAttribute('data-go'));
+  });
+
+  backBtn.addEventListener('click', function(){
+    if(history.state && history.state.page){ history.back(); }
+    else { showPage('home'); }
+  });
+
+  window.addEventListener('popstate', function(){
+    var id = location.hash ? location.hash.slice(1) : 'home';
+    showPage(id, false);
+  });
+
+  var initial = location.hash ? location.hash.slice(1) : 'home';
+  showPage(initial, false);
+  if(!location.hash){ history.replaceState({page:'home'}, '', '#home'); }
+
+  /* ---------- hero slider ---------- */
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#slider .slide'));
+  var dotsWrap = document.getElementById('slideDots');
+  var current = 0, timer;
+  slides.forEach(function(_, i){
+    var b = document.createElement('button');
+    if(i === 0) b.classList.add('active');
+    b.addEventListener('click', function(){ goTo(i); resetTimer(); });
+    dotsWrap.appendChild(b);
+  });
+  var dots = dotsWrap.querySelectorAll('button');
+  function goTo(i){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (i + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function resetTimer(){ clearInterval(timer); timer = setInterval(function(){ goTo(current+1); }, 6000); }
+  document.getElementById('slideNext').addEventListener('click', function(){ goTo(current+1); resetTimer(); });
+  document.getElementById('slidePrev').addEventListener('click', function(){ goTo(current-1); resetTimer(); });
+  resetTimer();
+
+  /* ---------- membership form -> telegram (https://t.me/Zack1620) ---------- */
+  var memberForm = document.getElementById('memberForm');
+  if(memberForm){
+    memberForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var fd = new FormData(memberForm);
+      var lines = [];
+      var checked = [];
+      fd.forEach(function(value, key){
+        if(key === 'حوزه فعالیت'){ if(value) checked.push(value); return; }
+        lines.push(key + ': ' + (value || '—'));
+      });
+      lines.push('حوزه‌های فعالیت: ' + (checked.length ? checked.join('، ') : '—'));
+      var name = (fd.get('نام') || '') + ' ' + (fd.get('نام خانوادگی') || '');
+      var header = 'فرم عضویت انجمن - ' + name.trim();
+      var text = header + '\n' + lines.join('\n');
+      var tgUrl = 'https://t.me/Zack1620?text=' + encodeURIComponent(text);
+      window.open(tgUrl, '_blank', 'noopener');
+    });
+  }
+
+  /* ---------- Jalali (Persian) calendar utilities ---------- */
+  function jc_div(a,b){return ~~(a/b);}
+  function jc_mod(a,b){return a - jc_div(a,b)*b;}
+  function jc_g2d(gy, gm, gd) {
+    var d = jc_div((gy + jc_div(gm - 8, 6) + 100100) * 1461, 4)
+      + jc_div(153 * ((gm + 9) % 12) + 2, 5) + gd - 34840408;
+    d = d - jc_div(jc_div(gy + 100100 + jc_div(gm - 8, 6), 100) * 3, 4) + 752;
+    return d;
+  }
+  function jc_d2g(jdn) {
+    var j = 4 * jdn + 139361631;
+    j = j + jc_div(jc_div(4 * jdn + 183187720, 146097) * 3, 4) * 4 - 3908;
+    var i = jc_div(jc_mod(j, 1461), 4) * 5 + 308;
+    var gd = jc_div(jc_mod(i, 153), 5) + 1;
+    var gm = jc_mod(jc_div(i, 153), 12) + 1;
+    var gy = jc_div(j, 1461) - 100100 + jc_div(8 - gm, 6);
+    return [gy, gm, gd];
+  }
+  function jc_jalCal(jy) {
+    var breaks=[-61,9,38,199,426,686,756,818,1111,1181,1210,1635,2060,2097,2192,2262,2324,2394,2456,3178];
+    var bl=breaks.length, gy=jy+621, leapJ=-14, jp=breaks[0], jm,jump,leap,n,i;
+    for(i=1;i<bl;i+=1){ jm=breaks[i]; jump=jm-jp; if(jy<jm) break; leapJ=leapJ+jc_div(jump,33)*8+jc_div(jc_mod(jump,33),4); jp=jm; }
+    n=jy-jp;
+    leapJ=leapJ+jc_div(n,33)*8+jc_div(jc_mod(n,33)+3,4);
+    if(jc_mod(jump,33)===4 && jump-n===4) leapJ+=1;
+    var leapG=jc_div(gy,4)-jc_div((jc_div(gy,100)+1)*3,4)-150;
+    var march=20+leapJ-leapG;
+    if(jump-n<6) n=n-jump+jc_div(jump,33)*33;
+    leap=jc_mod(jc_mod(n+1,33)-1,4);
+    if(leap===-1) leap=4;
+    return {leap:leap, gy:gy, march:march};
+  }
+  function jc_j2d(jy,jm,jd){ var r=jc_jalCal(jy); return jc_g2d(r.gy,3,r.march)+(jm-1)*31-jc_div(jm,7)*(jm-7)+jd-1; }
+  function jc_d2j(jdn){
+    var gy=jc_d2g(jdn)[0], jy=gy-621, r=jc_jalCal(jy);
+    var jdn1f=jc_g2d(r.gy,3,r.march);
+    var k=jdn-jdn1f, jm, jd;
+    if(k>=0){ if(k<=185){ jm=1+jc_div(k,31); jd=jc_mod(k,31)+1; return [jy,jm,jd]; } else { k-=186; } }
+    else { jy-=1; k+=179; if(r.leap===1) k+=1; }
+    jm=7+jc_div(k,30); jd=jc_mod(k,30)+1;
+    return [jy,jm,jd];
+  }
+  function jc_g2j(gy,gm,gd){ return jc_d2j(jc_g2d(gy,gm,gd)); }
+  function jc_monthLength(jy,jm){
+    var s=jc_j2d(jy,jm,1);
+    var ny= jm===12? jy+1: jy, nm = jm===12?1:jm+1;
+    var e=jc_j2d(ny,nm,1);
+    return e-s;
+  }
+  var JMONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+  var JWEEKDAYS=['ش','ی','د','س','چ','پ','ج'];
+
+  function tehranParts(date){
+    var tehranMs = date.getTime() + 3.5*3600*1000;
+    var t = new Date(tehranMs);
+    return {
+      y: t.getUTCFullYear(), m: t.getUTCMonth()+1, d: t.getUTCDate(),
+      hh: t.getUTCHours(), mm: t.getUTCMinutes(), weekdayJS: t.getUTCDay()
+    };
+  }
+
+  function renderJalaliCalendar(jy, jm, activeDay, colorVar){
+    var head = document.getElementById('jcalHead');
+    var grid = document.getElementById('jcalGrid');
+    head.textContent = JMONTHS[jm-1] + ' ' + toFa(jy);
+    grid.innerHTML = '';
+    JWEEKDAYS.forEach(function(w){
+      var el = document.createElement('div');
+      el.className = 'jcal-wd'; el.textContent = w;
+      grid.appendChild(el);
+    });
+    var todayP = tehranParts(new Date());
+    var todayJ = jc_g2j(todayP.y, todayP.m, todayP.d);
+    var todayJY = todayJ[0], todayJM = todayJ[1], todayJD = todayJ[2];
+    var firstGreg = jc_d2g(jc_j2d(jy, jm, 1));
+    var firstJsDate = new Date(Date.UTC(firstGreg[0], firstGreg[1]-1, firstGreg[2]));
+    var firstWeekday = (firstJsDate.getUTCDay() + 1) % 7; /* شنبه=0 */
+    var monthLen = jc_monthLength(jy, jm);
+    for(var i=0;i<firstWeekday;i++){
+      var empty = document.createElement('div');
+      empty.className = 'jcal-cell empty';
+      grid.appendChild(empty);
+    }
+    for(var d=1; d<=monthLen; d++){
+      var cell = document.createElement('div');
+      cell.className = 'jcal-cell';
+      cell.textContent = toFa(d);
+      if(jy === todayJY && jm === todayJM && d === todayJD){
+        cell.classList.add('today-marker');
+      }
+      if(d === activeDay){
+        cell.classList.add('active-day');
+        cell.style.background = colorVar;
+      }
+      grid.appendChild(cell);
+    }
+  }
+
+  function toFa(n){
+    var faDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    return String(n).replace(/\d/g, function(x){ return faDigits[x]; });
+  }
+
+  var COLOR_MAP = { 'g-blue':'#2f5fea', 'g-teal':'#0d9488', 'g-amber':'#d97706', 'g-indigo':'#4f46e5', 'g-rose':'#e11d48' };
+  var SLIDER_ORDER = ['g-blue','g-teal','g-amber','g-indigo'];
+  var sliderTimer = null;
+
+  function setupFestivalSlider(baseColor){
+    var slides = document.querySelectorAll('#detailSlider .slide');
+    var dots = document.querySelectorAll('#sliderDots button');
+    var startIdx = SLIDER_ORDER.indexOf(baseColor);
+    if(startIdx < 0) startIdx = 0;
+    var idx = 0;
+    var count = 3;
+    function show(n){
+      idx = n;
+      slides.forEach(function(s, i){
+        if(i >= count) return;
+        s.className = 'slide ' + SLIDER_ORDER[(startIdx + i) % SLIDER_ORDER.length] + (i === n ? ' active' : '');
+      });
+      dots.forEach(function(b, i){ b.classList.toggle('active', i === n); });
+    }
+    slides.forEach(function(s, i){
+      s.hidden = i >= count;
+      s.style.backgroundImage = '';
+    });
+    dots.forEach(function(b, i){
+      b.hidden = i >= count;
+      b.onclick = function(){ show(i); resetTimer(); };
+    });
+    function resetTimer(){
+      if(sliderTimer){ clearInterval(sliderTimer); }
+      sliderTimer = setInterval(function(){ show((idx + 1) % count); }, 3800);
+    }
+    show(0);
+    resetTimer();
+  }
+
+  function setupPhotoSlider(images){
+    var slides = document.querySelectorAll('#detailSlider .slide');
+    var dots = document.querySelectorAll('#sliderDots button');
+    var idx = 0;
+    var count = images.length;
+    function show(n){
+      idx = n;
+      slides.forEach(function(s, i){
+        if(i >= count) return;
+        s.classList.toggle('active', i === n);
+      });
+      dots.forEach(function(b, i){ b.classList.toggle('active', i === n); });
+    }
+    slides.forEach(function(s, i){
+      s.className = 'slide';
+      if(i < count){
+        s.hidden = false;
+        s.style.backgroundImage = "url('" + images[i] + "')";
+        s.style.backgroundSize = 'cover';
+        s.style.backgroundPosition = 'center';
+      } else {
+        s.hidden = true;
+        s.style.backgroundImage = '';
+      }
+    });
+    dots.forEach(function(b, i){
+      b.hidden = i >= count;
+      b.onclick = function(){ show(i); resetTimer(); };
+    });
+    function resetTimer(){
+      if(sliderTimer){ clearInterval(sliderTimer); }
+      sliderTimer = setInterval(function(){ show((idx + 1) % count); }, 3800);
+    }
+    show(0);
+    resetTimer();
+  }
+
+  function stopFestivalSlider(){
+    if(sliderTimer){ clearInterval(sliderTimer); sliderTimer = null; }
+  }
+
+  /* ---------- item detail page ---------- */
+  function openDetail(el){
+    var ds = el.dataset;
+    var color = ds.color || 'g-blue';
+    var colorHex = COLOR_MAP[color] || '#2f5fea';
+
+    var coverEl = document.getElementById('detailCover');
+    var sliderEl = document.getElementById('detailSlider');
+    stopFestivalSlider();
+    var photoImages = ds.images ? ds.images.split('|').filter(function(u){ return u.trim(); }) : null;
+    if(photoImages && photoImages.length){
+      coverEl.hidden = true;
+      sliderEl.hidden = false;
+      sliderEl.classList.toggle('is-portrait', ds.shape === 'portrait');
+      setupPhotoSlider(photoImages);
+    } else if(ds.cat === 'festival'){
+      coverEl.hidden = true;
+      sliderEl.hidden = false;
+      setupFestivalSlider(color);
+    } else {
+      coverEl.hidden = false;
+      sliderEl.hidden = true;
+    }
+    coverEl.className = 'detail-hero-cover ' + color + (ds.cat === 'news' ? ' cover-landscape' : '');
+    coverEl.style.backgroundImage = ds.image ? "url('" + ds.image + "')" : '';
+    document.getElementById('detailCoverLabel').textContent = ds.title || '';
+    document.querySelector('.detail-hero').classList.toggle('is-workshop', ds.cat === 'workshop');
+    var tagEl = document.getElementById('detailTag');
+    tagEl.textContent = ds.tag || '';
+    tagEl.style.background = colorHex;
+    document.getElementById('detailTitle').textContent = ds.title || '';
+    document.getElementById('detailDesc').textContent = ds.desc || '';
+
+    var metaEl = document.getElementById('detailMeta');
+    metaEl.innerHTML = '';
+    if(ds.meta && ds.cat !== 'workshop'){
+      ds.meta.split('·').forEach(function(m){
+        if(!m.trim()) return;
+        var span = document.createElement('span');
+        span.textContent = m.trim();
+        metaEl.appendChild(span);
+      });
+    }
+
+    var downloadWrap = document.getElementById('detailDownloadWrap');
+    var workshopWrap = document.getElementById('detailWorkshopWrap');
+    var mastheadWrap = document.getElementById('detailMastheadWrap');
+    var chipsWrap = document.getElementById('detailChips');
+    var priceWrap = document.getElementById('detailPriceRow');
+    var registerWrap = document.getElementById('detailRegisterWrap');
+    var notice = document.getElementById('detailNotice');
+    downloadWrap.hidden = true;
+    workshopWrap.hidden = true;
+    mastheadWrap.hidden = true;
+    chipsWrap.hidden = true; chipsWrap.innerHTML = '';
+    priceWrap.hidden = true;
+    document.getElementById('priceOld').textContent = '';
+    document.getElementById('priceNew').textContent = '';
+    registerWrap.hidden = true;
+    notice.classList.remove('show');
+
+    if(ds.cat === 'publication'){
+      downloadWrap.hidden = false;
+      var dlBtn = document.getElementById('detailDownloadBtn');
+      dlBtn.onclick = function(){ window.open(ds.download || 'https://google.com', '_blank', 'noopener'); };
+
+      if(ds.masthead){
+        var mTable = document.getElementById('detailMastheadTable');
+        mTable.innerHTML = '';
+        ds.masthead.split(';').forEach(function(row){
+          if(!row.trim()) return;
+          var sepIdx = row.indexOf('|');
+          if(sepIdx < 0) return;
+          var role = row.slice(0, sepIdx).trim();
+          var value = row.slice(sepIdx + 1).trim();
+          var tr = document.createElement('tr');
+          var th = document.createElement('th');
+          th.textContent = role;
+          var td = document.createElement('td');
+          td.textContent = value;
+          tr.appendChild(th); tr.appendChild(td);
+          mTable.appendChild(tr);
+        });
+        mastheadWrap.hidden = false;
+      }
+    }
+
+    if(ds.cat === 'workshop'){
+      workshopWrap.hidden = false;
+      registerWrap.hidden = false;
+      var eventDate = new Date(ds.datetime);
+      var parts = tehranParts(eventDate);
+      var jParts = jc_g2j(parts.y, parts.m, parts.d);
+      var jy = jParts[0], jm = jParts[1], jd = jParts[2];
+
+      renderJalaliCalendar(jy, jm, jd, colorHex);
+
+      var weekdayNamesFull = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+      var weekdayName = weekdayNamesFull[parts.weekdayJS];
+      var dateFa = toFa(jd) + ' ' + JMONTHS[jm-1] + ' ' + toFa(jy);
+      document.getElementById('wiDate').textContent = weekdayName + '، ' + dateFa;
+      var hh = (parts.hh<10?'0':'') + parts.hh, mm = (parts.mm<10?'0':'') + parts.mm;
+      var timeFa = toFa(hh) + ':' + toFa(mm);
+      document.getElementById('wiTime').textContent = 'ساعت ' + timeFa;
+
+      /* info chips: certificate / date / duration / code */
+      chipsWrap.hidden = false;
+      var chips = [];
+      if(ds.cert !== 'false'){
+        chips.push({cls:'chip-pill-green', icon:'<path d="M20 6L9 17l-5-5"/>', text:'دارای گواهی'});
+      }
+      chips.push({cls:'chip-pill-blue', icon:'<rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/>', text:'تاریخ: ' + dateFa});
+      if(ds.duration){
+        chips.push({cls:'chip-pill-amber', icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', text:ds.duration});
+      }
+      if(ds.code){
+        chips.push({cls:'chip-pill-indigo', icon:'<path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/>', text:ds.code});
+      }
+      chips.forEach(function(c){
+        var span = document.createElement('span');
+        span.className = 'info-chip ' + c.cls;
+        span.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + c.icon + '</svg><span>' + c.text + '</span>';
+        chipsWrap.appendChild(span);
+      });
+
+      /* price */
+      if(ds.priceNew){
+        priceWrap.hidden = false;
+        document.getElementById('priceOld').textContent = ds.priceOld ? toFa(ds.priceOld) + ' تومان' : '';
+        document.getElementById('priceOld').style.display = ds.priceOld ? '' : 'none';
+        document.getElementById('priceNew').textContent = toFa(ds.priceNew);
+      }
+
+      var now = new Date();
+      var passed = now.getTime() >= eventDate.getTime();
+
+      var regBtn = document.getElementById('detailRegisterBtn');
+      var joinBtn = document.getElementById('detailJoinBtn');
+      var noticeText = document.getElementById('detailNoticeText');
+
+      regBtn.onclick = function(){
+        if(passed){
+          noticeText.textContent = 'زمان ثبت‌نام به پایان رسیده است. جهت اطلاعات بیشتر به کانال تلگرام انجمن مراجعه کنید و یا با ادمین پیج در ارتباط باشید.';
+          notice.classList.add('show');
+        } else {
+          notice.classList.remove('show');
+          window.open(ds.register || 'https://register.com', '_blank', 'noopener');
+        }
+      };
+      joinBtn.onclick = function(){
+        if(!passed){
+          noticeText.textContent = 'زمان ورود به کلاس فرا نرسیده است؛ لطفاً دوباره تاریخ و ساعت ورود را چک کنید و در صورت بروز مشکل با ادمین کانال در ارتباط باشید.';
+          notice.classList.add('show');
+        } else {
+          notice.classList.remove('show');
+          window.open(ds.class || 'https://class.com', '_blank', 'noopener');
+        }
+      };
+      regBtn.classList.toggle('workshop-disabled', passed);
+      joinBtn.classList.toggle('workshop-disabled', !passed);
+    }
+
+    showPage('detail');
+  }
+
+  /* ---------- congress poster lightbox ---------- */
+  var imgLightbox = document.getElementById('imgLightbox');
+  var imgLightboxImg = document.getElementById('imgLightboxImg');
+  function openLightbox(src){
+    imgLightboxImg.src = src;
+    imgLightbox.classList.add('open');
+  }
+  function closeLightbox(){
+    imgLightbox.classList.remove('open');
+    imgLightboxImg.src = '';
+  }
+  document.getElementById('imgLightboxClose').addEventListener('click', closeLightbox);
+  imgLightbox.addEventListener('click', function(e){ if(e.target === imgLightbox) closeLightbox(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
+  document.querySelectorAll('.congress-card[data-image]').forEach(function(card){
+    card.addEventListener('click', function(){ openLightbox(card.dataset.image); });
+  });
+
+  /* ---------- back to top ---------- */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){ toTop.classList.toggle('show', window.scrollY > 500); });
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+
+</body>
+</html>
+
+
+
