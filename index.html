@@ -217,6 +217,7 @@
   .card h3{font-size:14.5px;margin:0 0 8px;font-weight:700;line-height:1.6;}
   .card p{font-size:12.5px;color:var(--muted);margin:0 0 12px;flex:1;}
   .card-link{font-size:12px;font-weight:700;color:var(--blue);}
+  .card-media.card-media-land{height:auto;aspect-ratio:16/9;}
   .card-media svg{position:absolute;inset:0;width:100%;height:100%;opacity:.5;}
 
   .hscroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x proximity;}
@@ -390,6 +391,7 @@
     background-size:cover;background-position:center;
   }
   .detail-hero-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,28,63,0) 45%,rgba(15,28,63,.78));z-index:1;}
+  .detail-hero-cover.cover-a4{aspect-ratio:210/297;max-width:380px;}
   .detail-hero-cover.cover-landscape{aspect-ratio:16/9;max-width:620px;}
   .detail-cover-label{position:absolute;z-index:2;bottom:14px;right:12px;left:12px;color:#fff;font-size:11px;font-weight:700;opacity:.92;line-height:1.7;overflow-wrap:break-word;word-break:break-word;}
 
@@ -492,6 +494,8 @@
   .workshop-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;}
   .workshop-actions button.workshop-disabled{opacity:.55;filter:grayscale(.3);}
 
+  .workshop-poster{margin:0 auto 18px;width:min(100%,560px);aspect-ratio:210/297;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden;cursor:zoom-in;}
+  .workshop-poster img{width:100%;height:100%;object-fit:contain;display:block;}
   .workshop-notice{
     display:none;margin-top:14px;background:#fff4f4;border:1px solid #fbd0d5;border-radius:14px;padding:16px 18px;
   }
@@ -572,7 +576,19 @@
     <div class="hero-wrap wrap">
       <div class="slider" id="slider">
 
-        <div class="slide active" data-target="news">
+        <div class="slide active" data-target="competitions">
+          <div class="slide-bg g-indigo" style="background-image:linear-gradient(120deg,rgba(55,48,163,.82),rgba(99,102,241,.6) 60%,rgba(47,95,234,.55)),url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231759_012.jpg');background-size:cover;background-position:center top;"><span class="blob" style="width:200px;height:200px;top:-50px;left:-30px;"></span></div>
+          <div class="slide-content">
+            <div class="glass-card">
+              <div class="slide-eyebrow">مسابقه ایده‌پردازی</div>
+              <h2 class="slide-title">به عنوان یه زیست‌شناس، چه نرم‌افزاری می‌ساختی؟</h2>
+              <p class="slide-desc">ایده‌ات رو برامون بفرست؛ بهترین ایده‌ی قابل اجرا برنده جایزه می‌شه.</p>
+              <button class="slide-btn" data-go="competitions">مشاهده مسابقه</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-target="news">
           <div class="slide-bg g-rose" style="background-image:linear-gradient(120deg,rgba(159,18,57,.78),rgba(244,63,94,.55) 60%,rgba(28,63,174,.55)),url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"><span class="blob" style="width:220px;height:220px;top:-60px;left:-40px;"></span></div>
           <div class="slide-content">
             <div class="glass-card">
@@ -600,10 +616,10 @@
           <div class="slide-bg g-teal"><span class="blob" style="width:200px;height:200px;top:-50px;right:-30px;"></span></div>
           <div class="slide-content">
             <div class="glass-card">
-              <div class="slide-eyebrow">کارگاه آموزشی</div>
-              <h2 class="slide-title">کارگاه تشریح و شناسایی مهره‌داران برای دانشجویان علوم زیستی</h2>
-              <p class="slide-desc">ظرفیت محدود — ثبت‌نام از طریق لینک اختصاصی کارگاه.</p>
-              <button class="slide-btn" data-go="workshops">ثبت‌نام کارگاه</button>
+              <div class="slide-eyebrow">وبینار آموزشی</div>
+              <h2 class="slide-title">وبینار آشنایی با مسیر کنکور ارشد وزارت علوم و بهداشت</h2>
+              <p class="slide-desc">ویژه داوطلبان کنکور ارشد ۱۴۰۶ — آنلاین و رایگان.</p>
+              <button class="slide-btn" data-go="workshops">مشاهده وبینار</button>
             </div>
           </div>
         </div>
@@ -659,16 +675,16 @@
         <div class="section-block-head"><h2>کارگاه‌ها و دوره‌ها</h2><a class="see-all" href="#workshops" data-go="workshops">مشاهده همه ←</a></div>
         <div class="grid-3">
           <article class="card" data-go="workshops" style="cursor:pointer;">
-            <div class="card-media g-amber"></div>
-            <div class="card-body"><span class="card-tag" style="background:var(--amber);">حضوری</span><h3>کارگاه تشریح مهره‌داران</h3><p>آشنایی عملی با آناتومی مقایسه‌ای مهره‌داران در آزمایشگاه دانشکده.</p><span class="card-link">بیشتر ←</span></div>
+            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231215_617.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--amber);">آنلاین · رایگان</span><h3>وبینار آشنایی با مسیر کنکور ارشد وزارت علوم و بهداشت</h3><p>با حضور سید محمد حسینی، ویژه داوطلبان کنکور ارشد ۱۴۰۶.</p><span class="card-link">بیشتر ←</span></div>
           </article>
           <article class="card" data-go="workshops" style="cursor:pointer;">
             <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg');background-size:cover;background-position:center;"></div>
             <div class="card-body"><span class="card-tag" style="background:var(--teal);">حضوری</span><h3>کارگاه نانوپزشکی</h3><p>با تدریس خانم مهندس ساحل حکیمی، کارشناس ارشد بیوشیمی (فیلد نانو).</p><span class="card-link">بیشتر ←</span></div>
           </article>
           <article class="card" data-go="workshops" style="cursor:pointer;">
-            <div class="card-media g-teal"></div>
-            <div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه شناسایی گونه‌های بومی</h3><p>برگزاری در محیط طبیعی با همکاری اداره محیط‌زیست استان.</p><span class="card-link">بیشتر ←</span></div>
+            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231002_731.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه ۳ روزه از سلول درمانی تا ژن درمانی</h3><p>سه جلسه با مدرسان مرکز تحقیقات سلول‌های بنیادی دانشکده پزشکی.</p><span class="card-link">بیشتر ←</span></div>
           </article>
         </div>
       </div>
@@ -716,7 +732,7 @@
         <div class="section-block-head"><h2>درباره انجمن</h2><a class="see-all" href="#about" data-go="about">مشاهده بیشتر ←</a></div>
         <div class="about-grid" data-go="about" style="cursor:pointer;">
           <div class="about-text">
-            <p>انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز با هدف گسترش فعالیت‌های علمی، پژوهشی و آموزشی در حوزه جانورشناسی توسط دانشجویان این دانشکده تأسیس شده است. با برگزاری نشست‌های تخصصی، کارگاه‌ها و بازدیدهای علمی، بستری برای رشد علمی دانشجویان علاقه‌مند فراهم می‌کند.</p>
+            <p>انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز، خانه‌ای دانشجویی برای همه‌ی علاقه‌مندان به علوم زیستی است؛ از جانورشناسی، سلولی و مولکولی و ژنتیک تا بیوشیمی، زیست‌فناوری و نانوپزشکی. ما با کارگاه‌ها، نشریات علمی، کتاب، مسابقه و رویدادهای ملی، مسیر رشد علمی دانشجویان را از کلاس درس تا دنیای پژوهش هموار می‌کنیم.</p>
             <span class="card-link">ادامه مطلب و فعالیت‌های انجمن ←</span>
           </div>
           <div class="about-panel">
@@ -733,6 +749,7 @@
       <div class="section-block">
         <div class="section-block-head"><h2>شورای مرکزی</h2><a class="see-all" href="#council" data-go="council">مشاهده همه اعضا ←</a></div>
         <div class="council-mini-grid">
+          <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ر</span></div><b>دکتر رضا صفرعلیزاده</b><small>استاد مشاور</small></div>
           <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>س</span></div><b>سما بنا آذرپناه</b><small>دبیر انجمن</small></div>
           <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ا</span></div><b>المیرا ابوطالبی‌وند بیلانکوهی</b><small>عضو شورا</small></div>
           <div class="council-mini-card" data-go="council" style="cursor:pointer;"><div class="council-mini-photo"><span>ز</span></div><b>زهرا کهنموئیان</b><small>عضو شورا</small></div>
@@ -863,13 +880,19 @@ https://ash.acecr.ac.ir/fa/news/88775/
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130414_331.jpg');background-size:cover;background-position:center;"></div>
           <div class="card-body"><span class="card-tag" style="background:var(--indigo);">انتشار کتاب</span><div class="card-date">شهریور ۱۴۰۴</div><h3>انتشار کتاب «رتینوبلاستوما و RNAهای غیرکدکننده (ncRNAs)؛ رویکردی نوین در تشخیص و درمان»</h3><p>اثری از مریم زمانی‌ثانی، دکتر ابوطالبی‌وند بیلانکوهی و دکتر صفرعلیزاده.</p><span class="card-link">ادامه مطلب ←</span></div>
         </article>
-        <article class="card" data-item data-cat="news" data-color="g-amber" data-tag="همایش" data-title="حضور اعضای انجمن در همایش دانشجویی علوم زیستی شمال‌غرب کشور" data-desc="ارائه پوستر علمی توسط دانشجویان عضو انجمن در همایش منطقه‌ای دانشجویی علوم زیستی." data-meta="۱۴۰۵/۰۶/۱۰">
-          <div class="card-media g-amber"><svg viewBox="0 0 100 60"><circle cx="50" cy="30" r="18" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
-          <div class="card-body"><span class="card-tag" style="background:var(--amber);">همایش</span><div class="card-date">۱۴۰۵/۰۶/۱۰</div><h3>حضور اعضای انجمن در همایش دانشجویی علوم زیستی شمال‌غرب کشور</h3><p>ارائه پوستر علمی توسط دانشجویان عضو انجمن.</p><span class="card-link">ادامه مطلب ←</span></div>
+        <article class="card" data-item data-cat="news" data-color="g-amber" data-tag="افتخار علمی" data-title="کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت" data-desc="با افتخار اعلام می‌داریم 🎉
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز در هجدهمین جشنواره بین‌المللی حرکت، موفق به کسب عنوان «شایسته تقدیر» در بخش کارآفرینی شد. 🏆🧬
+
+این دستاورد بزرگ، حاصل تلاش‌های اساتید مشاور انجمن دکتر المیرا ابوطالبی‌وند بیلانکوهی و دکتر رضا صفرعلیزاده و همچنین تلاش‌ها، خلاقیت و پشتکار تک‌تک اعضای فعال و دلسوز انجمن است که در مسیر پویایی و نوآوری گام برداشته‌اند.
+
+این موفقیت را به تمامی دانشجویان عزیز، اساتید حامی و خانواده بزرگ زیست‌شناسی جانوری دانشگاه تبریز تبریک می‌گوییم. به امید درخشش‌های بیشتر در مسیرهای پیش رو! 🚀🌱" data-meta="هجدهمین جشنواره بین‌المللی حرکت" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231105_890.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">افتخار علمی</span><div class="card-date">هجدهمین جشنواره بین‌المللی حرکت</div><h3>کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت</h3><p>انجمن با تلاش اساتید مشاور و اعضای فعال، عنوان «شایسته تقدیر» بخش کارآفرینی را کسب کرد.</p><span class="card-link">ادامه مطلب ←</span></div>
         </article>
-        <article class="card" data-item data-cat="news" data-color="g-blue" data-tag="اطلاعیه" data-title="تمدید مهلت ثبت‌نام کارگاه تشریح مهره‌داران" data-desc="مهلت ثبت‌نام تا پایان هفته جاری تمدید شد. دانشجویان علاقه‌مند می‌توانند از طریق بخش کارگاه‌ها ثبت‌نام کنند." data-meta="۱۴۰۵/۰۵/۳۰">
-          <div class="card-media g-blue"><svg viewBox="0 0 100 60"><path d="M0 30h100" stroke="#fff" stroke-width="2"/></svg></div>
-          <div class="card-body"><span class="card-tag" style="background:var(--blue);">اطلاعیه</span><div class="card-date">۱۴۰۵/۰۵/۳۰</div><h3>تمدید مهلت ثبت‌نام کارگاه تشریح مهره‌داران</h3><p>مهلت ثبت‌نام تا پایان هفته جاری تمدید شد.</p><span class="card-link">ادامه مطلب ←</span></div>
+        <article class="card" data-item data-cat="news" data-color="g-blue" data-tag="گزارش تصویری" data-title="گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی" data-desc="🧬 گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی
+
+حضور انجمن علمی زیست‌شناسی جانوری دانشگاه تبریز در مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی کشور، به میزبانی دانشگاه الزهرا، در روزهای ۱۶ و ۱۷ شهریورماه ۱۴۰۵." data-meta="مجمع عمومی اتحادیه · دانشگاه الزهرا · ۱۶ و ۱۷ شهریور ۱۴۰۵" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_686.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_131004_272.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">گزارش تصویری</span><div class="card-date">۱۶ و ۱۷ شهریور ۱۴۰۵</div><h3>گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی</h3><p>حضور انجمن در مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی کشور، به میزبانی دانشگاه الزهرا.</p><span class="card-link">ادامه مطلب ←</span></div>
         </article>
         <article class="card" data-item data-cat="news" data-color="g-teal" data-tag="گزارش" data-title="گزارش عملکرد فصلی انجمن منتشر شد" data-desc="مروری بر فعالیت‌های سه‌ماهه اخیر انجمن شامل کارگاه‌ها، نشست‌های علمی و بازدیدهای میدانی." data-meta="۱۴۰۵/۰۵/۲۰">
           <div class="card-media g-teal"><svg viewBox="0 0 100 60"><path d="M10 50 L40 15 L60 35 L90 10" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
@@ -895,8 +918,27 @@ https://ash.acecr.ac.ir/fa/news/88775/
         data-price-old = قیمت اصلی (اختیاری، با خط خورده نمایش داده می‌شود) | data-price-new = قیمت نهایی یا "رایگان"
       -->
       <div class="grid-3">
-        <article class="card" data-item data-cat="workshop" data-color="g-amber" data-tag="حضوری" data-title="کارگاه تشریح مهره‌داران" data-desc="آشنایی عملی با آناتومی مقایسه‌ای مهره‌داران در آزمایشگاه دانشکده علوم طبیعی، زیر نظر اساتید گروه زیست‌شناسی." data-meta="حضوری · آزمایشگاه دانشکده علوم طبیعی" data-datetime="2026-10-18T16:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۳ ساعت" data-code="ARV-WK1405-18" data-price-old="150,000" data-price-new="90,000">
-          <div class="card-media g-amber"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">حضوری</span><h3>کارگاه تشریح مهره‌داران</h3><p>آشنایی عملی با آناتومی مقایسه‌ای مهره‌داران در آزمایشگاه دانشکده.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        <article class="card" data-item data-cat="workshop" data-color="g-amber" data-tag="آنلاین" data-title="وبینار آشنایی با مسیر کنکور ارشد وزارت علوم و بهداشت" data-desc="انجمن علمی زیست‌شناسی دانشگاه یزد و انجمن زیست‌شناسی جانوری دانشگاه تبریز برگزار می‌کنند:
+
+وبینار آشنایی با مسیر کنکور ارشد وزارت علوم و بهداشت
+
+🔸 آشنایی با مسیر کنکور کارشناسی ارشد وزارت علوم و وزارت بهداشت
+🔸 ویژه داوطلبان کنکور ارشد علوم و بهداشت ۱۴۰۶
+
+🎙 با حضور: سید محمد حسینی
+دانشجوی کارشناسی ارشد فناوری سلول‌های بنیادی و مهندسی بافت دانشگاه تربیت مدرس، قبولی ایمونولوژی دانشگاه علوم پزشکی مشهد، رتبهٔ برتر کنکور وزارت علوم و وزارت بهداشت، مدرس و مشاور کنکور ارشد.
+
+🔍 محورهای جلسه:
+🎯 انتخاب گرایش کنکور
+📚 منابع مورد نیاز هر گرایش
+📝 برنامه‌ریزی و نحوه مطالعه
+
+در این جلسه با مسیر پیش رو و نکات مهمی که برای شروع و ادامه مسیر کنکور ارشد نیاز دارید، بیشتر آشنا می‌شوید.
+
+🌐 نحوه برگزاری: آنلاین
+💵 هزینه ثبت‌نام: رایگان
+🎁 هدیه ویژه برای شرکت‌کنندگان" data-meta="آنلاین · رایگان" data-datetime="2026-09-18T16:30:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="false" data-duration="" data-code="" data-price-old="" data-price-new="رایگان" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231215_617.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231215_617.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">آنلاین</span><h3>وبینار آشنایی با مسیر کنکور ارشد وزارت علوم و بهداشت</h3><p>با حضور سید محمد حسینی، ویژه داوطلبان کنکور ارشد علوم و بهداشت ۱۴۰۶.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
         <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه نانوپزشکی" data-desc="انجمن علمی-دانشجویی زیست‌شناسی جانوری دانشگاه تبریز برگزار می‌کند: کارگاه نانوپزشکی
 
@@ -904,11 +946,23 @@ https://ash.acecr.ac.ir/fa/news/88775/
 
 مدرس این دوره: خانم مهندس ساحل حکیمی؛ کارشناس ارشد بیوشیمی (فیلد نانو)
 
-این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد." data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-11-19T17:30:00+03:30" data-cert="true" data-duration="۱ ساعت و ۳۰ دقیقه" data-code="ARV-WK1404-28" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAAnvzj4s1c6NkZnH-KK8eEs-fYkM8k1frxH8NyQ2UA&s=10">
+این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد." data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-11-19T17:30:00+03:30" data-cert="true" data-duration="۱ ساعت و ۳۰ دقیقه" data-code="ARV-WK1404-28" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg">
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--teal);">حضوری</span><h3>کارگاه نانوپزشکی</h3><p>با تدریس خانم مهندس ساحل حکیمی، کارشناس ارشد بیوشیمی (فیلد نانو).</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
-        <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه شناسایی گونه‌های بومی" data-desc="برگزاری در محیط طبیعی با همکاری اداره محیط‌زیست استان؛ آشنایی میدانی با گونه‌های جانوری بومی منطقه." data-meta="حضوری · منطقه حفاظت‌شده اطراف تبریز" data-datetime="2026-09-20T09:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۴ ساعت" data-code="ARV-WK1405-06" data-price-old="" data-price-new="رایگان">
-          <div class="card-media g-teal"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه شناسایی گونه‌های بومی</h3><p>برگزاری در محیط طبیعی با همکاری اداره محیط‌زیست استان.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه ۳ روزه از سلول درمانی تا ژن درمانی" data-desc="انجمن علمی-دانشجویی زیست‌شناسی جانوری دانشگاه تبریز برگزار می‌کند:
+
+کارگاه ۳ روزه از سلول درمانی تا ژن درمانی
+
+مدرسین این دوره:
+• بهراد علیمحمدزاده، دستیار پژوهشی مرکز تحقیقات سلول‌های بنیادی دانشکده پزشکی
+• سمیرا عابدی، کارشناس ارشد سلول‌های بنیادی
+• رومینا فروغی، کارشناس ارشد ژنتیک
+
+این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد.
+
+🕐 زمان برگزاری: هر روز ساعت ۱۵ الی ۱۷
+📍 مکان: دانشکده علوم طبیعی" data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-05-05T15:00:00+03:30" data-extra-days="2025-05-06|2025-05-07" data-register="https://register.com" data-class="https://class.com" data-cert="false" data-duration="۳ روز، هر روز ۲ ساعت (ساعت ۱۵ تا ۱۷)" data-code="" data-price-old="" data-price-new="300,000" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231002_731.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231002_731.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه ۳ روزه از سلول درمانی تا ژن درمانی</h3><p>سه جلسه با مدرسان مرکز تحقیقات سلول‌های بنیادی و کارشناسان ارشد ژنتیک.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
         <article class="card" data-item data-cat="workshop" data-color="g-indigo" data-tag="حضوری" data-title="کارگاه میکروسکوپی بافت‌شناسی جانوری" data-desc="آموزش تهیه و مطالعه مقاطع بافتی زیر نظر اساتید گروه، همراه با کار عملی با میکروسکوپ‌های آزمایشگاهی دانشکده." data-meta="حضوری · آزمایشگاه بافت‌شناسی دانشکده" data-datetime="2026-11-08T15:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۵ ساعت" data-code="ARV-WK1405-08" data-price-old="180,000" data-price-new="110,000">
           <div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">حضوری</span><h3>کارگاه میکروسکوپی بافت‌شناسی جانوری</h3><p>آموزش تهیه و مطالعه مقاطع بافتی زیر نظر اساتید گروه.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
@@ -1016,13 +1070,15 @@ https://ash.acecr.ac.ir/fa/news/88775/
       <div class="about-hero-img"></div>
       <div class="about-grid">
         <div class="about-text">
-          <p>انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز با هدف گسترش فعالیت‌های علمی، پژوهشی و آموزشی در حوزه جانورشناسی توسط دانشجویان این دانشکده تأسیس شده است. این انجمن با برگزاری نشست‌های تخصصی، کارگاه‌های عملی، بازدیدهای علمی و همکاری با اساتید گروه، بستری برای رشد علمی و ارتباط دانشجویان علاقه‌مند به علوم جانوری فراهم می‌کند.</p>
+          <p>انجمن علمی زیست‌شناسی جانوری دانشکده علوم طبیعی دانشگاه تبریز، جامعه‌ای پویا از دانشجویان و پژوهشگران جوان است که علم زیست را فراتر از مرزهای یک گرایش می‌بیند. اگرچه نام ما از زیست‌شناسی جانوری آغاز می‌شود، دامنه‌ی فعالیت ما همه‌ی حوزه‌های علوم زیستی را در بر می‌گیرد: از جانورشناسی و زیست‌شناسی سلولی و مولکولی تا ژنتیک، بیوشیمی، سلول‌های بنیادی، زیست‌فناوری و نانوپزشکی.</p>
+          <p>با همراهی استادان مشاور و تلاش اعضای فعال، انجمن را به بستری برای یادگیری، تولید محتوای علمی و شبکه‌سازی تبدیل کرده‌ایم؛ جایی که ایده‌ها به کارگاه، نشریه، کتاب و مسابقه تبدیل می‌شوند و دانشجو در کنار تحصیل، مهارت‌های پژوهشی، نویسندگی، طراحی و کار تیمی را تجربه می‌کند.</p>
           <ul class="activity-list">
-            <li><b>◆</b> برگزاری نشست‌های علمی هفتگی و ماهانه با حضور اساتید و پژوهشگران</li>
-            <li><b>◆</b> برپایی کارگاه‌های تخصصی تشریح، بافت‌شناسی و شناسایی گونه‌ها</li>
-            <li><b>◆</b> انتشار نشریات علمی و خبری انجمن</li>
-            <li><b>◆</b> برگزاری بازدیدهای میدانی و علمی از مناطق طبیعی و موزه‌ها</li>
-            <li><b>◆</b> مشارکت در کنگره‌ها و جشنواره‌های علمی سراسری</li>
+            <li><b>◆</b> کارگاه‌ها و وبینارهای تخصصی، از نانوپزشکی و سلول‌درمانی تا ژن‌درمانی و مسیر کنکور ارشد</li>
+            <li><b>◆</b> انتشار نشریات «میکرون» (گاهنامه علمی-دانشجویی) و «کدون» (نشریه صوتی)</li>
+            <li><b>◆</b> تألیف و انتشار کتاب با همکاری انتشارات جهاددانشگاهی آذربایجان شرقی</li>
+            <li><b>◆</b> برگزاری مسابقات علمی و ایده‌پردازی و حضور درخشان در جشنواره‌های دانشجویی</li>
+            <li><b>◆</b> اردوهای علمی، بازدیدهای میدانی و مشارکت در کنگره‌ها و مجمع اتحادیه انجمن‌های علمی زیست‌شناسی کشور</li>
+            <li><b>◆</b> گواهی فعالیت و کد تخفیف ویژه اعضا برای کارگاه‌ها و دوره‌های مهارت‌افزایی</li>
           </ul>
         </div>
         <div class="about-panel">
@@ -1044,6 +1100,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
     <div class="wrap page-body">
       <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>شورای مرکزی انجمن</h1><p>اعضای شورای مرکزی انجمن علمی زیست‌شناسی جانوری</p></div>
       <div class="council-grid">
+        <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ر</span></div><b>دکتر رضا صفرعلیزاده</b><small>استاد مشاور انجمن</small></div>
         <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>س</span></div><b>سما بنا آذرپناه</b><small>دبیر انجمن</small></div>
         <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ا</span></div><b>المیرا ابوطالبی‌وند بیلانکوهی</b><small>عضو شورای مرکزی</small></div>
         <div class="council-card"><div class="council-photo"><img src="" alt="" onerror="this.style.display='none'"><span>ز</span></div><b>زهرا کهنموئیان</b><small>عضو شورای مرکزی</small></div>
@@ -1062,6 +1119,15 @@ https://ash.acecr.ac.ir/fa/news/88775/
     <div class="wrap page-body">
       <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>افتخارات</h1><p>دستاوردها و افتخارات کسب‌شده توسط انجمن و اعضای آن</p></div>
       <div class="grid-3">
+        <article class="card" data-item data-cat="festival" data-color="g-amber" data-tag="جشنواره حرکت" data-title="کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت" data-desc="با افتخار اعلام می‌داریم 🎉
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز در هجدهمین جشنواره بین‌المللی حرکت، موفق به کسب عنوان «شایسته تقدیر» در بخش کارآفرینی شد. 🏆🧬
+
+این دستاورد بزرگ، حاصل تلاش‌های اساتید مشاور انجمن دکتر المیرا ابوطالبی‌وند بیلانکوهی و دکتر رضا صفرعلیزاده و همچنین تلاش‌ها، خلاقیت و پشتکار تک‌تک اعضای فعال و دلسوز انجمن است که در مسیر پویایی و نوآوری گام برداشته‌اند.
+
+این موفقیت را به تمامی دانشجویان عزیز، اساتید حامی و خانواده بزرگ زیست‌شناسی جانوری دانشگاه تبریز تبریک می‌گوییم. به امید درخشش‌های بیشتر در مسیرهای پیش رو! 🚀🌱" data-meta="هجدهمین جشنواره بین‌المللی حرکت" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231105_890.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">جشنواره حرکت</span><div class="card-date">هجدهمین جشنواره بین‌المللی حرکت</div><h3>کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت</h3><p>انجمن با تلاش اساتید مشاور و اعضای فعال، عنوان «شایسته تقدیر» بخش کارآفرینی را کسب کرد.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
         <article class="card" data-item data-cat="news" data-color="g-rose" data-tag="افتخار علمی" data-title="کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی" data-desc="به گزارش روابط عمومی انجمن زیست‌شناسی جانوری دانشگاه تبریز، دکتر المیرا ابوطالبی‌وند بیلانکوهی؛ دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز، در شصت‌وچهارمین دوره جایزه ملّی نخبگانی البرز (نوبل ایرانی) موفق به کسب این جایزه شد.
 
 به گزارش روابط عمومی دانشگاه تبریز، آیین اعطای جوایز شصت‌وچهارمین دوره جایزه ملّی البرز، با حضور دکتر محمّدرضا عارف؛ معاون اول رئیس‌جمهوری و جمعی از مسئولان، استادان، پژوهشگران و نخبگان علمی کشور در مرکز همایش‌های بین‌المللی دانشگاه شهید بهشتی تهران برگزار شد و دکتر المیرا ابوطالبی‌وند بیلانکوهی، به پاس مجموعه‌ای از فعالیت‌ها و دستاوردهای علمی، پژوهشی، آموزشی، فرهنگی و اجتماعی، جایزه ملّی البرز را در بخش دانشجویان رشته‌های غیرپزشکی از آن خود کرد.
@@ -1113,6 +1179,15 @@ https://ash.acecr.ac.ir/fa/news/88775/
     <div class="wrap page-body">
       <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>جشنواره‌ها</h1><p>جشنواره‌ها و رویدادهای علمی‌فرهنگی مرتبط با انجمن</p></div>
       <div class="grid-3">
+        <article class="card" data-item data-cat="festival" data-color="g-amber" data-tag="جشنواره حرکت" data-title="کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت" data-desc="با افتخار اعلام می‌داریم 🎉
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز در هجدهمین جشنواره بین‌المللی حرکت، موفق به کسب عنوان «شایسته تقدیر» در بخش کارآفرینی شد. 🏆🧬
+
+این دستاورد بزرگ، حاصل تلاش‌های اساتید مشاور انجمن دکتر المیرا ابوطالبی‌وند بیلانکوهی و دکتر رضا صفرعلیزاده و همچنین تلاش‌ها، خلاقیت و پشتکار تک‌تک اعضای فعال و دلسوز انجمن است که در مسیر پویایی و نوآوری گام برداشته‌اند.
+
+این موفقیت را به تمامی دانشجویان عزیز، اساتید حامی و خانواده بزرگ زیست‌شناسی جانوری دانشگاه تبریز تبریک می‌گوییم. به امید درخشش‌های بیشتر در مسیرهای پیش رو! 🚀🌱" data-meta="هجدهمین جشنواره بین‌المللی حرکت" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231105_890.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">جشنواره حرکت</span><div class="card-date">هجدهمین جشنواره بین‌المللی حرکت</div><h3>کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت</h3><p>انجمن با تلاش اساتید مشاور و اعضای فعال، عنوان «شایسته تقدیر» بخش کارآفرینی را کسب کرد.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
         <article class="card" data-item data-cat="festival" data-color="g-indigo" data-tag="جشنواره حرکت" data-title="درخشش انجمن در هجدهمین جشنواره حرکت ۱۴۰۴" data-desc="با افتخار اعلام می‌داریم که انجمن علمی دانشجویی زیست‌شناسی جانوری دانشگاه تبریز، در هجدهمین جشنواره «حرکت» بخش درون‌دانشگاهی، موفق به کسب عناوین ارزشمندی در سه بخش شد:
 
 بخش کارآفرینی: برگزیده
@@ -1142,9 +1217,34 @@ https://ash.acecr.ac.ir/fa/news/88775/
     <div class="wrap page-body">
       <div class="page-head"><div class="eyebrow">درباره انجمن</div><h1>مسابقات</h1><p>مسابقات علمی و هنری فعال و برگزارشده توسط انجمن</p></div>
       <div class="grid-3">
-        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-tag="فعال" data-title="مسابقه عکاسی حیات‌وحش «نگاه جانوری»" data-desc="مهلت ارسال آثار تا پایان ماه جاری است. دانشجویان علاقه‌مند می‌توانند آثار خود را از طریق کانال انجمن ارسال کنند."><div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">فعال</span><h3>مسابقه عکاسی حیات‌وحش «نگاه جانوری»</h3><p>مهلت ارسال آثار تا پایان ماه جاری</p><span class="card-link">شرکت در مسابقه ←</span></div></article>
-        <article class="card" data-item data-cat="generic" data-color="g-teal" data-tag="فعال" data-title="مسابقه پوستر علمی دانشجویی" data-desc="ویژه دانشجویان کارشناسی و تحصیلات تکمیلی؛ طراحی پوستر علمی با موضوعات مرتبط با زیست‌شناسی جانوری."><div class="card-media g-teal"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">فعال</span><h3>مسابقه پوستر علمی دانشجویی</h3><p>ویژه دانشجویان کارشناسی و تحصیلات تکمیلی</p><span class="card-link">شرکت در مسابقه ←</span></div></article>
-        <article class="card" data-item data-cat="generic" data-color="g-amber" data-tag="به‌زودی" data-title="مسابقه دانش زیست‌شناسی جانوری" data-desc="آزمون علمی گروهی با جوایز نفیس برای نفرات برتر. جزئیات بیشتر به‌زودی از طریق کانال انجمن اعلام خواهد شد."><div class="card-media g-amber"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">به‌زودی</span><h3>مسابقه دانش زیست‌شناسی جانوری</h3><p>آزمون علمی گروهی با جوایز نفیس برای نفرات برتر</p><span class="card-link">اطلاعات بیشتر ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-shape="a4" data-tag="مسابقه ایده‌پردازی" data-title="مسابقه ایده‌پردازی: به عنوان یه زیست‌شناس، چه نرم‌افزاری می‌ساختی؟" data-desc="🧬💻 به عنوان یه زیست‌شناس، چه نرم‌افزاری می‌ساختی؟
+
+تا حالا به این فکر کردی که اگه قدرت برنامه‌نویسی داشتی و می‌تونستی هر ایده‌ای رو به یه نرم‌افزار واقعی تبدیل کنی، چه چیزی می‌ساختی؟ 🤔
+
+تصور کن نرم‌افزاری که بتونه تحلیل داده‌های زیستی رو متحول کنه، به تشخیص بیماری‌ها کمک کنه، فرایندهای بیوشیمیایی رو شبیه‌سازی کنه یا حتی راه‌حل تازه‌ای برای یکی از چالش‌های دنیای زیست‌شناسی ارائه بده! 🔬🧪
+
+حالا نوبت توئه! 🚀
+
+🔹 اگه یک زیست‌شناس بودی که می‌تونستی مثل یک برنامه‌نویس حرفه‌ای نرم‌افزار طراحی کنی، چه ایده‌ای داشتی؟
+🔹 نرم‌افزارت قراره چه مشکلی رو حل کنه؟
+🔹 چه چیزی ایده‌ات رو خاص و کاربردی می‌کنه؟
+
+🏆 ایده‌ات رو با ما به اشتراک بذار! بهترین ایده‌ای که قابلیت اجرا داشته باشه، برنده‌ی جایزه خواهد شد. 🎁
+
+📌 لازم نیست برنامه‌نویس باشی؛ ما دنبال ایده‌های خلاقانه، نوآورانه و کاربردی تو هستیم. شاید ایده‌ای که امروز مطرح می‌کنی، فردا به یک ابزار واقعی برای جامعه علمی تبدیل بشه! ✨
+
+📩 برای شرکت در مسابقه، ایده‌ات رو برای ما ارسال کن.
+
+منتظر ایده‌های خفن شما هستیم! 💙
+@samagraphix
+
+🧬 انجمن زیست‌شناسی جانوری دانشگاه تبریز
+
+💡 از یک ایده شروع کن؛ شاید آینده‌ی علم رو تغییر بدی!
+
+#مسابقه_ایده_پردازی #انجمن_زیست_شناسی_جانوری #دانشگاه_تبریز #زیست_شناسی #بیوشیمی #بیوانفورماتیک #هوش_مصنوعی #برنامه_نویسی #زیست_فناوری #ایده_های_نوآورانه" data-meta="مسابقه ایده‌پردازی · انجمن زیست‌شناسی جانوری" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231759_012.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231759_012.jpg');background-size:cover;background-position:top center;"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">مسابقه ایده‌پردازی</span><h3>مسابقه ایده‌پردازی: به عنوان یه زیست‌شناس، چه نرم‌افزاری می‌ساختی؟</h3><p>اگه قدرت برنامه‌نویسی داشتی، چه نرم‌افزاری می‌ساختی؟ ایده‌ات رو بفرست و برنده جایزه شو.</p><span class="card-link">جزئیات مسابقه ←</span></div>
+        </article>
       </div>
     </div>
   </section>
@@ -1152,12 +1252,42 @@ https://ash.acecr.ac.ir/fa/news/88775/
   <!-- ================= BIOLOGY NEWS ================= -->
   <section class="page" id="page-biology-news" data-page="biology-news" data-title="تازه‌های زیست‌شناسی">
     <div class="wrap page-body">
-      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>تازه‌های زیست‌شناسی</h1><p>گزیده‌ای از تازه‌ترین یافته‌های علمی دنیای زیست‌شناسی جانوری</p></div>
+      <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>تازه‌های زیست‌شناسی</h1><p>گزیده‌ای از تازه‌ترین یافته‌های علمی زیست‌شناسی و بیوشیمی، همراه با لینک منبع خبر</p></div>
       <div class="grid-4">
-        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-tag="پژوهش جهانی" data-title="کشف گونه جدیدی از دوزیستان در جنگل‌های استوایی" data-desc="پژوهشگران در جریان بررسی‌های میدانی، گونه جدیدی از دوزیستان را در جنگل‌های استوایی شناسایی کردند."><div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">پژوهش جهانی</span><h3>کشف گونه جدیدی از دوزیستان در جنگل‌های استوایی</h3><span class="card-link">مطالعه ←</span></div></article>
-        <article class="card" data-item data-cat="generic" data-color="g-blue" data-tag="پژوهش جهانی" data-title="یافته‌های تازه درباره مهاجرت پرندگان دریایی" data-desc="یافته‌های جدید نشان می‌دهد الگوهای مهاجرت پرندگان دریایی تحت تأثیر تغییرات اقلیمی در حال تغییر است."><div class="card-media g-blue"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">پژوهش جهانی</span><h3>یافته‌های تازه درباره مهاجرت پرندگان دریایی</h3><span class="card-link">مطالعه ←</span></div></article>
-        <article class="card" data-item data-cat="generic" data-color="g-teal" data-tag="پژوهش جهانی" data-title="مطالعه جدید بر رفتار اجتماعی پستانداران دریایی" data-desc="پژوهش تازه‌ای به بررسی الگوهای ارتباطی و رفتار اجتماعی پستانداران دریایی در اقیانوس‌های آزاد پرداخته است."><div class="card-media g-teal"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">پژوهش جهانی</span><h3>مطالعه جدید بر رفتار اجتماعی پستانداران دریایی</h3><span class="card-link">مطالعه ←</span></div></article>
-        <article class="card" data-item data-cat="generic" data-color="g-amber" data-tag="پژوهش جهانی" data-title="پیشرفت‌های ژنتیک حفاظتی در گونه‌های در معرض خطر" data-desc="روش‌های نوین ژنتیک حفاظتی می‌توانند به حفظ تنوع ژنتیکی گونه‌های در معرض خطر انقراض کمک کنند."><div class="card-media g-amber"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">پژوهش جهانی</span><h3>پیشرفت‌های ژنتیک حفاظتی در گونه‌های در معرض خطر</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-tag="جایزه نوبل ۲۰۲۶" data-title="نوبل پزشکی ۲۰۲۶ برای کشف کانال‌های یونی حساس به نور و اپتوژنتیک" data-desc="جایزه نوبل فیزیولوژی یا پزشکی ۲۰۲۶ به کارل دایسروت (دانشگاه استنفورد)، پیتر هگمان (دانشگاه هومبولت برلین) و گئورگ ناگل (دانشگاه ورتسبورگ) برای پژوهش درباره کانال‌های یونی حساس به نور و اپتوژنتیک اهدا شد.
+
+این مسیر علمی از مطالعه جلبک تک‌سلولی کلامیدوموناس شروع شد: پروتئینی به نام کانال‌رودوپسین با تابش نور در غشای سلول کانالی باز می‌کند و یون‌های مثبت را وارد سلول می‌کند. بعدها مشخص شد که با قرار دادن این پروتئین در نورون‌ها می‌توان فعالیت سلول‌های عصبی را با نور روشن و خاموش کرد؛ ابزاری که امروز در پژوهش‌های مغز و در کارآزمایی‌های اولیه درمان بیماری‌های شبکیه کاربرد دارد." data-meta="اعلامیه رسمی کمیته نوبل · مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.sciencedaily.com/images/1920/translucent-glowing-human-brain-signals-waves.webp" data-link="https://www.nobelprize.org/prizes/medicine/2026/prize-announcement/" data-source="Nobel Prize"><div class="card-media card-media-land g-indigo" style="background-image:url('https://www.sciencedaily.com/images/1920/translucent-glowing-human-brain-signals-waves.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">جایزه نوبل ۲۰۲۶</span><h3>نوبل پزشکی ۲۰۲۶ برای کشف کانال‌های یونی حساس به نور و اپتوژنتیک</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-teal" data-tag="جانورشناسی دریایی" data-title="کشف ۵۷ گونه جدید در دره زیردریایی مار دل پلاتا در آرژانتین" data-desc="طی یک اکتشاف در دره زیردریایی مار دل پلاتا در جنوب اقیانوس اطلس، ۵۷ گونه جدید و ۵ جنس جدید از جانداران دریایی شناسایی شد. این گونه‌ها شامل ۲۰ گونه پاروپا، ۲۲ گونه خارپوست (خیار دریایی و زنبق دریایی)، ۱۴ گونه کیسه‌تن (مرجان‌ها و قلم‌های دریایی) و یک نرم‌تن است.
+
+نمونه‌ها در مرداد ۲۰۲۵ با همکاری مؤسسه اقیانوس‌شناسی اشمیت جمع‌آوری و در کارگاهی با حضور ۲۰ رده‌بند از آمریکای لاتین و اروپا نام‌گذاری شدند. تنها حدود ۱۰ درصد نمونه‌ها تاکنون بررسی شده است." data-meta="منبع: PopSci · ۱۳ مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.popsci.com/wp-content/uploads/2026/10/loki-sea-cucumber.png?quality=85&w=2000" data-link="https://www.popsci.com/environment/57-new-ocean-species-argentina/" data-source="PopSci"><div class="card-media card-media-land g-teal" style="background-image:url('https://www.popsci.com/wp-content/uploads/2026/10/loki-sea-cucumber.png?quality=85&w=2000');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">جانورشناسی دریایی</span><h3>کشف ۵۷ گونه جدید در دره زیردریایی مار دل پلاتا در آرژانتین</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-blue" data-tag="ژنتیک و آلزایمر" data-title="چرا برخی افراد با وجود ژن پرخطر APOE4 به آلزایمر مبتلا نمی‌شوند؟" data-desc="پژوهشگران دانشگاه کلمبیا دریافتند جهش نادری در ژن FN1 که پروتئین فیبرونکتین را می‌سازد، می‌تواند از تجمع زیان‌بار این پروتئین در اطراف رگ‌های مغزی جلوگیری کند.
+
+در آزمایش‌ها، فیبرونکتین اضافه با اختلال در پیام‌رسانی عوامل رشد، سد خونی-مغزی را در حامل‌های APOE4 تضعیف می‌کرد. نویسندگان می‌گویند راهکارهای درمانی آینده می‌توانند بر کاهش این تجمع تمرکز کنند، اما هنوز در مرحله آزمایشی هستند.
+
+مرجع: Nature Aging, 2026; 6(9): 1901 — DOI: 10.1038/s43587-026-01204-0" data-meta="Nature Aging · دانشگاه کلمبیا · ۲۷ مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.sciencedaily.com/images/1920/genetic-neuroscience-human-brain-dna-mutation.webp" data-link="https://www.sciencedaily.com/releases/2026/10/261018205044.htm" data-source="ScienceDaily"><div class="card-media card-media-land g-blue" style="background-image:url('https://www.sciencedaily.com/images/1920/genetic-neuroscience-human-brain-dna-mutation.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">ژنتیک و آلزایمر</span><h3>چرا برخی افراد با وجود ژن پرخطر APOE4 به آلزایمر مبتلا نمی‌شوند؟</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-amber" data-tag="زیست‌شناسی مرجان" data-title="بازیابی مرجان‌های سفیدشده در ۷ هفته با تماس مرجان‌های سالم" data-desc="پژوهشگران دانشکده پایداری دورر دانشگاه استنفورد نشان دادند مرجان‌های به‌شدت سفیدشده پس از تماس با مرجان‌های سالمِ هم‌کلون خود، ظرف هفت هفته کاملاً بازیابی می‌شوند؛ برخی حتی پس از پنج روز تماس.
+
+جلبک‌های همزیست از طریق بافت متصل منتقل می‌شوند، در مرجان سفیدشده تکثیر می‌یابند و منبع انرژی آن را بازمی‌گردانند. پژوهشگران تأکید دارند این روش هنوز برای مقیاس صخره‌های کامل قابل استفاده نیست.
+
+مرجع: Science Advances, 2026; 12(42) — DOI: 10.1126/sciadv.aeh1580" data-meta="Science Advances · دانشگاه استنفورد · ۲۲ مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.sciencedaily.com/images/1920/corals-can-fully-recover-from-bleaching.webp" data-link="https://www.sciencedaily.com/releases/2026/10/261017230025.htm" data-source="ScienceDaily"><div class="card-media card-media-land g-amber" style="background-image:url('https://www.sciencedaily.com/images/1920/corals-can-fully-recover-from-bleaching.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">زیست‌شناسی مرجان</span><h3>بازیابی مرجان‌های سفیدشده در ۷ هفته با تماس مرجان‌های سالم</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-rose" data-tag="بیوشیمی و متابولیسم" data-title="بیماری کبد چرب در واقع پنج بیماری متفاوت است" data-desc="پژوهشگران مایو کلینیک نشان دادند بیماری کبد چرب مرتبط با اختلال متابولیک (MASLD)، که حدود ۳۰ درصد بزرگسالان جهان را درگیر می‌کند، شامل پنج زیرگروه زیستی متمایز است. هر زیرگروه خطر متفاوتی برای بیماری قلبی، نارسایی کبد، سرطان و نیاز به پیوند دارد.
+
+برخی زیرگروه‌ها به چاقی و دیابت مرتبط‌اند و برخی دیگر بیشتر ریشه ژنتیکی دارند. این تحلیل بر پایه توالی‌یابی ژنتیکی و داده‌های بالینی بیش از ۴۶۰۰ بیمار انجام شده است.
+
+مرجع: Nature Communications, 2026; 17(1) — DOI: 10.1038/s41467-026-77410-6" data-meta="Nature Communications · مایو کلینیک · ۲۶ مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.sciencedaily.com/images/1920/magnifying-glass-diseased-liver.webp" data-link="https://www.sciencedaily.com/releases/2026/10/261016070642.htm" data-source="ScienceDaily"><div class="card-media card-media-land g-rose" style="background-image:url('https://www.sciencedaily.com/images/1920/magnifying-glass-diseased-liver.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--rose);">بیوشیمی و متابولیسم</span><h3>بیماری کبد چرب در واقع پنج بیماری متفاوت است</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-indigo" data-tag="زیست‌شناسی سلول‌های بنیادی" data-title="پوست زنان و مردان با قواعد متفاوتی بازسازی می‌شود" data-desc="پژوهشگران دانشگاه آزاد بروکسل (ULB) و دانشگاه کمبریج با ردیابی سلول‌های بنیادی پوست در موش زنده به مدت پنج ماه دریافتند سلول‌های ماده هماهنگ‌تر عمل می‌کنند، در حالی که سلول‌های نر مستقل‌تر رفتار می‌کنند.
+
+هورمون‌های جنسی در این تفاوت نقش دارند: تستوسترون بلوغ سلول‌ها را سرعت می‌دهد و استروژن تکثیر و هماهنگی سلول‌های بنیادی را افزایش می‌دهد. موش‌های ماده زخم‌ها را هم سریع‌تر ترمیم کردند. نتایج فعلاً مربوط به موش است.
+
+این پژوهش در مجله Nature منتشر شده است." data-meta="Nature · دانشگاه آزاد بروکسل · ۲۶ مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.sciencedaily.com/images/1920/man-woman-skincare-beauty.webp" data-link="https://www.sciencedaily.com/releases/2026/10/261017230020.htm" data-source="ScienceDaily"><div class="card-media card-media-land g-indigo" style="background-image:url('https://www.sciencedaily.com/images/1920/man-woman-skincare-beauty.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">زیست‌شناسی سلول‌های بنیادی</span><h3>پوست زنان و مردان با قواعد متفاوتی بازسازی می‌شود</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-teal" data-tag="بیوشیمی RNA" data-title="مطالعه دانشگاه لتبریج درباره RMRP، «کشف سال» انجمن RNA کانادا شد" data-desc="مطالعه‌ای از دانشگاه لتبریج کانادا درباره RMRP، یک RNA بلند غیرکدکننده مرتبط با زیست‌شناسی سرطان، به‌عنوان «کشف سال» جوایز RNA Canada ARN انتخاب شد.
+
+این پژوهش که در مجله PNAS منتشر شده، نشان می‌دهد RMRP نقش کلیدی در حفظ عملکرد میتوکندری دارد؛ RNA‌ای که زمانی عمدتاً بی‌فایده تلقی می‌شد. تیم تحقیقاتی به رهبری ترشار پتل و هیگور ست پریرا، با همکاری دانشگاه ایالتی اوهایو، برهم‌کنش‌های پروتئینی دیگری را هم شناسایی کرده که می‌تواند به نقش‌های بیشتری اشاره کند." data-meta="PNAS · دانشگاه لتبریج · ۲۲ مهر ۱۴۰۵" data-shape="landscape" data-image="https://lethbridgeherald.com/wp-content/uploads/2026/10/101426-UofL-study-award-72.jpg" data-link="https://lethbridgeherald.com/news/lethbridge-news/2026/10/14/university-of-lethbridge-biochemistry-research-study-recognized-as-discovery-of-the-year/" data-source="Lethbridge Herald"><div class="card-media card-media-land g-teal" style="background-image:url('https://lethbridgeherald.com/wp-content/uploads/2026/10/101426-UofL-study-award-72.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">بیوشیمی RNA</span><h3>مطالعه دانشگاه لتبریج درباره RMRP، «کشف سال» انجمن RNA کانادا شد</h3><span class="card-link">مطالعه ←</span></div></article>
+        <article class="card" data-item data-cat="generic" data-color="g-blue" data-tag="رفتار جانوری" data-title="دوزهای کم سیلوسایبین، پرخاشگری ماهی مانگرو ریولوس را کاهش داد" data-desc="در پژوهشی روی ماهی مانگرو ریولوس (Kryptolebias marmoratus)، دوز کم سیلوسایبین فعالیت و شنای پرخاشگرانه پرانرژی این ماهی‌های بسیار پرخاشگر را کاهش داد، در حالی که نمایش‌های اجتماعی کم‌انرژی تقریباً بدون تغییر ماند.
+
+پژوهشگران تأکید می‌کنند این مطالعه حیوانی و تک‌دوزی بوده و نشان نمی‌دهد سیلوسایبین پرخاشگری انسان را درمان می‌کند.
+
+مرجع: Frontiers in Behavioral Neuroscience, 2026; 20 — DOI: 10.3389/fnbeh.2026.1767175" data-meta="Frontiers in Behavioral Neuroscience · ۲۶ مهر ۱۴۰۵" data-shape="landscape" data-image="https://www.sciencedaily.com/images/1920/glowing-magic-mushrooms.webp" data-link="https://www.sciencedaily.com/releases/2026/10/261017230036.htm" data-source="ScienceDaily"><div class="card-media card-media-land g-blue" style="background-image:url('https://www.sciencedaily.com/images/1920/glowing-magic-mushrooms.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">رفتار جانوری</span><h3>دوزهای کم سیلوسایبین، پرخاشگری ماهی مانگرو ریولوس را کاهش داد</h3><span class="card-link">مطالعه ←</span></div></article>
       </div>
     </div>
   </section>
@@ -1297,6 +1427,10 @@ https://ash.acecr.ac.ir/fa/news/88775/
             <button class="btn-cta-green" id="detailRegisterBtn">ثبت‌نام در کارگاه آموزشی</button>
           </div>
 
+          <div id="detailSourceWrap" hidden style="margin-bottom:8px;">
+            <a class="btn-primary-form" id="detailSourceBtn" href="#" target="_blank" rel="noopener noreferrer">مشاهده خبر در منبع اصلی ↗</a>
+          </div>
+
           <div class="workshop-notice" id="detailNotice">
             <p id="detailNoticeText"></p>
             <a class="btn-telegram" id="detailAdminBtn" href="https://t.me/Zainab_naqavi" target="_blank" rel="noopener">
@@ -1338,6 +1472,9 @@ https://ash.acecr.ac.ir/fa/news/88775/
               </div>
             </div>
           </div>
+        </div>
+        <div class="workshop-poster" id="detailPoster" hidden>
+          <img id="detailPosterImg" src="" alt="پوستر کارگاه">
         </div>
       </div>
 
@@ -1559,7 +1696,8 @@ https://ash.acecr.ac.ir/fa/news/88775/
     };
   }
 
-  function renderJalaliCalendar(jy, jm, activeDay, colorVar){
+  function renderJalaliCalendar(jy, jm, activeDays, colorVar){
+    if(!Array.isArray(activeDays)) activeDays = [activeDays];
     var head = document.getElementById('jcalHead');
     var grid = document.getElementById('jcalGrid');
     head.textContent = JMONTHS[jm-1] + ' ' + toFa(jy);
@@ -1588,7 +1726,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
       if(jy === todayJY && jm === todayJM && d === todayJD){
         cell.classList.add('today-marker');
       }
-      if(d === activeDay){
+      if(activeDays.indexOf(d) !== -1){
         cell.classList.add('active-day');
         cell.style.background = colorVar;
       }
@@ -1700,7 +1838,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
       coverEl.hidden = false;
       sliderEl.hidden = true;
     }
-    coverEl.className = 'detail-hero-cover ' + color + (ds.cat === 'news' ? ' cover-landscape' : '');
+    coverEl.className = 'detail-hero-cover ' + color + ((ds.cat === 'news' || ds.shape === 'landscape') ? ' cover-landscape' : '') + (ds.shape === 'a4' ? ' cover-a4' : '');
     coverEl.style.backgroundImage = ds.image ? "url('" + ds.image + "')" : '';
     document.getElementById('detailCoverLabel').textContent = ds.title || '';
     document.querySelector('.detail-hero').classList.toggle('is-workshop', ds.cat === 'workshop');
@@ -1728,6 +1866,14 @@ https://ash.acecr.ac.ir/fa/news/88775/
     var priceWrap = document.getElementById('detailPriceRow');
     var registerWrap = document.getElementById('detailRegisterWrap');
     var notice = document.getElementById('detailNotice');
+    var srcWrap = document.getElementById('detailSourceWrap');
+    srcWrap.hidden = true;
+    if(ds.link){
+      var srcBtn = document.getElementById('detailSourceBtn');
+      srcBtn.href = ds.link;
+      srcBtn.textContent = 'مشاهده خبر در منبع اصلی' + (ds.source ? ' (' + ds.source + ')' : '') + ' ↗';
+      srcWrap.hidden = false;
+    }
     downloadWrap.hidden = true;
     workshopWrap.hidden = true;
     mastheadWrap.hidden = true;
@@ -1767,17 +1913,49 @@ https://ash.acecr.ac.ir/fa/news/88775/
     if(ds.cat === 'workshop'){
       workshopWrap.hidden = false;
       registerWrap.hidden = false;
+      var posterBox = document.getElementById('detailPoster');
+      var posterImg = document.getElementById('detailPosterImg');
+      if(ds.image){
+        posterImg.src = ds.image;
+        posterImg.alt = 'پوستر ' + (ds.title || 'کارگاه');
+        posterBox.hidden = false;
+        posterBox.onclick = function(){ openLightbox(ds.image); };
+      } else {
+        posterImg.removeAttribute('src');
+        posterBox.hidden = true;
+        posterBox.onclick = null;
+      }
       var eventDate = new Date(ds.datetime);
       var parts = tehranParts(eventDate);
       var jParts = jc_g2j(parts.y, parts.m, parts.d);
       var jy = jParts[0], jm = jParts[1], jd = jParts[2];
 
-      renderJalaliCalendar(jy, jm, jd, colorHex);
+      var allDays = [jd];
+      if(ds.extraDays){
+        ds.extraDays.split('|').forEach(function(g){
+          var m = g.trim().match(/^(\d+)-(\d+)-(\d+)$/);
+          if(!m) return;
+          var j = jc_g2j(+m[1], +m[2], +m[3]);
+          if(j[0] === jy && j[1] === jm) allDays.push(j[2]);
+        });
+        allDays.sort(function(x,y){return x-y;});
+      }
+      renderJalaliCalendar(jy, jm, allDays, colorHex);
 
       var weekdayNamesFull = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
       var weekdayName = weekdayNamesFull[parts.weekdayJS];
       var dateFa = toFa(jd) + ' ' + JMONTHS[jm-1] + ' ' + toFa(jy);
-      document.getElementById('wiDate').textContent = weekdayName + '، ' + dateFa;
+      var JWD_JS = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+      if(allDays.length > 1){
+        var names = allDays.map(function(d){
+          var g = jc_d2g(jc_j2d(jy, jm, d));
+          return JWD_JS[new Date(Date.UTC(g[0], g[1]-1, g[2])).getUTCDay()] + ' ' + toFa(d);
+        });
+        dateFa = names.slice(0,-1).join('، ') + ' و ' + names[names.length-1] + ' ' + JMONTHS[jm-1] + ' ' + toFa(jy);
+        document.getElementById('wiDate').textContent = dateFa;
+      } else {
+        document.getElementById('wiDate').textContent = weekdayName + '، ' + dateFa;
+      }
       var hh = (parts.hh<10?'0':'') + parts.hh, mm = (parts.mm<10?'0':'') + parts.mm;
       var timeFa = toFa(hh) + ':' + toFa(mm);
       document.getElementById('wiTime').textContent = 'ساعت ' + timeFa;
@@ -1788,7 +1966,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
       if(ds.cert !== 'false'){
         chips.push({cls:'chip-pill-green', icon:'<path d="M20 6L9 17l-5-5"/>', text:'دارای گواهی'});
       }
-      chips.push({cls:'chip-pill-blue', icon:'<rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/>', text:'تاریخ: ' + dateFa});
+      chips.push({cls:'chip-pill-blue', icon:'<rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/>', text:(allDays.length > 1 ? 'تاریخ‌ها: ' : 'تاریخ: ') + dateFa});
       if(ds.duration){
         chips.push({cls:'chip-pill-amber', icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', text:ds.duration});
       }
