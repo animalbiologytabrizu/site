@@ -505,6 +505,71 @@
     display:inline-flex;align-items:center;gap:7px;background:#229ed9;color:#fff;font-weight:700;
     padding:10px 20px;border-radius:12px;font-size:12.5px;
   }
+
+
+  /* ================= TOOLS ================= */
+  .tool-d-hero{display:flex;align-items:center;gap:16px;border-radius:var(--radius-xl);padding:clamp(20px,4vw,30px);color:#fff;box-shadow:var(--shadow-lg);margin-bottom:20px;}
+  .tool-d-ic{width:62px;height:62px;border-radius:18px;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .tool-d-ic svg{width:30px;height:30px;}
+  .tool-d-hero h1{margin:6px 0 0;font-size:clamp(19px,4vw,26px);font-weight:900;line-height:1.5;}
+  .tool-d-tag{font-size:11px;font-weight:800;background:rgba(255,255,255,.22);padding:3px 12px;border-radius:99px;}
+  .tool-d-body{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:clamp(18px,3.5vw,28px);max-width:820px;}
+  .tool-d-lead{margin:0 0 18px;font-size:14px;line-height:2;color:var(--muted);}
+  .tool-d-body h2{margin:0 0 12px;font-size:15.5px;font-weight:900;}
+  .tool-feats{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px;}
+  .tool-feats li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.95;color:var(--ink);}
+  .tool-feats b{color:var(--teal);font-weight:900;margin-top:1px;}
+  .tool-btn{display:inline-block;background:linear-gradient(120deg,var(--blue),var(--teal));color:#fff;font-weight:800;font-size:14px;padding:12px 30px;border-radius:99px;box-shadow:0 12px 24px -12px rgba(47,95,234,.7);}
+  .tool-d-video{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);}
+  .tool-video-box{position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#16245c,#0b1536);}
+  .tool-video-box::before{content:"";display:block;padding-top:57%;}
+  .tool-site-link{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px;font-size:12.5px;color:var(--muted);}
+  .tool-site-link a{direction:ltr;unicode-bidi:plaintext;color:var(--blue);font-weight:700;word-break:break-all;}
+  .tool-video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+  /* phone home-screen */
+  .phone-wrap{display:flex;justify-content:center;padding:6px 0 10px;}
+  .phone{position:relative;width:min(100%,380px);min-height:560px;border-radius:44px;padding:44px 22px 34px;
+    background:radial-gradient(90% 60% at 20% 0%,#7c8cff 0%,rgba(124,140,255,0) 60%),radial-gradient(80% 60% at 100% 100%,#14b8a6 0%,rgba(20,184,166,0) 60%),linear-gradient(160deg,#1b2a6b,#0b1536);
+    box-shadow:0 0 0 7px #0f1c3f,0 0 0 9px #3a4a85,var(--shadow-lg);display:flex;flex-direction:column;}
+  .phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:96px;height:24px;border-radius:99px;background:#050b1f;}
+  .phone-status{position:absolute;top:14px;left:26px;right:26px;display:flex;justify-content:space-between;font-size:10.5px;font-weight:800;color:rgba(255,255,255,.85);}
+  .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 8px;margin-top:22px;align-content:start;flex:1;}
+  .app-icon{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;-webkit-tap-highlight-color:transparent;}
+  .app-ic{position:relative;width:70px;height:70px;border-radius:22px;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 20px -8px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.45);transition:transform .15s ease;}
+  .app-ic::after{content:"";position:absolute;inset:0;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,0) 55%);pointer-events:none;}
+  .app-ic svg{width:32px;height:32px;position:relative;z-index:1;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));}
+  .app-icon:hover .app-ic{transform:scale(1.06);}
+  .app-icon:active .app-ic{transform:scale(.92);}
+  .app-name{font-size:11.5px;font-weight:700;line-height:1.7;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.45);max-width:96px;}
+  .phone-dock{height:70px;margin:22px 4px 0;border-radius:26px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+  .phone-dock{display:flex;align-items:center;justify-content:space-evenly;}
+  .dock-ic{width:50px;height:50px;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.4);}
+  .dock-ic svg{width:24px;height:24px;}
+  .phone-home{width:110px;height:5px;border-radius:99px;background:rgba(255,255,255,.6);margin:16px auto 0;}
+
+  /* in-app screens */
+  .phone{min-height:700px;}
+  .phone-app{padding:42px 10px 22px;}
+  .phone-app .phone-status{color:#fff;left:30px;right:30px;}
+  .phone-app .phone-status span:first-child{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .app-screen{flex:1;display:flex;flex-direction:column;background:var(--surface);border-radius:32px;overflow:hidden;margin-top:6px;}
+  .page.active .app-screen{animation:appOpen .32s cubic-bezier(.2,.8,.25,1);}
+  @keyframes appOpen{from{opacity:0;transform:scale(.9);}to{opacity:1;transform:scale(1);}}
+  .app-hero{position:relative;text-align:center;color:#fff;padding:34px 20px 26px;}
+  .app-back{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;line-height:1;}
+  .app-hero-ic{width:76px;height:76px;border-radius:24px;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 14px 24px -12px rgba(0,0,0,.4);}
+  .app-hero-ic svg{width:38px;height:38px;}
+  .app-hero h1{margin:0 0 8px;font-size:19px;font-weight:900;line-height:1.6;}
+  .app-hero-tag{font-size:11px;font-weight:800;background:rgba(255,255,255,.24);padding:3px 12px;border-radius:99px;}
+  .app-content{flex:1;padding:20px 20px 26px;margin-top:-14px;background:var(--surface);border-radius:26px 26px 0 0;position:relative;}
+  .app-content h2{margin:0 0 12px;font-size:15px;font-weight:900;}
+  .app-content .tool-d-lead{font-size:13px;}
+  .app-content .tool-feats li{font-size:13px;}
+  .app-content .tool-btn{display:block;text-align:center;}
+  .app-content .tool-d-video{margin-top:24px;padding-top:18px;}
+  .tool-btn-soon{display:block;text-align:center;background:var(--bg);color:var(--muted);border:1px dashed var(--line);box-shadow:none;cursor:default;}
 </style>
 </head>
 <body>
@@ -548,6 +613,7 @@
       <li><a href="#workshops" data-go="workshops"><span class="m-ic chip-teal"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 14l9 5 9-5"/></svg></span>کارگاه‌ها و دوره‌ها</a></li>
       <li><a href="#publications" data-go="publications"><span class="m-ic chip-indigo"><svg viewBox="0 0 24 24"><path d="M4 5h9a2 2 0 012 2v13H6a2 2 0 01-2-2V5z"/><path d="M20 5h-4v15"/></svg></span>نشریات</a></li>
       <li><a href="#biology-news" data-go="biology-news"><span class="m-ic chip-teal"><svg viewBox="0 0 24 24"><path d="M4 4c6 0 10 4 10 10M4 10c3.5 0 6 2.5 6 6M4 16c1.5 0 2 .5 2 2"/></svg></span>تازه‌های زیست‌شناسی</a></li>
+      <li><a href="#tools" data-go="tools"><span class="m-ic chip-indigo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span>ساخت انجمن</a></li>
       <li><a href="#congresses" data-go="congresses"><span class="m-ic chip-amber"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>کنگره‌های پیش رو</a></li>
 
       <div class="menu-label">درباره انجمن</div>
@@ -661,7 +727,7 @@
         <a class="quick-card" href="#workshops" data-go="workshops"><span class="qc-ic chip-light-teal"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 14l9 5 9-5"/></svg></span><span>کارگاه و دوره</span></a>
         <a class="quick-card" href="#publications" data-go="publications"><span class="qc-ic chip-light-indigo"><svg viewBox="0 0 24 24"><path d="M4 5h9a2 2 0 012 2v13H6a2 2 0 01-2-2V5z"/><path d="M20 5h-4v15"/></svg></span><span>نشریات</span></a>
         <a class="quick-card" href="#membership" data-go="membership"><span class="qc-ic chip-light-rose"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></span><span>عضویت</span></a>
-        <a class="quick-card" href="#about" data-go="about"><span class="qc-ic chip-light-blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span><span>درباره انجمن</span></a>
+        <a class="quick-card" href="#tools" data-go="tools"><span class="qc-ic chip-light-indigo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span><span>ساخت انجمن</span></a>
         <a class="quick-card" href="#biology-news" data-go="biology-news"><span class="qc-ic chip-light-teal"><svg viewBox="0 0 24 24"><path d="M4 4c6 0 10 4 10 10M4 10c3.5 0 6 2.5 6 6M4 16c1.5 0 2 .5 2 2"/></svg></span><span>تازه‌های زیست‌شناسی</span></a>
         <a class="quick-card" href="#congresses" data-go="congresses"><span class="qc-ic chip-light-amber"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span><span>کنگره‌های پیش رو</span></a>
         <a class="quick-card" href="#contact" data-go="contact"><span class="qc-ic chip-light-blue"><svg viewBox="0 0 24 24"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></span><span>تماس با ما</span></a>
@@ -694,18 +760,18 @@
         <div class="section-block-head"><h2>اخبار انجمن</h2><a class="see-all" href="#news" data-go="news">مشاهده همه ←</a></div>
         <div class="grid-3">
           <article class="card" data-go="news" style="cursor:pointer;">
+            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--amber);">افتخار علمی</span><h3>کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت</h3><p>انجمن با تلاش اساتید مشاور و اعضای فعال، عنوان «شایسته تقدیر» را کسب کرد.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+          <article class="card" data-go="news" style="cursor:pointer;">
+            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg');background-size:cover;background-position:center;"></div>
+            <div class="card-body"><span class="card-tag" style="background:var(--blue);">گزارش تصویری</span><h3>گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی</h3><p>حضور انجمن در مجمع عمومی اتحادیه به میزبانی دانشگاه الزهرا، ۱۶ و ۱۷ شهریور ۱۴۰۵.</p><span class="card-link">بیشتر ←</span></div>
+          </article>
+          <article class="card" data-go="news" style="cursor:pointer;">
             <div class="card-media" style="background-image:url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"></div>
             <div class="card-body"><span class="card-tag" style="background:var(--rose);">افتخار علمی</span><h3>کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h3><p>دبیر سابق انجمن، در جمع برگزیدگان جایزه ملی نخبگانی البرز قرار گرفت.</p><span class="card-link">بیشتر ←</span></div>
           </article>
-          <article class="card" data-go="news" style="cursor:pointer;">
-            <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_140349_734.jpg');background-size:cover;background-position:center;"></div>
-            <div class="card-body"><span class="card-tag" style="background:var(--indigo);">انتشار کتاب</span><h3>انتشار کتاب «نقش میکروRNA ها در سرطان پستان؛ تشخیص، درمان و چشم‌اندازهای آینده»</h3><p>اثری از دکتر ابوطالبی‌وند بیلانکوهی، دکتر صفرعلیزاده و مریم زمانی‌ثانی.</p><span class="card-link">بیشتر ←</span></div>
-          </article>
-          <article class="card" data-go="news" style="cursor:pointer;">
-            <div class="card-media g-teal"></div>
-            <div class="card-body"><span class="card-tag" style="background:#0d9488;">فراخوان</span><h3>فراخوان عضویت دوره جدید انجمن برای دانشجویان ورودی جدید</h3><p>به جمع اعضای فعال انجمن بپیوندید و از مزایای عضویت بهره‌مند شوید.</p><span class="card-link">بیشتر ←</span></div>
-          </article>
-        </div>
+</div>
       </div>
 
       <!-- Publications preview -->
@@ -780,6 +846,42 @@
     <div class="wrap page-body">
       <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>اخبار انجمن</h1><p>تازه‌ترین اطلاعیه‌ها و رویدادهای انجمن زیست‌شناسی جانوری</p></div>
       <div class="grid-3">
+        <article class="card" data-item data-cat="news" data-color="g-amber" data-tag="افتخار علمی" data-title="کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت" data-desc="با افتخار اعلام می‌داریم 🎉
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز در هجدهمین جشنواره بین‌المللی حرکت، موفق به کسب عنوان «شایسته تقدیر» در بخش کارآفرینی شد. 🏆🧬
+
+این دستاورد بزرگ، حاصل تلاش‌های اساتید مشاور انجمن دکتر المیرا ابوطالبی‌وند بیلانکوهی و دکتر رضا صفرعلیزاده و همچنین تلاش‌ها، خلاقیت و پشتکار تک‌تک اعضای فعال و دلسوز انجمن است که در مسیر پویایی و نوآوری گام برداشته‌اند.
+
+این موفقیت را به تمامی دانشجویان عزیز، اساتید حامی و خانواده بزرگ زیست‌شناسی جانوری دانشگاه تبریز تبریک می‌گوییم. به امید درخشش‌های بیشتر در مسیرهای پیش رو! 🚀🌱" data-meta="هجدهمین جشنواره بین‌المللی حرکت" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231105_890.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">افتخار علمی</span><div class="card-date">هجدهمین جشنواره بین‌المللی حرکت</div><h3>کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت</h3><p>انجمن با تلاش اساتید مشاور و اعضای فعال، عنوان «شایسته تقدیر» بخش کارآفرینی را کسب کرد.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-blue" data-tag="گزارش تصویری" data-title="گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی" data-desc="🧬 گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی
+
+حضور انجمن علمی زیست‌شناسی جانوری دانشگاه تبریز در مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی کشور، به میزبانی دانشگاه الزهرا، در روزهای ۱۶ و ۱۷ شهریورماه ۱۴۰۵." data-meta="مجمع عمومی اتحادیه · دانشگاه الزهرا · ۱۶ و ۱۷ شهریور ۱۴۰۵" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_686.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_131004_272.jpg">
+          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">گزارش تصویری</span><div class="card-date">۱۶ و ۱۷ شهریور ۱۴۰۵</div><h3>گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی</h3><p>حضور انجمن در مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی کشور، به میزبانی دانشگاه الزهرا.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
+        <article class="card" data-item data-cat="news" data-color="g-rose" data-tag="افتخار علمی" data-title="کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی" data-desc="به گزارش روابط عمومی انجمن زیست‌شناسی جانوری دانشگاه تبریز، دکتر المیرا ابوطالبی‌وند بیلانکوهی؛ دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز، در شصت‌وچهارمین دوره جایزه ملّی نخبگانی البرز (نوبل ایرانی) موفق به کسب این جایزه شد.
+
+به گزارش روابط عمومی دانشگاه تبریز، آیین اعطای جوایز شصت‌وچهارمین دوره جایزه ملّی البرز، با حضور دکتر محمّدرضا عارف؛ معاون اول رئیس‌جمهوری و جمعی از مسئولان، استادان، پژوهشگران و نخبگان علمی کشور در مرکز همایش‌های بین‌المللی دانشگاه شهید بهشتی تهران برگزار شد و دکتر المیرا ابوطالبی‌وند بیلانکوهی، به پاس مجموعه‌ای از فعالیت‌ها و دستاوردهای علمی، پژوهشی، آموزشی، فرهنگی و اجتماعی، جایزه ملّی البرز را در بخش دانشجویان رشته‌های غیرپزشکی از آن خود کرد.
+
+دکتر ابوطالبی‌وند بیلانکوهی از دانشجویان برگزیده استعداد درخشان دانشگاه تبریز بوده و در دوران تحصیل در مقطع دکتری تخصصی، عنوان دانشجوی سرآمد آموزشی، پژوهشی و فرهنگی در جشنواره وزارت علوم را نیز به دست آورده است.
+
+وی همچنین موفق به کسب مقام دوم در رویداد مسئله‌محور بنیاد ملی نخبگان و عنوان برگزیده بخش طرح پژوهشی در سومین جشنواره علمی شهید چمران شده است.
+
+از دیگر سوابق علمی و حرفه‌ای این پژوهشگر می‌توان به همکاری اصلی در راه‌اندازی و اجرای هفت پروژه تحقیقاتی، نگارش ۴۲ مقاله علمی در مجلات معتبر ملی و بین‌المللی و تألیف سه جلد کتاب در انتشارات جهاد دانشگاهی اشاره کرد.
+
+وی همچنین به‌عنوان استاد مدعو مؤسسه آموزش عالی ربع رشید تبریز، دانشگاه پیام نور تبریز و مؤسسه گلستان خرد ایرانیان فعالیت داشته و سابقه دبیری تحریریه نشریه بین‌المللی Hereditas در انگلستان و داوری بیش از ۶۴ مقاله در مجلات علمی ملی و بین‌المللی را در کارنامه خود دارد.
+
+خانم دکتر ابوطالبی‌وند در حوزه‌های فرهنگی، هنری، ادبی و ورزشی نیز حضور فعالی داشته و کسب بیش از ۳۲ عنوان و رتبه در جشنواره‌ها و مسابقات مختلف از دیگر بخش‌های کارنامه وی به شمار می‌رود.
+
+ایشان همچنین سابقه فعالیت به‌عنوان استاد مشاور نشریات «میکرون» و «کدون» دانشگاه تبریز، دبیر و نایب‌دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز و مدیر کانون حامیان محیط زیست جهاد دانشگاهی استان آذربایجان شرقی را در کارنامه خود دارد.
+
+جایزه البرز که از آن به عنوان «نوبل ایرانی» یاد می‌شود، یکی از باسابقه‌ترین جوایز نخبگانی کشور است که با هدف شناسایی، معرفی و تجلیل از استعدادهای برتر و چهره‌های شاخص علمی و فرهنگی کشور برگزار می‌شود.
+
+انجمن زیست‌شناسی جانوری دانشگاه تبریز، ضمن تبریک این افتخار ارزشمند به دکتر ابوطالبی‌وند بیلانکوهی، خانواده ایشان و جامعه علمی کشور، از درگاه خداوند متعال برای این عضو افتخارآفرین خانواده بزرگ زیست‌شناسی جانوری، توفیق روزافزون در تمامی عرصه‌های علمی، پژوهشی و فرهنگی را مسئلت می‌نماید." data-meta="شصت‌وچهارمین دوره جایزه ملی البرز" data-images="https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339457-6a97e5014de52-ih5tc-20.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339365-6a97e4a513206-lskex-1.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7ba4e-o3bbf-img-20260827-103409-280.jpg">
+          <div class="card-media" style="background-image:url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"></div>
+          <div class="card-body"><span class="card-tag" style="background:var(--rose);">افتخار علمی</span><div class="card-date">شصت‌وچهارمین دوره جایزه ملی البرز</div><h3>کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h3><p>دبیر سابق انجمن، در جمع برگزیدگان جایزه ملی نخبگانی البرز قرار گرفت.</p><span class="card-link">ادامه مطلب ←</span></div>
+        </article>
         <article class="card" data-item data-cat="news" data-color="g-teal" data-tag="انتشار کتاب" data-title="انتشار کتاب «زیست‌شناسی به زبان فارسی؛ فرهنگ لغات و اصطلاحات»" data-desc="انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز با افتخار تقدیم می‌کند:
 
 📖 کتاب
@@ -803,28 +905,6 @@
 🔶 انتشارات جهاددانشگاهی آذربایجان شرقی" data-meta="چاپ اسفند ۱۴۰۳ · ۲ جلد · ۱۰۲۰ صفحه" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130704_393.jpg">
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130704_393.jpg');background-size:cover;background-position:center;"></div>
           <div class="card-body"><span class="card-tag" style="background:#0d9488;">انتشار کتاب</span><div class="card-date">اسفند ۱۴۰۳</div><h3>انتشار کتاب «زیست‌شناسی به زبان فارسی؛ فرهنگ لغات و اصطلاحات»</h3><p>اثری دو جلدی با مشارکت اعضای انجمن، با نظارت علمی پروفسور ضرغامی سلطان‌احمدی.</p><span class="card-link">ادامه مطلب ←</span></div>
-        </article>
-        <article class="card" data-item data-cat="news" data-color="g-rose" data-tag="افتخار علمی" data-title="کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی" data-desc="به گزارش روابط عمومی انجمن زیست‌شناسی جانوری دانشگاه تبریز، دکتر المیرا ابوطالبی‌وند بیلانکوهی؛ دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز، در شصت‌وچهارمین دوره جایزه ملّی نخبگانی البرز (نوبل ایرانی) موفق به کسب این جایزه شد.
-
-به گزارش روابط عمومی دانشگاه تبریز، آیین اعطای جوایز شصت‌وچهارمین دوره جایزه ملّی البرز، با حضور دکتر محمّدرضا عارف؛ معاون اول رئیس‌جمهوری و جمعی از مسئولان، استادان، پژوهشگران و نخبگان علمی کشور در مرکز همایش‌های بین‌المللی دانشگاه شهید بهشتی تهران برگزار شد و دکتر المیرا ابوطالبی‌وند بیلانکوهی، به پاس مجموعه‌ای از فعالیت‌ها و دستاوردهای علمی، پژوهشی، آموزشی، فرهنگی و اجتماعی، جایزه ملّی البرز را در بخش دانشجویان رشته‌های غیرپزشکی از آن خود کرد.
-
-دکتر ابوطالبی‌وند بیلانکوهی از دانشجویان برگزیده استعداد درخشان دانشگاه تبریز بوده و در دوران تحصیل در مقطع دکتری تخصصی، عنوان دانشجوی سرآمد آموزشی، پژوهشی و فرهنگی در جشنواره وزارت علوم را نیز به دست آورده است.
-
-وی همچنین موفق به کسب مقام دوم در رویداد مسئله‌محور بنیاد ملی نخبگان و عنوان برگزیده بخش طرح پژوهشی در سومین جشنواره علمی شهید چمران شده است.
-
-از دیگر سوابق علمی و حرفه‌ای این پژوهشگر می‌توان به همکاری اصلی در راه‌اندازی و اجرای هفت پروژه تحقیقاتی، نگارش ۴۲ مقاله علمی در مجلات معتبر ملی و بین‌المللی و تألیف سه جلد کتاب در انتشارات جهاد دانشگاهی اشاره کرد.
-
-وی همچنین به‌عنوان استاد مدعو مؤسسه آموزش عالی ربع رشید تبریز، دانشگاه پیام نور تبریز و مؤسسه گلستان خرد ایرانیان فعالیت داشته و سابقه دبیری تحریریه نشریه بین‌المللی Hereditas در انگلستان و داوری بیش از ۶۴ مقاله در مجلات علمی ملی و بین‌المللی را در کارنامه خود دارد.
-
-خانم دکتر ابوطالبی‌وند در حوزه‌های فرهنگی، هنری، ادبی و ورزشی نیز حضور فعالی داشته و کسب بیش از ۳۲ عنوان و رتبه در جشنواره‌ها و مسابقات مختلف از دیگر بخش‌های کارنامه وی به شمار می‌رود.
-
-ایشان همچنین سابقه فعالیت به‌عنوان استاد مشاور نشریات «میکرون» و «کدون» دانشگاه تبریز، دبیر و نایب‌دبیر سابق انجمن زیست‌شناسی جانوری دانشگاه تبریز و مدیر کانون حامیان محیط زیست جهاد دانشگاهی استان آذربایجان شرقی را در کارنامه خود دارد.
-
-جایزه البرز که از آن به عنوان «نوبل ایرانی» یاد می‌شود، یکی از باسابقه‌ترین جوایز نخبگانی کشور است که با هدف شناسایی، معرفی و تجلیل از استعدادهای برتر و چهره‌های شاخص علمی و فرهنگی کشور برگزار می‌شود.
-
-انجمن زیست‌شناسی جانوری دانشگاه تبریز، ضمن تبریک این افتخار ارزشمند به دکتر ابوطالبی‌وند بیلانکوهی، خانواده ایشان و جامعه علمی کشور، از درگاه خداوند متعال برای این عضو افتخارآفرین خانواده بزرگ زیست‌شناسی جانوری، توفیق روزافزون در تمامی عرصه‌های علمی، پژوهشی و فرهنگی را مسئلت می‌نماید." data-meta="شصت‌وچهارمین دوره جایزه ملی البرز" data-images="https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339457-6a97e5014de52-ih5tc-20.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339365-6a97e4a513206-lskex-1.jpg|https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7ba4e-o3bbf-img-20260827-103409-280.jpg">
-          <div class="card-media" style="background-image:url('https://tabrizu.ac.ir/images/www/fa/gallery/gallery-big/2026/1788339246-6a97e42e7d61a-7cc07-img-20260826-123629-540.jpg');background-size:cover;background-position:center;"></div>
-          <div class="card-body"><span class="card-tag" style="background:var(--rose);">افتخار علمی</span><div class="card-date">شصت‌وچهارمین دوره جایزه ملی البرز</div><h3>کسب جایزه ملی البرز (نوبل ایرانی) توسط دکتر المیرا ابوطالبی‌وند بیلانکوهی</h3><p>دبیر سابق انجمن، در جمع برگزیدگان جایزه ملی نخبگانی البرز قرار گرفت.</p><span class="card-link">ادامه مطلب ←</span></div>
         </article>
         <article class="card" data-item data-cat="news" data-color="g-indigo" data-tag="انتشار کتاب" data-title="انتشار کتاب «نقش میکروRNA ها در سرطان پستان؛ تشخیص، درمان و چشم‌اندازهای آینده»" data-desc="انجمن علمی_دانشجویی زیست‌شناسی جانوری دانشگاه تبریز با افتخار تقدیم می‌کند:
 
@@ -880,20 +960,6 @@ https://ash.acecr.ac.ir/fa/news/88775/
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130414_331.jpg');background-size:cover;background-position:center;"></div>
           <div class="card-body"><span class="card-tag" style="background:var(--indigo);">انتشار کتاب</span><div class="card-date">شهریور ۱۴۰۴</div><h3>انتشار کتاب «رتینوبلاستوما و RNAهای غیرکدکننده (ncRNAs)؛ رویکردی نوین در تشخیص و درمان»</h3><p>اثری از مریم زمانی‌ثانی، دکتر ابوطالبی‌وند بیلانکوهی و دکتر صفرعلیزاده.</p><span class="card-link">ادامه مطلب ←</span></div>
         </article>
-        <article class="card" data-item data-cat="news" data-color="g-amber" data-tag="افتخار علمی" data-title="کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت" data-desc="با افتخار اعلام می‌داریم 🎉
-
-انجمن زیست‌شناسی جانوری دانشگاه تبریز در هجدهمین جشنواره بین‌المللی حرکت، موفق به کسب عنوان «شایسته تقدیر» در بخش کارآفرینی شد. 🏆🧬
-
-این دستاورد بزرگ، حاصل تلاش‌های اساتید مشاور انجمن دکتر المیرا ابوطالبی‌وند بیلانکوهی و دکتر رضا صفرعلیزاده و همچنین تلاش‌ها، خلاقیت و پشتکار تک‌تک اعضای فعال و دلسوز انجمن است که در مسیر پویایی و نوآوری گام برداشته‌اند.
-
-این موفقیت را به تمامی دانشجویان عزیز، اساتید حامی و خانواده بزرگ زیست‌شناسی جانوری دانشگاه تبریز تبریک می‌گوییم. به امید درخشش‌های بیشتر در مسیرهای پیش رو! 🚀🌱" data-meta="هجدهمین جشنواره بین‌المللی حرکت" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231105_890.jpg">
-          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231109_700.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">افتخار علمی</span><div class="card-date">هجدهمین جشنواره بین‌المللی حرکت</div><h3>کسب عنوان «شایسته تقدیر» در بخش کارآفرینی هجدهمین جشنواره بین‌المللی حرکت</h3><p>انجمن با تلاش اساتید مشاور و اعضای فعال، عنوان «شایسته تقدیر» بخش کارآفرینی را کسب کرد.</p><span class="card-link">ادامه مطلب ←</span></div>
-        </article>
-        <article class="card" data-item data-cat="news" data-color="g-blue" data-tag="گزارش تصویری" data-title="گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی" data-desc="🧬 گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی
-
-حضور انجمن علمی زیست‌شناسی جانوری دانشگاه تبریز در مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی کشور، به میزبانی دانشگاه الزهرا، در روزهای ۱۶ و ۱۷ شهریورماه ۱۴۰۵." data-meta="مجمع عمومی اتحادیه · دانشگاه الزهرا · ۱۶ و ۱۷ شهریور ۱۴۰۵" data-images="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_686.jpg|https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_131004_272.jpg">
-          <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20260912_145608_060.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--blue);">گزارش تصویری</span><div class="card-date">۱۶ و ۱۷ شهریور ۱۴۰۵</div><h3>گزارش تصویری | مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی</h3><p>حضور انجمن در مجمع عمومی اتحادیه انجمن‌های علمی دانشجویی زیست‌شناسی کشور، به میزبانی دانشگاه الزهرا.</p><span class="card-link">ادامه مطلب ←</span></div>
-        </article>
         <article class="card" data-item data-cat="news" data-color="g-teal" data-tag="گزارش" data-title="گزارش عملکرد فصلی انجمن منتشر شد" data-desc="مروری بر فعالیت‌های سه‌ماهه اخیر انجمن شامل کارگاه‌ها، نشست‌های علمی و بازدیدهای میدانی." data-meta="۱۴۰۵/۰۵/۲۰">
           <div class="card-media g-teal"><svg viewBox="0 0 100 60"><path d="M10 50 L40 15 L60 35 L90 10" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
           <div class="card-body"><span class="card-tag" style="background:#0d9488;">گزارش</span><div class="card-date">۱۴۰۵/۰۵/۲۰</div><h3>گزارش عملکرد فصلی انجمن منتشر شد</h3><p>مروری بر فعالیت‌های سه‌ماهه اخیر انجمن.</p><span class="card-link">ادامه مطلب ←</span></div>
@@ -937,7 +1003,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
 
 🌐 نحوه برگزاری: آنلاین
 💵 هزینه ثبت‌نام: رایگان
-🎁 هدیه ویژه برای شرکت‌کنندگان" data-meta="آنلاین · رایگان" data-datetime="2026-09-18T16:30:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="false" data-duration="" data-code="" data-price-old="" data-price-new="رایگان" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231215_617.jpg">
+🎁 هدیه ویژه برای شرکت‌کنندگان" data-meta="آنلاین · رایگان" data-datetime="2026-09-18T16:30:00+03:30" data-register="https://t.me/Zainab_naqavi" data-class="https://www.skyroom.online/" data-cert="false" data-duration="" data-code="" data-price-old="" data-price-new="رایگان" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231215_617.jpg">
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231215_617.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--amber);">آنلاین</span><h3>وبینار آشنایی با مسیر کنکور ارشد وزارت علوم و بهداشت</h3><p>با حضور سید محمد حسینی، ویژه داوطلبان کنکور ارشد علوم و بهداشت ۱۴۰۶.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
         <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه نانوپزشکی" data-desc="انجمن علمی-دانشجویی زیست‌شناسی جانوری دانشگاه تبریز برگزار می‌کند: کارگاه نانوپزشکی
@@ -946,7 +1012,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
 
 مدرس این دوره: خانم مهندس ساحل حکیمی؛ کارشناس ارشد بیوشیمی (فیلد نانو)
 
-این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد." data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-11-19T17:30:00+03:30" data-cert="true" data-duration="۱ ساعت و ۳۰ دقیقه" data-code="ARV-WK1404-28" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg">
+این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد." data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-11-19T17:30:00+03:30" data-class="https://www.skyroom.online/" data-cert="true" data-duration="۱ ساعت و ۳۰ دقیقه" data-code="ARV-WK1404-28" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg">
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261001_130327_746.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:var(--teal);">حضوری</span><h3>کارگاه نانوپزشکی</h3><p>با تدریس خانم مهندس ساحل حکیمی، کارشناس ارشد بیوشیمی (فیلد نانو).</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
         <article class="card" data-item data-cat="workshop" data-color="g-teal" data-tag="حضوری" data-title="کارگاه ۳ روزه از سلول درمانی تا ژن درمانی" data-desc="انجمن علمی-دانشجویی زیست‌شناسی جانوری دانشگاه تبریز برگزار می‌کند:
@@ -961,11 +1027,14 @@ https://ash.acecr.ac.ir/fa/news/88775/
 این کارگاه فرصتی مناسب برای علاقه‌مندان و دانشجویان می‌باشد.
 
 🕐 زمان برگزاری: هر روز ساعت ۱۵ الی ۱۷
-📍 مکان: دانشکده علوم طبیعی" data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-05-05T15:00:00+03:30" data-extra-days="2025-05-06|2025-05-07" data-register="https://register.com" data-class="https://class.com" data-cert="false" data-duration="۳ روز، هر روز ۲ ساعت (ساعت ۱۵ تا ۱۷)" data-code="" data-price-old="" data-price-new="300,000" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231002_731.jpg">
+📍 مکان: دانشکده علوم طبیعی" data-meta="حضوری · دانشکده علوم طبیعی" data-datetime="2025-05-05T15:00:00+03:30" data-extra-days="2025-05-06|2025-05-07" data-register="https://t.me/Zainab_naqavi" data-class="https://www.skyroom.online/" data-cert="false" data-duration="۳ روز، هر روز ۲ ساعت (ساعت ۱۵ تا ۱۷)" data-code="" data-price-old="" data-price-new="300,000" data-image="https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231002_731.jpg">
           <div class="card-media" style="background-image:url('https://raw.githubusercontent.com/azarsam936-svg/ChemiSafe/refs/heads/main/git%20pics/IMG_20261019_231002_731.jpg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="card-tag" style="background:#0d9488;">حضوری</span><h3>کارگاه ۳ روزه از سلول درمانی تا ژن درمانی</h3><p>سه جلسه با مدرسان مرکز تحقیقات سلول‌های بنیادی و کارشناسان ارشد ژنتیک.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
-        <article class="card" data-item data-cat="workshop" data-color="g-indigo" data-tag="حضوری" data-title="کارگاه میکروسکوپی بافت‌شناسی جانوری" data-desc="آموزش تهیه و مطالعه مقاطع بافتی زیر نظر اساتید گروه، همراه با کار عملی با میکروسکوپ‌های آزمایشگاهی دانشکده." data-meta="حضوری · آزمایشگاه بافت‌شناسی دانشکده" data-datetime="2026-11-08T15:00:00+03:30" data-register="https://register.com" data-class="https://class.com" data-cert="true" data-duration="۵ ساعت" data-code="ARV-WK1405-08" data-price-old="180,000" data-price-new="110,000">
-          <div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">حضوری</span><h3>کارگاه میکروسکوپی بافت‌شناسی جانوری</h3><p>آموزش تهیه و مطالعه مقاطع بافتی زیر نظر اساتید گروه.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
+        <article class="card" data-item data-cat="workshop" data-color="g-indigo" data-tag="آنلاین" data-title="کارگاه آموزش ایندیزاین جهت طراحی نشریات دانشجویی" data-desc="آموزش نرم‌افزار ایندیزاین (InDesign) برای صفحه‌آرایی و طراحی نشریات و گاهنامه‌های دانشجویی.
+
+🌐 نحوه برگزاری: آنلاین
+📆 تاریخ برگزاری: ۱۷ و ۲۱ آبان ۱۴۰۵" data-meta="آنلاین · ۱۷ و ۲۱ آبان ۱۴۰۵" data-datetime="2026-11-08T15:00:00+03:30" data-extra-days="2026-11-12" data-register="https://t.me/Zainab_naqavi" data-class="https://skyroom.online/ch/farhangitu/anjoman" data-cert="true" data-duration="" data-code="ARV-WK1405-08" data-price-old="" data-price-new="300,000">
+          <div class="card-media g-indigo"></div><div class="card-body"><span class="card-tag" style="background:var(--indigo);">آنلاین</span><h3>کارگاه آموزش ایندیزاین جهت طراحی نشریات دانشجویی</h3><p>آموزش صفحه‌آرایی و طراحی نشریات و گاهنامه‌های دانشجویی با نرم‌افزار ایندیزاین.</p><span class="card-link">مشاهده و ثبت‌نام ←</span></div>
         </article>
       </div>
     </div>
@@ -1292,7 +1361,261 @@ https://ash.acecr.ac.ir/fa/news/88775/
     </div>
   </section>
 
-  <!-- ================= CONGRESSES ================= -->
+  <!-- ================= TOOLS ================= -->
+  <section class="page" id="page-tools" data-page="tools" data-title="ساخت انجمن">
+    <div class="wrap page-body">
+      <div class="page-head"><div class="eyebrow">ساخته‌شده توسط انجمن</div><h1>ساخت انجمن</h1><p>در این بخش شما می‌توانید به‌صورت کاملاً رایگان به ابزارهایی که انجمن زیست‌شناسی جانوری دانشگاه تبریز طراحی کرده است دسترسی داشته باشید و از امکانات آنها استفاده کنید ❤️</p></div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-grid">
+          <a class="app-icon" href="#tool-1" data-go="tool-1"><span class="app-ic" style="background:linear-gradient(135deg,#0d9488,#14b8a6);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9.5A2 2 0 006.2 21h11.6a2 2 0 001.7-2.5L14 9V3"/><path d="M7.5 15h9"/></svg></span><span class="app-name">دستیار آزمایشگاه</span></a>
+          <a class="app-icon" href="#tool-2" data-go="tool-2"><span class="app-ic" style="background:linear-gradient(135deg,#2f5fea,#5a86f5);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span><span class="app-name">پروتکل‌های آزمایشگاهی</span></a>
+          <a class="app-icon" href="#tool-3" data-go="tool-3"><span class="app-ic" style="background:linear-gradient(135deg,#6366f1,#818cf8);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 9l2 2 3.5-4M8 16h8"/></svg></span><span class="app-name">سامانه تصحیح ورقه‌های امتحانی</span></a>
+          <a class="app-icon" href="#tool-4" data-go="tool-4"><span class="app-ic" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="app-name">وبسایت بانک سوالات تیمز</span></a>
+          <a class="app-icon" href="#tool-5" data-go="tool-5"><span class="app-ic" style="background:linear-gradient(135deg,#f43f5e,#fb7185);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2.2M12 17h.01"/></svg></span><span class="app-name">آزمون‌ساز</span></a>
+          <a class="app-icon" href="#tool-6" data-go="tool-6"><span class="app-ic" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 012 2v10"/></svg></span><span class="app-name">فلش‌کارت‌ساز</span></a>
+          <a class="app-icon" href="#tool-7" data-go="tool-7"><span class="app-ic" style="background:linear-gradient(135deg,#10b981,#34d399);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8.5 15.5l2.2 2.2 4.3-4.4"/></svg></span><span class="app-name">برنامه‌ریز شخصی</span></a>
+          <a class="app-icon" href="#tool-8" data-go="tool-8"><span class="app-ic" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="5"/><path d="M7.5 10.5v4M5.5 12.5h4M15.5 11h.01M18 13.5h.01"/></svg></span><span class="app-name">بازی‌های آموزشی</span></a>
+          </div>
+          <div class="phone-dock">
+            <a class="dock-ic" href="https://www.instagram.com/animal_biology_association?igsh=ZGFhdTZxMTIwbGth" target="_blank" rel="noopener" aria-label="اینستاگرام" style="background:linear-gradient(135deg,#f43f5e,#f59e0b);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="#fff"/></svg></a>
+            <a class="dock-ic" href="https://t.me/animalbiology_tabrizu" target="_blank" rel="noopener" aria-label="تلگرام" style="background:linear-gradient(135deg,#2f5fea,#38bdf8);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M21 3L2 11l6 2 2 6 3-4 5 3 3-15z"/></svg></a>
+            <a class="dock-ic" href="mailto:abans.tabrizu@gmail.com" aria-label="ایمیل" style="background:linear-gradient(135deg,#0d9488,#14b8a6);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></a>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-1" data-page="tool-1" data-title="دستیار آزمایشگاه">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#0d9488,#14b8a6);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9.5A2 2 0 006.2 21h11.6a2 2 0 001.7-2.5L14 9V3"/><path d="M7.5 15h9"/></svg></span>
+              <h1>دستیار آزمایشگاه</h1>
+              <span class="app-hero-tag">آزمایشگاه</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">دستیار هوشمند آزمایشگاه؛ دسترسی سریع به اطلاعات مواد شیمیایی، برگه ایمنی (SDS) و ابزارهای محاسباتی برای کار روزمره در آزمایشگاه.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>جست‌وجوی مواد شیمیایی آزمایشگاهی و دسترسی فوری به اطلاعات کامل و برگه ایمنی (SDS) هر ماده</span></li><li><b>✓</b><span>ابزارهای محاسباتی آزمایشگاه برای ساخت محلول‌ها و محاسبات رایج</span></li><li><b>✓</b><span>ثبت مکان نگهداری مواد شیمیایی و بازیابی آن با یک جست‌وجوی ساده، در پایگاه داده‌ای برای آزمایشگاه‌های سراسر کشور</span></li><li><b>✓</b><span>دستیار هوش مصنوعی آزمایشگاه برای پاسخ به پرسش‌های شما</span></li></ul>
+              <div class="tool-site-link"><span>آدرس سایت:</span><a href="https://azarsam936-svg.github.io/ChemiSafepro/" target="_blank" rel="noopener noreferrer">azarsam936-svg.github.io/ChemiSafepro</a></div>
+              <a class="tool-btn" href="https://azarsam936-svg.github.io/ChemiSafepro/" target="_blank" rel="noopener noreferrer">ورود به سایت ↗</a>
+              
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-2" data-page="tool-2" data-title="پروتکل‌های آزمایشگاهی">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#2f5fea,#5a86f5);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span>
+              <h1>پروتکل‌های آزمایشگاهی</h1>
+              <span class="app-hero-tag">آزمایشگاه</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">مرجعی جامع از پروتکل‌های آزمایشگاهی، همراه با کاربرد و نکات کلیدی هر روش.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>جست‌وجو و دسترسی کامل به پروتکل‌های آزمایشگاهی</span></li><li><b>✓</b><span>آشنایی با کاربرد، مراحل و نکات مهم هر پروتکل</span></li></ul>
+              <div class="tool-site-link"><span>آدرس سایت:</span><a href="https://azarsam936-svg.github.io/ChemiSafe/" target="_blank" rel="noopener noreferrer">azarsam936-svg.github.io/ChemiSafe</a></div>
+              <a class="tool-btn" href="https://azarsam936-svg.github.io/ChemiSafe/" target="_blank" rel="noopener noreferrer">ورود به سایت ↗</a>
+              
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-3" data-page="tool-3" data-title="سامانه تصحیح ورقه‌های امتحانی">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#6366f1,#818cf8);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 9l2 2 3.5-4M8 16h8"/></svg></span>
+              <h1>سامانه تصحیح ورقه‌های امتحانی</h1>
+              <span class="app-hero-tag">آموزش و آزمون</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">سامانه‌ای کاربردی برای تصحیح سریع و دقیق ورقه‌های امتحانی در آزمون‌های مجازی.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>تصحیح آزمون‌ها در شرایط مجازی</span></li><li><b>✓</b><span>صرفه‌جویی در زمان و کاهش خطا در تصحیح ورقه‌ها</span></li><li><b>✓</b><span>امکانات ویژه برای مدیریت و بررسی نتایج</span></li></ul>
+              <div class="tool-site-link"><span>آدرس سایت:</span><a href="https://azarsam936-svg.github.io/exam-corrector/" target="_blank" rel="noopener noreferrer">azarsam936-svg.github.io/exam-corrector</a></div>
+              <a class="tool-btn" href="https://azarsam936-svg.github.io/exam-corrector/" target="_blank" rel="noopener noreferrer">ورود به سایت ↗</a>
+              <div class="tool-d-video">
+          <h2>ویدیوی معرفی</h2>
+          <div class="tool-video-box"><iframe data-src="https://www.aparat.com/video/video/embed/videohash/xdzg51t/vt/frame?titleShow=true" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" title="ویدیوی معرفی"></iframe></div>
+        </div>
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-4" data-page="tool-4" data-title="وبسایت بانک سوالات تیمز">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
+              <h1>وبسایت بانک سوالات تیمز</h1>
+              <span class="app-hero-tag">آموزش و آزمون</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">بانک تحلیلی سوالات تیمز، طراحی‌شده توسط انجمن برای گروه علوم تجربی استان آذربایجان شرقی.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>مجموعه سوالات تیمز علوم برای تمرین و تحلیل</span></li><li><b>✓</b><span>طراحی‌شده توسط انجمن زیست‌شناسی جانوری برای گروه علوم تجربی استان آذربایجان شرقی</span></li></ul>
+              <div class="tool-site-link"><span>آدرس سایت:</span><a href="https://azarsam936-svg.github.io/TIMSS/" target="_blank" rel="noopener noreferrer">azarsam936-svg.github.io/TIMSS</a></div>
+              <a class="tool-btn" href="https://azarsam936-svg.github.io/TIMSS/" target="_blank" rel="noopener noreferrer">ورود به سایت ↗</a>
+              
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-5" data-page="tool-5" data-title="آزمون‌ساز">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#f43f5e,#fb7185);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2.2M12 17h.01"/></svg></span>
+              <h1>آزمون‌ساز</h1>
+              <span class="app-hero-tag">آموزش و آزمون</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">ابزار ساخت آزمون‌های تستی با تصحیح خودکار، برای معلمان، دانشجویان و علاقه‌مندان.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>ساخت آسان آزمون‌های تستی</span></li><li><b>✓</b><span>تصحیح خودکار و نمایش نتیجه</span></li><li><b>✓</b><span>امکانات ویژه برای طراحی آزمون‌های مؤثرتر</span></li></ul>
+              <div class="tool-site-link"><span>آدرس سایت:</span><a href="https://azarsam936-svg.github.io/quiz-maker/" target="_blank" rel="noopener noreferrer">azarsam936-svg.github.io/quiz-maker</a></div>
+              <a class="tool-btn" href="https://azarsam936-svg.github.io/quiz-maker/" target="_blank" rel="noopener noreferrer">ورود به سایت ↗</a>
+              
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-6" data-page="tool-6" data-title="فلش‌کارت‌ساز">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 012 2v10"/></svg></span>
+              <h1>فلش‌کارت‌ساز</h1>
+              <span class="app-hero-tag">یادگیری</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">ابزار ساخت فلش‌کارت‌های تعاملی برای مرور و یادگیری سریع مطالب.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>ساخت فلش‌کارت‌های تعاملی برای مرور و یادگیری سریع</span></li><li><b>✓</b><span>امکان افزودن عکس به کارت‌ها</span></li><li><b>✓</b><span>امکانات ویژه برای یادگیری مؤثرتر</span></li></ul>
+              <div class="tool-site-link"><span>آدرس سایت:</span><a href="https://azarsam936-svg.github.io/flipcard/" target="_blank" rel="noopener noreferrer">azarsam936-svg.github.io/flipcard</a></div>
+              <a class="tool-btn" href="https://azarsam936-svg.github.io/flipcard/" target="_blank" rel="noopener noreferrer">ورود به سایت ↗</a>
+              <div class="tool-d-video">
+          <h2>ویدیوی معرفی</h2>
+          <div class="tool-video-box"><iframe data-src="https://www.aparat.com/video/video/embed/videohash/atyx50j/vt/frame?titleShow=true" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" title="ویدیوی معرفی"></iframe></div>
+        </div>
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-7" data-page="tool-7" data-title="برنامه‌ریز شخصی">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#10b981,#34d399);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8.5 15.5l2.2 2.2 4.3-4.4"/></svg></span>
+              <h1>برنامه‌ریز شخصی</h1>
+              <span class="app-hero-tag">بهره‌وری</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">برنامه‌ریز شخصی (Top Planner)؛ ابزاری برای برنامه‌ریزی و ثبت برنامه روزانه، مجهز به تایمر سبک پومودورو.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>برنامه‌ریزی و ثبت برنامه روزانه</span></li><li><b>✓</b><span>تایمر سبک پومودورو (Pomodoro) برای تمرکز بیشتر هنگام مطالعه و کار</span></li></ul>
+              <span class="tool-btn tool-btn-soon" role="status">به‌زودی فعال می‌شود</span>
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-tool-8" data-page="tool-8" data-title="بازی‌های آموزشی">
+    <div class="wrap page-body">
+      <div class="phone-wrap">
+        <div class="phone phone-app">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-status" aria-hidden="true"><span>انجمن</span><span>●●●</span></div>
+          <div class="app-screen">
+            <div class="app-hero" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);">
+              <a class="app-back" href="#tools" data-go="tools" aria-label="بازگشت به صفحه اصلی گوشی">›</a>
+              <span class="app-hero-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="5"/><path d="M7.5 10.5v4M5.5 12.5h4M15.5 11h.01M18 13.5h.01"/></svg></span>
+              <h1>بازی‌های آموزشی</h1>
+              <span class="app-hero-tag">بازی و یادگیری</span>
+            </div>
+            <div class="app-content">
+              <p class="tool-d-lead">مجموعه‌ای از بازی‌های آموزشی علوم و زیست‌شناسی برای یادگیری سرگرم‌کننده.</p>
+              <h2>امکانات</h2>
+              <ul class="tool-feats"><li><b>✓</b><span>بازی‌های آموزشی علوم و زیست‌شناسی</span></li><li><b>✓</b><span>مناسب پایه‌های تحصیلی مختلف</span></li></ul>
+              <span class="tool-btn tool-btn-soon" role="status">به‌زودی فعال می‌شود</span>
+            </div>
+          </div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="page" id="page-congresses" data-page="congresses" data-title="کنگره‌های پیش رو">
     <div class="wrap page-body">
       <div class="page-head"><div class="eyebrow">محتوای علمی</div><h1>کنگره‌های پیش رو</h1><p>رویدادها و کنگره‌های علمی ملی و بین‌المللی مرتبط</p></div>
@@ -1508,6 +1831,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
         <li><a href="#news" data-go="news">اخبار</a></li>
         <li><a href="#workshops" data-go="workshops">کارگاه‌ها</a></li>
         <li><a href="#publications" data-go="publications">نشریات</a></li>
+        <li><a href="#tools" data-go="tools">ساخت انجمن</a></li>
         <li><a href="#membership" data-go="membership">عضویت</a></li>
         <li><a href="#about" data-go="about">درباره انجمن</a></li>
       </ul>
@@ -1560,6 +1884,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
       pageTitleEl.textContent = pages[id].dataset.title || '';
       backBtn.hidden = false;
     }
+    pages[id].querySelectorAll('iframe[data-src]').forEach(function(f){ if(!f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src')); });
     window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
     if(push !== false){
       var hash = '#' + id;
@@ -1590,6 +1915,8 @@ https://ash.acecr.ac.ir/fa/news/88775/
   var initial = location.hash ? location.hash.slice(1) : 'home';
   showPage(initial, false);
   if(!location.hash){ history.replaceState({page:'home'}, '', '#home'); }
+
+
 
   /* ---------- hero slider ---------- */
   var slides = Array.prototype.slice.call(document.querySelectorAll('#slider .slide'));
@@ -2001,7 +2328,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
           notice.classList.add('show');
         } else {
           notice.classList.remove('show');
-          window.open(ds.register || 'https://register.com', '_blank', 'noopener');
+          window.open(ds.register || 'https://t.me/Zainab_naqavi', '_blank', 'noopener');
         }
       };
       joinBtn.onclick = function(){
@@ -2010,7 +2337,7 @@ https://ash.acecr.ac.ir/fa/news/88775/
           notice.classList.add('show');
         } else {
           notice.classList.remove('show');
-          window.open(ds.class || 'https://class.com', '_blank', 'noopener');
+          window.open(ds.class || 'https://www.skyroom.online/', '_blank', 'noopener');
         }
       };
       regBtn.classList.toggle('workshop-disabled', passed);
